@@ -32,7 +32,7 @@ easily refer to the files outside of the IDE.
 
 Most of this work is review on the lecture and labs, so if you feel completely comfortable
 with variables and the lecture notes feel free to skip to the section labeled "Attached Exercise".
-This exercise page is a bit hefty, however.
+This exercise page is a bit hefty.
 
 Below all of this, there is a section that includes the references used in this exercise. If I've 
 missed anything you would like to cover, ask a friend or review the work.
@@ -391,8 +391,8 @@ there isn't necessarily a bulletproof plan for knowing when to use each data typ
 you're doing and what you'll need to accomplish the task.
 
 #### Attached Exercises
-Under the file list there is a .docx file. Download it to your computer, open it, and follow the instructions 
-from there. 
+Download the following file below:
+https://www.mediafire.com/?b4uyr6q5yckfl6x
 
 NOTE: The second page is a challenge section.
 

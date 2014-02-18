@@ -269,6 +269,7 @@ More operations with booleans (that you may have or not seen before):
 	some_bool = (7 > 3); //true, as 7 is greater than 3
 	some_bool = (15 >= 15); //true, as 15 is greater than or equal to 15
 	some_bool = (16 <= 17); //true, as 16 is less than or equal to 17
+	cout << !some_bool << endl; //false, as '!' is the negation operator for booleans
 ```
 
 Trivia: The `bool` data type is named after the mathematician, [George Boole] (http://en.wikipedia.org/wiki/George_Boole)

@@ -3,7 +3,7 @@
 ## Contents
 - Exercise & Setup
 - Intro
-- Variables
+- Variables (& Constants)
 	- Identifiers and Naming Scheme
 	- Data Types
 		- Integers
@@ -11,8 +11,8 @@
 		- Char
 		- Strings
 		- Bool
-	- Assignment Operator & Type Coercion
-	- Basic Arithmetic
+	- Assignment Operator
+	- Basic Arithmetic & Type Casting/Conversion
 	- Overflow/Underflow
 	- When to Use Each Type
 	- Attached Exercise (Geometric Shapes: Area and Volume)
@@ -23,18 +23,18 @@
 ### Exercise & Setup
 
 As usual, load up Visual Studio and create a project using the "Win32 Application" option.
-Name it whatever you'd like (best to have the name pertain to what you're working on though). 
+Name it whatever you'd like (best to have the name pertain to what you're working on though,
+e.g. "Week_5_Exercise"). 
+
 Most of this exercise will deal with reading though, with some examples and an attached
-exercise at the end of it.
-
-Make sure to set the directory to your desktop, so you can easily refer to the files outside
-of the IDE.
-
-If you get done early, please help a friend nearby. If you don't have any, and can
-bear making new ones, find and make one then help them out.
+exercise at the end of it. Also, make sure to set the directory to your desktop, so you can 
+easily refer to the files outside of the IDE.
 
 Most of this work is review on the lecture and labs, so if you feel completely comfortable
-with variables feel free to skip to the section labeled "Attached Exercise".
+with variables and the lecture notes feel free to skip to the section labeled "Attached Exercise".
+
+Lastly, if you finish early please help a friend nearby. If you don't have any, and can
+bear making new ones, find and make one then help them out.
 
 ### Intro
 
@@ -55,7 +55,7 @@ results in the console printing out `17`.
 
 Going more in-depth, we'll look more into these in the following sections.
 
-### Variables
+### Variables (& Constants)
 Like in math, variables are items that can hold values. Unlike math though, in computer 
 science a variable can be reassigned a different value later on.
 
@@ -65,6 +65,9 @@ value assigned to it for the remainder of the program.
 
 Variables have three parts to them: Data type, identifier, and the value assigned to each 
 variable.
+
+The values assigned to each variable (as you'll see in the later sections of this excerise), are
+called constants. Not represented as variables, examples of such are `12`, `'a'`, and `"hello"`.
 
 #### Identifiers & Naming Scheme
 When creating variables, you always need to an identifier assigned to each. For instance, in
@@ -99,7 +102,7 @@ to it.
 	int number_of_bananas = 0; //underscores for spaces
 ```
 
-lastly, when creating identifiers for your variables, it is up to you to determine whether or not to 
+Lastly, when creating identifiers for your variables, it is up to you to determine whether or not to 
 sacrifice legibility or the time it takes to type it out. Look at the following example and determine
 for yourself which one would suit yourself and others reviewing your program:
 
@@ -111,8 +114,8 @@ for yourself which one would suit yourself and others reviewing your program:
   //etc.
 ```
 
-Overall, like the rest of your code, think about the future when looking back on your work. What typing
-style do you think works best?
+Overall, like the rest of your code, think about the future when looking back on your work. Make it neat, 
+legible, and easy for you and others to review for later use.
 
 #### Data Types
 Although there are MANY different types of data types , you won't be using every single one 
@@ -130,7 +133,7 @@ the following reference goes over the file sizes, we'll be going over them too i
 sections.
 
 [Variables and types in C++] (http://www.cplusplus.com/doc/tutorial/variables/)
-[Range of Data Types in Visual Studio C++] (http://msdn.microsoft.com/en-us/library/s3f49ktz%28v=vs.80%29.aspx)
+[Range of Data Types in Visual Studio C++] (http://msdn.microsoft.com/en-us/library/s3f49ktz%28v=vs.110%29.aspx)
 
 Note that the range and size of each data type depends on the compiler you're working
 with. In our case, we're only working with Visual Studio.
@@ -152,11 +155,12 @@ Like in the previous sections, here's an example of creating an integer in code:
   cout << some_integer << endl;
 ```
 
-which outputs `42` in console.
+which outputs `42` in console. `42` is an `integer constant`.
 
 ##### Doubles
 Known in syntax as `double`, doubles are similar to the `int` data type, except they are 
-for decimal values. Refer to the reference under "Data Types" for exact byte-size and range.
+for decimal values. Refer to the second reference under "Data Types" for exact byte-size 
+and range.
 
 Here's an example of this in code:
 
@@ -165,11 +169,47 @@ Here's an example of this in code:
   cout << some_double << endl;
 ```
 
-which outputs `2.7`.
+which outputs `2.7`. `2.7` is a `double constant`.
 
 ##### Characters
 The character data type, or `char`, holds single characters. These include values such as 
-`a, b, z, -, ...` and so on. 
+`a, b, z, -, ...` and so on. These are 1 byte and therefore their range is `0 to 255` or 
+`-128 to 127`.
+
+Examples of assigning and printing characters:
+
+```C++
+	char some_char = 'c';
+	cout << some_char << endl;
+```
+
+which outputs `c`. `c` is a `character constant`.
+
+At the beginning, notice how the above talks about integers. The weird thing about characters 
+are that they can be represented as integers. For instance:
+
+```C++
+	cout << 'a' << endl;
+```
+
+outputs `97`. Also, 
+
+```C++
+	cout << 'b' + 55 << endl;
+```
+
+outputs . The reason for this is because of how characters are stored on computers. Check [here] (http://www.ascii-code.com/) for more information on how the output corresponds to the letter. 
+Although ASCII isn't used much anymore, programming in general bases off of this because of how 
+easy it is to correspond values (e.g. `97` is `a`). The new standard is UTF-8, and if you want 
+to see more information on it check [here] (http://stackoverflow.com/questions/700187/unicode-utf-ascii-ansi-format-differences).
+
+The main difference though is that it covers more character types than ASCII. UTF-8 supports
+up to 4-bytes per character, wheras ASCII has only one byte per character (which works perfectly
+for us right now).
+
+Moving on: If we want to go from `char` to `int`, all we have to do is the following:
+
+
 
 ##### Strings
 The string data type, or `string`, is unlike the other data types on this list. For one thing, 
@@ -178,16 +218,82 @@ it requires its own special header to be able to use it. Another thing is it isn
 
 
 
-##### Bool
-The bool data type, or `bool`, hodls either a `true` or `false` value. Not necessarily too
-useful for us yet, in the next chapter we'll be using this data type frequently. For now, we 
-can use this 
+##### Boolean
+The boolean data type, or `bool`, holds either a `true` or `false` value. Not necessarily too
+useful for us yet, in the next chapter we'll be using this data type frequently. For now, know 
+the following few specifics of this data type.
 
-#### Assignment Operator & Type Coercion
+First off: As a boolean can only hold a `true` or `false` value, what size do you think it is in 
+memory?
+
+If you guessed a bit or anything else other than a byte, then I'm afraid you're wrong. Although 
+it makes perfect sense for a bool to be of size 1 bit (as it can only be a `true` or `false` 
+value, because the smallest piece of memory a CPU can handle is one byte then a bool is of size
+1 byte.
+
+Example syntax of using the `bool` data type are as follows:
+
+```C++
+	bool some_bool = 0; //false
+	some_bool = true; //true
+	some_bool = false; //false
+	some_bool = 1; //true
+```
+
+As a boolean can be assigned `0` or `1` to it, 
+
+#### Assignment Operator
 As you've seen already in the previous examples, the assignment operator "assigns" a value 
 to a variable. The value assigned to the variable depends solely on the data type of the
 variable.
 
+The assignment operator works right to left, that is, the right value gets assigned to the 
+whatever is on the left (namely a variable). For instance: 
+
+```C++
+	int some_value = 0; //0 gets assigned to the integer variable some_value
+```
+
+#### Basic Arithmetic & Type Casting/Conversion
+Just like in math, arithmetic with variables works the same way in computer science. Below 
+are a few examples of how this might work in C++ syntax:
+
+```C++
+	int var1 = 7;
+	int var2 = -3; //unary negation operator, explained below
+	cout << var1 + var2 << endl; // 10
+	cout << var2 - var1 << endl; //4
+	cout << 2 * var1 << endl; // 14
+	cout << var1 / var2 << endl; // 2 (Look below)
+	cout << var1 % var2 << endl; // 1 (Look below)
+```
+As seen above, `+` is for addition, `-` is for subtraction, `/` for division, `*` for multiplication, 
+and `%` for modulous. The first four might seem obvious (when looking at a math point of view), although
+you might have not heard of modulous before. What modulous does is 
+
+When referring to operators as binary or unary, this means that the operator requires a
+certain amount of items acting upon it. For instance: In order to add you need two values, and in order
+to set a value negative you need only one value.
+
+
+Another important thing is the order of operations. Working exactly like math, the order is
+
+
+With type casting/conversion, we use the C++ standard's `static_cast` function. For example:
+
+```C++
+	cout << static_cast<int>(99.8);
+```
+
+displays `99`. Remember that, when converting to integer from double, the decimal is truncated.
+
+Other examples:
+
+```C++
+	char some_char = 'q';
+	cout << static_cast<int>(q); //outputs 113
+	int circumference = static_cast<int>(2 * 3.141592); //assigns 6 to circumference
+```
 
 
 #### Overflow/Underflow
@@ -220,22 +326,28 @@ the data type and compiler you use, different effects may occur.
 
 #### When to Use Each Data Type
 Before, when memory wasn't bountiful and filesizes mattered, programmers had to focus heavily
-on the data types and amount of code they produced.
+on the data types and amount of code they produced. As each variable adds up to how much memory a program
+is using in RAM, and each typed word adds up the amount of space the source file `(.cpp)` is using on 
+the hard drive, programmers had to be wary with code. Lucky for us, we don't have to worry about that 
+(or for now at least).
 
 You can also check the byte-size of a data type by using `sizeof()`, where inside
 the parenthesis you place the variable. For example:
 ```C++
   cout << sizeof(52) << endl;
+  cout << sizeof(char) << endl;
 ```
 
-Since `52` is an integer constant, the output is `4` (the byte-size of an integer value).
+Since `52` is an integer constant, the output is `4` (the byte-size of an integer value). With the second
+line, the output is `1`.
 
 Another thing: As with most things, there is a time and place for using each variable. Unfortunately, 
 There isn't necessarily a bulletproof plan for knowing when to use each, so just think about what you're 
 doing and what you'll need to accomplish the task.
 
 #### Attached Exercise (Geometric Shapes: Area and Volume)
-Above there is a .docx file. Download it to your computer, open it, and follow the instructions from there.
+Under the file list there is a .docx file. Download it to your computer, open it, and follow the instructions 
+from there.
 
 #### Extra: Simple Control Flow (`if`, `else`)
 A preview of what you'll be learning in Chapter 4, `if` and `else` statements 

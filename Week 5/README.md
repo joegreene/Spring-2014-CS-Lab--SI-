@@ -18,7 +18,7 @@
 	- Attached Exercise (Geometric Shapes: Area and Volume)
 	- Extra: Simple Control Flow (`if`, `else`)
 - Continuing Challenges
-- Notes
+- Notes (and for More Help)
 
 ### Exercise & Setup
 
@@ -33,6 +33,9 @@ easily refer to the files outside of the IDE.
 Most of this work is review on the lecture and labs, so if you feel completely comfortable
 with variables and the lecture notes feel free to skip to the section labeled "Attached Exercise".
 This exercise page is a bit hefty, however.
+
+Below all of this, there is a section that includes the references used in this exercise. If I've 
+missed anything you would like to cover, ask a friend or review the work.
 
 Lastly, if you finish early please help a friend nearby. If you don't have any, and can
 bear making new ones, find and make one then help them out.
@@ -233,17 +236,17 @@ Example syntax of a string in use:
   cout << some_string <<endl;
 ```
   
-outputs 'I am a string. Rawr.'. `I am a string. Rawr.` is a string literal.
+outputs `I am a string. Rawr.`. `I am a string. Rawr.` is a string literal.
   
 ##### Booleans
 The boolean data type, or `bool`, holds either a `true` or `false` value. Not necessarily too
-useful for us yet, in the next chapter we'll be using this data type frequently. For now, know 
+useful for us yet, in the next chapter we will be using this data type frequently. For now, know 
 the following few specifics of this data type.
 
 First off: As a boolean can only hold a `true` or `false` value, what size do you think it is in 
 memory?
 
-If you guessed a bit or anything else other than a byte, then I'm afraid you're wrong. Although 
+If you guessed a bit or anything else other than a byte, then I am afraid you are wrong. Although 
 it makes perfect sense for a bool to be of size 1 bit (as it can only be a `true` or `false` 
 value, because the smallest piece of memory a CPU can handle is one byte then a bool is one byte.
 
@@ -260,8 +263,18 @@ Example syntax of using the `bool` data type:
 As a boolean can be assigned `0` or `1` to it, what do you think will happen if you assigned a value, 
 say, `42` to it? Try it out.
 
+More operations with booleans (that you may have or not seen before):
+```C++
+	bool some_bool = (10 < 2); //false, as 10 is less than 2
+	some_bool = (7 > 3); //true, as 7 is greater than 3
+	some_bool = (15 >= 15); //true, as 15 is greater than or equal to 15
+	some_bool = (16 <= 17); //true, as 16 is less than or equal to 17
+```
+
+Trivia: The `bool` data type is named after the mathematician, [George Boole] (http://en.wikipedia.org/wiki/George_Boole)
+
 #### Assignment Operator
-As you've seen already in the previous examples, the assignment operator "assigns" a value 
+As you have seen already in the previous examples, the assignment operator "assigns" a value 
 to a variable. Signified by `=`, the value assigned to the variable depends solely on the data type of the
 variable.
 
@@ -423,6 +436,10 @@ Sources used in this exercise:
 
 [Learn more about variables, IO (Input/Output), and strings] (http://www.cplusplus.com/doc/tutorial/basic_io/)
 [Flow control in C++] (http://www.cplusplus.com/doc/tutorial/control/)
+[More on Data Types] (http://www.tutorialspoint.com/cplusplus/cpp_data_types.htm)
+[Bool Data Type: Where'd it Get its Name?] (http://en.wikipedia.org/wiki/George_Boole)
+
+Refer to your lecture notes and book for more help if I've missed anything you would like to review.
 
 Random bold here. I'm not sure how to fix this at the moment.
 -------------------------------------------------------------------------------

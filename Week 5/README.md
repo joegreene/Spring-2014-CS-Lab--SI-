@@ -8,9 +8,9 @@
 	- Data Types
 		- Integers
 		- Doubles
-		- Char
+		- Characters
 		- Strings
-		- Bool
+		- Booleans
 	- Assignment Operator
 	- Basic Arithmetic & Type Casting/Conversion
 	- Overflow/Underflow
@@ -68,7 +68,7 @@ Variables have three parts to them: Data type, identifier, and the value assigne
 variable.
 
 The values assigned to each variable (as you'll see in the later sections of this excerise), are
-called constants. Not represented as variables, examples of such are `12`, `'a'`, and `"hello"`.
+called constants or literals. Examples of such are `12`, `'a'`, and `"hello\n"`.
 
 #### Identifiers & Naming Scheme
 When creating variables, you always need to an identifier assigned to each. For instance, in
@@ -200,26 +200,41 @@ outputs `97`. Also,
 	cout << 'b' + 55 << endl;
 ```
 
-outputs . The reason for this is because of how characters are stored on computers. Check [here] (http://www.ascii-code.com/) for more information on how the output corresponds to the letter. 
+outputs `153`. The reason for this is because of how characters are stored on computers. Check [here] (http://www.ascii-code.com/) for more information on how the output corresponds to the letter. 
+
 Although ASCII isn't used much anymore, programming in general bases off of this because of how 
 easy it is to correspond values (e.g. `97` is `a`). The new standard is UTF-8, and if you want 
 to see more information on it check [here] (http://stackoverflow.com/questions/700187/unicode-utf-ascii-ansi-format-differences).
 
 The main difference though is that it covers more character types than ASCII. UTF-8 supports
-up to 4-bytes per character, wheras ASCII has only one byte per character (which works perfectly
+up to 4-bytes per character, whereas ASCII has only one byte per character (which works perfectly
 for us right now).
 
 Moving on: If we want to go from `char` to `int`, all we have to do is the following:
 
+```C++
+  cout << static_cast<char>('a' + 5) << endl;
+```
 
+outputs `f`.
+
+NOTE: `static_cast` is a form of type conversion. We'll talk more about it in a later section.
 
 ##### Strings
 The string data type, or `string`, is unlike the other data types on this list. For one thing, 
 it requires its own special header to be able to use it. Another thing is it isn't a 
-[primitive data type] (). If you think about it, what are strings composed of?
+[primitive data type] (http://www.tutorialspoint.com/cplusplus/cpp_data_types.htm), or a data type in its simplest form.
+If you think about it, what are strings composed of?
 
+Example syntax of a string in use:
 
-
+```C++
+  string some_string = "I am a string. Rawr.";
+  cout << some_string <<endl;
+```
+  
+outputs 'I am a string. Rawr.'. `I am a string. Rawr.` is a string literal.
+  
 ##### Boolean
 The boolean data type, or `bool`, holds either a `true` or `false` value. Not necessarily too
 useful for us yet, in the next chapter we'll be using this data type frequently. For now, know 
@@ -243,11 +258,11 @@ Example syntax of using the `bool` data type:
 ```
 
 As a boolean can be assigned `0` or `1` to it, what do you think will happen if you assigned a value, 
-say, `42` to it? Try it out yourselves.
+say, `42` to it? Try it out.
 
 #### Assignment Operator
 As you've seen already in the previous examples, the assignment operator "assigns" a value 
-to a variable. The value assigned to the variable depends solely on the data type of the
+to a variable. Signified by `=`, the value assigned to the variable depends solely on the data type of the
 variable.
 
 The assignment operator works right to left, that is, the right value gets assigned to the 
@@ -362,7 +377,7 @@ Since `52` is an integer constant, the output is `4` (the byte-size of an intege
 line, the output is `1`.
 
 Another thing: As with most things, there is a time and place for using each variable. Unfortunately, 
-There isn't necessarily a bulletproof plan for knowing when to use each, so just think about what you're 
+there isn't necessarily a bulletproof plan for knowing when to use each, so just think about what you're 
 doing and what you'll need to accomplish the task.
 
 #### Attached Exercise (Geometric Shapes: Area and Volume)
@@ -374,8 +389,31 @@ A preview of what you'll be learning in Chapter 4, `if` and `else` statements. H
 of using these concepts:
 
 ```C++
-	
+  #include <stdafx.h>
+  #include <iostream>
+  
+  int _tmain(int argc, _TCHAR* argv[])
+  {
+  	int some_value = 1;
+  	
+  	std::cout<<"Enter in an integer: ";
+  	std::cin>>some_value;
+  	
+  	if(some_value >= 50)
+  	{
+  		std::cout << "Your value is: " << some_value << std::endl;
+  	}
+  	else
+  	{
+  	  std::cout<< "Your value multiplied by two is: " << 2 * some_value << std::endl;
+  	}
+  	
+  	return 0;
+  }
 ```
+
+By inspection, see if you understand what's going on with the code. What would the output be? Refer to the flow
+control link under "Continuing Challenges" below.
 
 ### Continuing Challenges
 [Learn more about variables, IO (Input/Output), and strings] (http://www.cplusplus.com/doc/tutorial/basic_io/)

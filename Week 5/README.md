@@ -15,7 +15,7 @@
 	- Basic Arithmetic & Type Casting/Conversion
 	- Overflow/Underflow
 	- When to Use Each Type
-	- Attached Exercise (Geometric Shapes: Area and Volume)
+	- Attached Exercise
 	- Extra: Simple Control Flow (`if`, `else`)
 - Continuing Challenges
 - Notes (and for More Help)
@@ -390,9 +390,11 @@ Another thing: As with most things, there is a time and place for using each var
 there isn't necessarily a bulletproof plan for knowing when to use each data type, so just think about what 
 you're doing and what you'll need to accomplish the task.
 
-#### Attached Exercise (Geometric Shapes: Area and Volume)
+#### Attached Exercises
 Under the file list there is a .docx file. Download it to your computer, open it, and follow the instructions 
-from there.
+from there. 
+
+NOTE: The second page is a challenge section.
 
 #### Extra: Simple Control Flow (`if`, `else`)
 A preview of what you'll be learning in Chapter 4, `if` and `else` statements. Here's an example 
@@ -426,6 +428,7 @@ By inspection, see if you understand what's going on with the code. What would t
 control link under "Continuing Challenges" below.
 
 ### Continuing Challenges
+Second portion of the .docx file.
 [Learn more about variables, IO (Input/Output), and strings] (http://www.cplusplus.com/doc/tutorial/basic_io/)
 [Flow control in C++] (http://www.cplusplus.com/doc/tutorial/control/)
 

@@ -429,7 +429,9 @@ control link under "Continuing Challenges" below.
 
 ### Continuing Challenges
 Second portion of the .docx file.
+
 [Learn more about variables, IO (Input/Output), and strings] (http://www.cplusplus.com/doc/tutorial/basic_io/)
+
 [Flow control in C++] (http://www.cplusplus.com/doc/tutorial/control/)
 
 ## Notes

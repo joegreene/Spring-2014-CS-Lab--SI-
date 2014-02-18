@@ -32,6 +32,7 @@ easily refer to the files outside of the IDE.
 
 Most of this work is review on the lecture and labs, so if you feel completely comfortable
 with variables and the lecture notes feel free to skip to the section labeled "Attached Exercise".
+This exercise page is a bit hefty, however.
 
 Lastly, if you finish early please help a friend nearby. If you don't have any, and can
 bear making new ones, find and make one then help them out.
@@ -120,19 +121,20 @@ legible, and easy for you and others to review for later use.
 #### Data Types
 Although there are MANY different types of data types , you won't be using every single one 
 in this course. There are five, however, that come up the most often. These are:
-`int`, `double`, `char`, `string`, and 'bool'.
+`int`, `double`, `char`, `string`, and `bool`.
 
-It's good to know the other types, such as 'float', although you won't be seeing them 
+It's good to know the other types, such as `float`, although you won't be seeing them 
 as much (or at least I haven't).
 
-For future reference, a byte is a list of 8 bits, whereas a bit is a `0 (off)` or `1 (on)` 
-value.
+Each data type has its own byte-size, that is, the amount of memory it takes up in RAM. A byte is a list 
+of 8 bits, whereas a bit is a `0 (off)` or `1 (on)` value. 
 
-Each data type has its own byte-size, that is, the amount of memory it takes up in RAM. Although
-the following reference goes over the file sizes, we'll be going over them too in the following
-sections.
+Although the following references goes over the file sizes, we'll be going over them too in the following 
+sections. This topic also deals slightly on the range of each data type. If you'd like you can have the following
+links open on separate tabs (because they will be referred to later on).
 
 [Variables and types in C++] (http://www.cplusplus.com/doc/tutorial/variables/)
+
 [Range of Data Types in Visual Studio C++] (http://msdn.microsoft.com/en-us/library/s3f49ktz%28v=vs.110%29.aspx)
 
 Note that the range and size of each data type depends on the compiler you're working
@@ -228,19 +230,20 @@ memory?
 
 If you guessed a bit or anything else other than a byte, then I'm afraid you're wrong. Although 
 it makes perfect sense for a bool to be of size 1 bit (as it can only be a `true` or `false` 
-value, because the smallest piece of memory a CPU can handle is one byte then a bool is of size
-1 byte.
+value, because the smallest piece of memory a CPU can handle is one byte then a bool is one byte.
 
-Example syntax of using the `bool` data type are as follows:
+Example syntax of using the `bool` data type:
 
 ```C++
 	bool some_bool = 0; //false
 	some_bool = true; //true
 	some_bool = false; //false
 	some_bool = 1; //true
+	cout << some_bool << endl; //1 (or true)
 ```
 
-As a boolean can be assigned `0` or `1` to it, 
+As a boolean can be assigned `0` or `1` to it, what do you think will happen if you assigned a value, 
+say, `42` to it? Try it out yourselves.
 
 #### Assignment Operator
 As you've seen already in the previous examples, the assignment operator "assigns" a value 
@@ -255,21 +258,38 @@ whatever is on the left (namely a variable). For instance:
 ```
 
 #### Basic Arithmetic & Type Casting/Conversion
-Just like in math, arithmetic with variables works the same way in computer science. Below 
-are a few examples of how this might work in C++ syntax:
+Just like in math, arithmetic with variables works the same way in computer science. Using PEMDAS, try to 
+guess the outputs of the following C++ syntax:
 
 ```C++
 	int var1 = 7;
-	int var2 = -3; //unary negation operator, explained below
-	cout << var1 + var2 << endl; // 10
-	cout << var2 - var1 << endl; //4
-	cout << 2 * var1 << endl; // 14
-	cout << var1 / var2 << endl; // 2 (Look below)
-	cout << var1 % var2 << endl; // 1 (Look below)
+	int var2 = -var1; // (Look below for more explanation)
+	cout << var1 + var2 << endl;
+	cout << var2 - var1 << endl;
+	cout << 2 * var1 << endl;
+	cout << var1 / (var2 * 3) << endl; // (Look below for more explanation)
+	cout << var1 % -var2 << endl; // (Look below for more explanation)
 ```
+
+In order of cout statements (top to bottom): `7 + (-7) = 0`, `7 - (-7) = 14`, `2 * 7 = 14`, 
+`7/(-7*3) = 0`, and `7 % -7 = 0`.
+
 As seen above, `+` is for addition, `-` is for subtraction, `/` for division, `*` for multiplication, 
-and `%` for modulous. The first four might seem obvious (when looking at a math point of view), although
-you might have not heard of modulous before. What modulous does is 
+and `%` for modulus. The first four might seem obvious (when looking at a math point of view), although
+you might have not heard of modulus before. 
+
+When dividing two integers, the number (minus the decimal) is returned. Also `%` returns the remainder of 
+two integers.
+
+Another neat thing about operators: If you're only dealing with one binary operation, you may do the following:
+
+```C++
+	int var1 = 0;
+	var1+=1; //same as var1 = var1 + 1;
+	var1/=2; //same as var1 = var1 / 2;
+```
+
+and so on with the other operators `*` and `%`.
 
 When referring to operators as binary or unary, this means that the operator requires a
 certain amount of items acting upon it. For instance: In order to add you need two values, and in order
@@ -350,7 +370,25 @@ Under the file list there is a .docx file. Download it to your computer, open it
 from there.
 
 #### Extra: Simple Control Flow (`if`, `else`)
-A preview of what you'll be learning in Chapter 4, `if` and `else` statements 
+A preview of what you'll be learning in Chapter 4, `if` and `else` statements. Here's an example 
+of using these concepts:
+
+```C++
+	
+```
+
+### Continuing Challenges
+[Learn more about variables, IO (Input/Output), and strings] (http://www.cplusplus.com/doc/tutorial/basic_io/)
+[Flow control in C++] (http://www.cplusplus.com/doc/tutorial/control/)
+
+## Notes
+Sources used in this exercise:
+[Variables and types in C++] (http://www.cplusplus.com/doc/tutorial/variables/)
+
+[Range of Data Types in Visual Studio C++] (http://msdn.microsoft.com/en-us/library/s3f49ktz%28v=vs.110%29.aspx)
+
+[Learn more about variables, IO (Input/Output), and strings] (http://www.cplusplus.com/doc/tutorial/basic_io/)
+[Flow control in C++] (http://www.cplusplus.com/doc/tutorial/control/)
 
 Random bold here. I'm not sure how to fix this at the moment.
 -------------------------------------------------------------------------------

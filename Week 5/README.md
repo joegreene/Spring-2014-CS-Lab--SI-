@@ -235,7 +235,7 @@ Example syntax of a string in use:
   
 outputs 'I am a string. Rawr.'. `I am a string. Rawr.` is a string literal.
   
-##### Boolean
+##### Booleans
 The boolean data type, or `bool`, holds either a `true` or `false` value. Not necessarily too
 useful for us yet, in the next chapter we'll be using this data type frequently. For now, know 
 the following few specifics of this data type.
@@ -296,7 +296,7 @@ you might have not heard of modulus before.
 When dividing two integers, the number (minus the decimal) is returned. Also `%` returns the remainder of 
 two integers.
 
-Another neat thing about operators: If you're only dealing with one binary operation, you may do the following:
+Another neat thing about operators: If you are only dealing with one `binary` operation, you may do the following:
 
 ```C++
 	int var1 = 0;
@@ -306,13 +306,9 @@ Another neat thing about operators: If you're only dealing with one binary opera
 
 and so on with the other operators `*` and `%`.
 
-When referring to operators as binary or unary, this means that the operator requires a
+When referring to operators as `binary` or `unary`, this means that the operator requires a
 certain amount of items acting upon it. For instance: In order to add you need two values, and in order
 to set a value negative you need only one value.
-
-
-Another important thing is the order of operations. Working exactly like math, the order is
-
 
 With type casting/conversion, we use the C++ standard's `static_cast` function. For example:
 
@@ -377,8 +373,8 @@ Since `52` is an integer constant, the output is `4` (the byte-size of an intege
 line, the output is `1`.
 
 Another thing: As with most things, there is a time and place for using each variable. Unfortunately, 
-there isn't necessarily a bulletproof plan for knowing when to use each, so just think about what you're 
-doing and what you'll need to accomplish the task.
+there isn't necessarily a bulletproof plan for knowing when to use each data type, so just think about what 
+you're doing and what you'll need to accomplish the task.
 
 #### Attached Exercise (Geometric Shapes: Area and Volume)
 Under the file list there is a .docx file. Download it to your computer, open it, and follow the instructions 

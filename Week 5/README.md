@@ -391,7 +391,7 @@ there isn't necessarily a bulletproof plan for knowing when to use each data typ
 you're doing and what you'll need to accomplish the task.
 
 #### Attached Exercises
-Download the following file [here] (https://www.mediafire.com/?dxg57vhrwpou9tt)
+Download the following file [here] (https://www.mediafire.com/?5g0b3cdna9dk05j)
 
 NOTE: The second page is a challenge section.
 

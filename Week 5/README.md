@@ -436,13 +436,19 @@ Second portion of the .docx file.
 
 ## Notes
 Sources used in this exercise:
+
 [Variables and types in C++] (http://www.cplusplus.com/doc/tutorial/variables/)
+
 
 [Range of Data Types in Visual Studio C++] (http://msdn.microsoft.com/en-us/library/s3f49ktz%28v=vs.110%29.aspx)
 
+
 [Learn more about variables, IO (Input/Output), and strings] (http://www.cplusplus.com/doc/tutorial/basic_io/)
+
 [Flow control in C++] (http://www.cplusplus.com/doc/tutorial/control/)
+
 [More on Data Types] (http://www.tutorialspoint.com/cplusplus/cpp_data_types.htm)
+
 [Bool Data Type: Where'd it Get its Name?] (http://en.wikipedia.org/wiki/George_Boole)
 
 Refer to your lecture notes and book for more help if I've missed anything you would like to review.

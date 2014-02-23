@@ -5,10 +5,10 @@
 - Intro
 - Psuedo-code
 - Chapter 3
-	- (cin) [#### cin]
-	- (getline) [#### getline]
-	- (iomanip) [#### iomanip]
-	- (More on Naming Schemes (Constants)) [#### More on Naming Schemes (Constants)]
+	- [cin] [####cin]
+	- [getline] [#getline]
+	- [iomanip] [#iomanip]
+	- [(More on Naming Schemes) (Constants)](# More on Naming Schemes (Constants))
 	- c-string
 	- cmath and Generating Random Numbers
 	- Recap

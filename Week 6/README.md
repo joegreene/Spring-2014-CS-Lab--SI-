@@ -5,13 +5,13 @@
 - Intro
 - Psuedo-code
 - Chapter 3
-	- [cin] [####cin]
-	- [getline] [#getline]
-	- [iomanip] [#iomanip]
-	- [(More on Naming Schemes) (Constants)](# More on Naming Schemes (Constants))
-	- c-string
-	- cmath and Generating Random Numbers
-	- Recap
+	- [cin](#cin)
+	- [getline](#getline)
+	- [iomanip](#iomanip)
+	- [(More on Naming Schemes) (Constants)](#more-on-naming-Schemes-(constants))
+	- [c-string](#c-string)
+	- [cmath and Generating Random Numbers](#cmath-and-generating-random-numbers)
+	- [Recap (Chapter 3)](#recap-(chapter 3))
 - Chapter 4
 	- Booleans (Review)
 	- if-else

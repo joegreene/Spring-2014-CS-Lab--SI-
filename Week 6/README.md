@@ -11,15 +11,15 @@
 	- [(More on Naming Schemes) (Constants)](#more-on-naming-Schemes-(constants))
 	- [c-string](#c-string)
 	- [cmath and Generating Random Numbers](#cmath-and-generating-random-numbers)
-	- [Recap (Chapter 3)](#recap-(chapter 3))
+	- [Recap](#recap)
 - Chapter 4
-	- Booleans (Review)
-	- if-else
-	- More with if-else
-	- switch statements
-	- Menu-driven programming (?)
-	- Recap
-- Practice Assignment:
+	- [Booleans (Review)](#booleans-(review))
+	- [if-else](#if-else)
+	- [More with if-else](#more-with-if--else)
+	- [switch statements](#switch-statements)
+	- [Menu-driven programming] (?)
+	- [Recap](#recap-1)
+- Practice Assignments:
 	- Design your own calculator!
 	- Remake a previous program (dunno yet)
 	- Conversion program (SI Units) (?) [best with arrays though...]

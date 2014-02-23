@@ -49,15 +49,24 @@ a language (e.g. Russian) __AND__ its culture. Fortunately for you guys though, 
 Another thing: Like taking an intro class for Spanish, learning the beginnings of programming won't let you do 
 too much. As we progress through the course, you'll begin to see more of its application to the real world. 
 
+When looking at some of the examples on this page, I'll be typing something like:
+```C++
+  //...code...
+```
+This just means I'm too lazy to type out the entire program. The omitted syntax should be self-explanatory and 
+therefore I deemed it unnecessary to include in the examples.
+
 Last note: Remember that, by reading this page, you can't skip the reading and lecture notes. The purpose of
 this page is to help review. Both the reading and lecture notes are more insightful.
 
 ### Psuedo-code
+This might be one of the weirder sections of computer science. Hopefully here it gets more clarified.
+
 ####What is psuedo-code and how do I use it?
 Think of psuedo-code as a midway translation between C++ and a standard, spoken language (such as English). 
 An example of translating from C++ to psuedo-code (and vice-versa if you read bottom-up):
 
-C++:
+__C++:__
 ```C++
   //...code...
   double lbs_of_bananas = 0, total_cost = 0;
@@ -73,7 +82,7 @@ C++:
   //...code...
 ```
 
-Psuedo-code:
+__Psuedo-code:__
 ```
   1. Create and initialize local variables for lbs of bananas, total cost, tax rate, and cost per lb
   2. Request user to input the pounds of bananas they want to buy
@@ -105,7 +114,63 @@ Getting into a habit of creating psuedocode will help you in the longrun, especi
 Below are the topics from chapter three, with brief descriptions per topic.
 
 #### cin
+When using `cin`, remember these few things:
+  1. You must using `#include <iostream>` in order to use this. Note that iostream is "input/output stream"
+  2. You must use the namespace `std`. Go about this by either using `using namespace std;` or `std::`.
+  3. `cin` works by grabbing input up until it reaches either a space or new line (`'\n'`). 
+  --* In other words, don't use `cin` if you plan to have spaces when grabbing input.
+  --* If you end up putting a space, whatever is leftover goes to the next variable to be inputted.
+  4. __TBD__
+
+Example of using `cin`:
+```C++
+  //...code...
+  int num1, num2;
+  num1 = num2 = 0; //initialization
+  cout << "Enter in two integers: ";
+  cin >> num1 >> num2;
+  
+  cout << "Here they are added together: " << (num1 + num2) << endl;
+  //...code...
+```
+Console Output:
+```
+  ...
+  Enter in a value: 5 5
+  Here they are added together: 10
+  ...
+```
 #### getline
+Like `cin`, `getline` requires iostream and the standard namespace. Unlike `cin` though, as told by its name 
+the `getline` function can grab and throw an entire line into a variable. Therefore, it's great for strings.
+
+Example of `getline` in use:
+```C++
+  //...code...
+  std::string some_string = "";
+  
+  cout<<"Enter in two words (separated by a space): "
+  getline(cin, some_string);
+  
+  cout<<"Here are the two words you inputted: "<<some_string<<"\n";
+  //...code...
+```
+Console Output:
+```
+  ...
+  Enter in two words (separated by a space: two words
+  Here are the two words you inputted: two words
+  ...
+```
+Another neat thing about `getline` is that it can be edited so that you can read up to a certain character or 
+value. For example:
+
+```C++
+  //...code...
+  
+  //...code...
+```
+
 #### iomanip
 #### More on Naming Schemes (Constants)
 #### c-string
@@ -154,7 +219,8 @@ the book, create your own calculator program that allows the following things:
 Remember that the best approach to making a program is by creating it through psuedocode first. For that 
 reason, **BEFORE** you begin programming make sure to validate your psuedocode with another person __AND__
 me. I know this might seem both tedious and annoying to do, but keep in mind that this (like the rest of the 
-work in this course) is to help you build a knack on programming (fix this line asdlfksd).
+work in this course) is to help you build a knack on programming (fix this line asdlfksd). Practice makes
+(near) perfection!
 	
 #### Remake a previous program (dunno yet)
 #### Conversion program (SI Units) (?) [best with arrays though...]

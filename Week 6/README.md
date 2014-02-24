@@ -5,13 +5,14 @@
 - [Solutions (From Last Week)](#solutions-from-last-week)
 - [Intro](#intro)
 - [Psuedo-code](#psuedo-code)
+- [Bits, Bytes, Bases & Range](#bits,-bytes,-bases-&-range]
 - [Side note: Doubles vs. Floats](#side-note:-doubles-vs.-floats)
 - Chapter 3
 	- [cin](#cin)
 	- [getline](#getline)
 	- [iomanip](#iomanip)
 	- [(More on Naming Schemes) (Constants)](#more-on-naming-schemes-constants)
-	- [c-string](#c-string)
+	- [c-string vs string](#c-string-vs-string)
 	- [cmath and Generating Random Numbers](#cmath-and-generating-random-numbers)
 	- [Recap](#recap)
 - Chapter 4
@@ -36,20 +37,12 @@ Another note: I don't know exactly how Dr. Tian will make your exams, and this i
 __TO-DO__
 
 ### Solutions (From Last Week)
-Above all this are the .cpp solutions from last week's exercises. For each week from now on, I'm going to place 
+Above this are the .cpp solutions from last week's exercises. For each week from now on, I'm going to place 
 the solutions to the previous week's solutions there.
 
 ### Intro
-Welcome guys to another week of CS 120 Lab (Yay!). Most of this page will serve as review, whereas the second 
-half of it will cover topics you recently read over (specifically chapter 4).
-
-I'd like to remind you guys that learning your first programming language is no easy task. What you guys are 
-doing is learning a new language on top of learning how it works within itself. This is comparable to learning 
-a language (e.g. Russian) __AND__ its culture (e.g. the compiler, IDE, etc.). Fortunately for you guys though, 
-you won't have to speak C++.
-
-Another thing: Like taking an intro class for Spanish, learning the beginnings of programming won't let you do 
-too much. As we progress through the course, you'll begin to see more of its application to the real world. 
+Most of this page will serve as review, whereas the second half of it will cover topics you recently read over 
+(specifically chapter 4). It will be handy to have open a Visual Studio C++ project when looking through each topic.
 
 When looking at some of the examples on this page, I'll be typing something like:
 ```C++
@@ -62,8 +55,6 @@ Last note: Remember that, by reading this page, you can't skip the reading and l
 this page is to help review. Both the reading and lecture notes are more insightful.
 
 ### Psuedo-code
-This might be one of the weirder sections of computer science. Hopefully here it gets more clarified.
-
 ####What is psuedo-code and how do I use it?
 Think of psuedo-code as a midway translation between C++ and a standard, spoken language (such as English). 
 An example of translating from C++ to psuedo-code (and vice-versa if you read bottom-up):
@@ -94,8 +85,8 @@ __Psuedo-code:__
 ```
 
 There is no specific way to write psuedo-code (sorry). Just make sure that it explains well enough what you're 
-trying to do in your program, step-by-step. Good references for this is by looking at the teacher's example, 
-located on the Titanium page, the book (if it has any), or online posts.
+trying to do in your program, step-by-step. Apart from this, the teacher's notes on Titanium covering this can 
+help if you're stuck on this.
 
 ####Why create psuedocode? 
 Although there are many reasons, here are the two that come up to my mind right now:
@@ -106,27 +97,31 @@ Although there are many reasons, here are the two that come up to my mind right 
   2. Outside help
     - It's easier for someone to help you out if you tell them what you're trying to do. Imagine looking at 
       someone's math homework, but they've written extremely messy all over the place. How are you going to 
-      know what they're doing unless you keep asking them over and over what they're trying to do? Some of you 
-      might say "What if we type neat code?". If you end up having hundreds of lines of code, despite having neat 
-      code everything starts to get messy. It's like revising an essay!
+      know what they're doing unless you keep asking them over and over what they're trying to do?
 	  
 Getting into a habit of creating psuedocode will help you in the longrun, especially with larger projects.
+
+### Bits, Bytes, Bases & Range
+If I get enough people asking about this topic, I'll try my best to explain up on the board on this topic with more detail.
+Other than that, the following links should explain bits, bytes, bases and range pretty well:
+
+[Bits and Bytes](http://computer.howstuffworks.com/bytes1.htm)
+[Converting Bases](http://www.cplusplus.com/doc/hex/)
+[Determining Size of a Datatype](http://www.tutorialspoint.com/cplusplus/cpp_sizeof_operator.htm)
+[Range of Values (check posts in thread)](http://www.cplusplus.com/forum/beginner/44774/)
 
 ### Side note: Doubles vs. Floats
 I didn't really go over floats in last week's review, but a nice reference is [this](http://www.learncpp.com/cpp-tutorial/25-floating-point-numbers/) 
 if you would like know about the differences between the two.
 
 ### Chapter 3
-Below are the topics from chapter three, with brief descriptions per topic.
-
 #### cin
-When using `cin`, remember these few things:
-  1. You must using `#include <iostream>` in order to use this. Note that iostream is "input/output stream"
-  2. You must use the namespace `std`. Go about this by either using `using namespace std;` or `std::`.
-  3. `cin` works by grabbing input up until it reaches either a space or new line (`'\n'`). 
-  ··* In other words, don't use `cin` if you plan to have spaces when grabbing input.
+When using `cin`, remember these several things:
+  1. You must using `#include <iostream>` in order to use this. Note that `iostream` is shorthand for "input/output stream"
+  2. You must use the namespace `std`. Go about this by either using `using namespace std;` or `std::` before `cin`.
+  3. `cin` works by grabbing input up until it reaches either a space or new line (`'\n'`). It must grab
+  ··* Don't use `cin` if you plan to have spaces when grabbing input.
   ··* If you end up putting a space, whatever is leftover goes to the next variable to be inputted.
-  4. __TBD__
 
 Example of using `cin`:
 ```C++
@@ -146,6 +141,7 @@ Example of using `cin`:
   Here they are added together: 10
   ...
 ```
+
 #### getline
 Like `cin`, `getline` requires iostream and the standard namespace. Unlike `cin` though, as told by its name, 
 the `getline` function can grab and throw an entire line into a variable. It only works for the `string` 
@@ -171,7 +167,7 @@ __Console Output:__
   ...
 ```
 Another neat thing about `getline` is that it can be edited so that you can read up to a certain character or 
-value. Now, editing the previous example, we may have something such as:
+value (instead of `\n`). Now, editing the previous example, we may have something such as:
 
 __C++:__
 ```C++
@@ -190,9 +186,7 @@ __Console Output:__
   ...
 ```
 
-When doing this, the character or value read up to is called a [delimiter](http://www.thefreedictionary.com/delimiter).
-This comes in handy when reading input such as social security numbers (numbers separated by '-') and when 
-trying to skip parts of a line typed (namely errors in input).
+When doing this, the character or value scanned for is called a [delimiter](http://www.thefreedictionary.com/delimiter).
 
 #### iomanip
 Mainly used for cleanliness in output, `iomanip` is a header file used for (if you guessed it) "input/output 
@@ -213,58 +207,98 @@ click [here](http://www.learncpp.com/cpp-tutorial/25-floating-point-numbers/).
 Example of iomanip in use:
 __C++:__
 ```C++
-  
+  TBD
 ```
 #### More on Naming Schemes (Constants)
-#### c-string
+To declare a constant (that is, a variable that won't change after creating it), do as such:
+```C++
+  const double TAX_RATE = 0.75;
+  const string MY_NAME = "John Smoth";
+  const float SOME_FLOAT = 5.6f;
+```
+
+Notice that the identifier is capitalized. It's just another way to read through code easier.
+
+Also, taking note that the values do not change over time, try the following code out in Visual Studio: 
+```C++
+  #include "stdafx.h"
+  #include <iostream>
+
+  int _tmain(int argc, _TCHAR* argv[])
+  {
+    const float SOME_FLOAT = 5.6f;
+
+    SOME_FLOAT+=55;
+
+    std::cout << SOME_FLOAT;
+  }
+```
+What happens when you try to compile it?
+
+#### c-string vs string
 #### cmath and Generating Random Numbers
+##### cmath
+The `cmath` header lets you use specific math functions, such as `tan` (tangent), `sqrt` (square root), and more. A 
+more complete list can be found [here](http://www.cplusplus.com/reference/cmath/).
+
+##### Random Numbers
+Through the header file `cstdlib`, you can use both the `rand` function. `rand` outputs a random number (between 0 and 
+some maximum integer set by the compiler). 
+
+Note that, when calling `rand`
 #### Recap
 
 ### Chapter 4
-Below are the topics from chapter four, with brief descriptions per topic.
-
 #### Booleans (Review)
 Recall that booleans, or in syntax `bool`, can only hold two types of values. These values are either 
 `0 (off or false)` or `1 (on or true)`. They are one byte (not one bit). Remember why?
 
-Another important note: When setting a boolean to any integer value other than `0` sets the bool to `true`.
-If this is confusing, think of it as the bool being set to a value. If it is a value, it is true. Else (0), false.
+Another important note: When setting a boolean to any integer value other than `0` sets the bool to `true`. If it is a 
+value, it is true. Else, false.
 
-Operators that work on booleans:
+##### Operators that Work on Booleans
 ```C++
-  bool some_bool = false; //set to false (or 0)
-  some_bool = (10 < 0); //less than operator (some_bool = false)
-  some_bool = (14 > 2); //greater than operator (some_bool = true)
-  some_bool = (55 >= 55); //greater than or equal to (some_bool = true)
-  some_bool = (44 <= 43); //less than or equal to (some_bool = false);
+  //...code...
+  bool some_bool = false; //initialization
+  some_bool = (10 < 0); //less than operator
+  some_bool = (14 > 2); //greater than operator
+  some_bool = (55 >= 55); //greater than or equal to
+  some_bool = (44 <= 43); //less than or equal to
+  //...code...
 ```
+Before checking with the compiler, write down what you think `some_bool` is set to after each line. Afterwards, see if 
+your answers matched up with what the actual output is. You can use `cout` to help check what the value is after each line.
+
 Remember also that there are three other operators that work on these, `! (not)`, `|| (or)`, and `&& (and).
 Using the variable in the above example:
 ```C++
   //...code...
-  some_bool = !some_bool; //NOT some_bool (some_bool = true)
-  some_bool = (true || false); //true OR false (some_bool = true)
-  some_bool = (false && true); //true AND false (some_bool = false)
-  some_bool = (7 || 0); //true OR false (some_bool = false);
+  some_bool = !some_bool;
+  some_bool = (true || false);
+  some_bool = (false && true);
+  some_bool = (7 || 0);
 ```
+Like the previous example, guess and then check what the outputs are using the compiler.
 
-__NOTE:__ If you've taken an introduction to logic course or a circuit theory course, the above might be giving you either 
-nightmares or nostalgia. These work exactly like the true/false charts in those classes.
-
+##### Combining Operators into one Assignment
 Like using the assignment operator on other various data types, you can combine multiple operators when 
 assigning a value to a bool. 
 Example of this in use (reusing `some_bool`):
-
 ```C++
-  some_bool = (55 || 66) && !(0 || 3); //some_bool = (true) AND NOT(true);
-                                       //          = (true) AND (false);
-                                       //          = (false);
+  //...code...
+  some_bool = (55 || 66) && !(0 || 3);
+  //...code...
 ```
+Guess first, then check your answer by outputting the above in a Visual Studio project.
 
-If AND, NOT, and OR are a bit confusing for you, look at the following 
+
+For more help with AND, NOT, and OR, look under the topic "Logical Operator" on [this page](http://www.cplusplus.com/doc/tutorial/operators/).
 
 #### if-else
+
 #### switch
+Nearly similar to using if-else statements, `switch` statements help when testing a variable's value. For example, if 
+we wanted to test whether or not 
 #### Menu-driven programming
 #### Recap
 ### Practice Assignments
@@ -278,9 +312,7 @@ the book, create your own calculator program that allows the following things:
 
 Remember that the best approach to making a program is by creating it through psuedocode first. For that 
 reason, **BEFORE** you begin programming make sure to validate your psuedocode with another person __AND__
-me. I know this might seem both tedious and annoying to do, but keep in mind that this (like the rest of the 
-work in this course) is to help you build a knack on programming (fix this line asdlfksd). Practice makes
-(near) perfection!
+me.
 	
 #### Remake a previous program (dunno yet)
 #### Conversion program (SI Units) (?) [best with arrays though...]

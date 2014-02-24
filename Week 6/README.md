@@ -57,18 +57,6 @@ When looking at some of the examples on this page, I'll be typing something like
 This just means I'm too lazy to type out the entire program. The omitted syntax should be self-explanatory and 
 therefore I deemed it unnecessary to include in the examples.
 
-__OMIT?__
-Also, to help understand the certain functions we'll be using, I'll describe what their parameters are. For 
-instance:
-
-```C++
-  getline(istream cin, std::string input_string);
-```
-Lets you know that the input allowed for the `getline` function is cin (of type istream, which will be gone 
-over later in the class), a string. 
-
-__END__
-
 Last note: Remember that, by reading this page, you can't skip the reading and lecture notes. The purpose of
 this page is to help review. Both the reading and lecture notes are more insightful.
 

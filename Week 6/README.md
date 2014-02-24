@@ -104,11 +104,12 @@ if you would like know about the differences between the two.
 ### Chapter 3
 #### cin
 When using `cin`, remember these few things:
+
   1. You must using `#include <iostream>` in order to use this. Note that `iostream` is shorthand for "input/output stream"
   2. You must use the namespace `std`. Go about this by either using `using namespace std;` or `std::` before `cin`.
   3. `cin` works by grabbing input up until it reaches either a space or new line (`'\n'`). It must grab
-  ··* Don't use `cin` if you plan to have spaces when grabbing input.
-  ··* If you end up putting a space, whatever is leftover goes to the next variable to be inputted.
+    - Don't use `cin` if you plan to have spaces when grabbing input.
+    - If you end up putting a space, whatever is leftover goes to the next variable to be inputted.
 
 Example of using `cin`:
 ```C++
@@ -299,6 +300,7 @@ Through the header file `cstdlib`, you can use both the `rand` function. `rand` 
 some maximum integer set by the compiler). 
 
 When using and creating randomly-generated numbers, there are two key things to think about:
+
   1. Range of a value
     - To set the range of a value, use % for range
   2. Lower limit
@@ -495,12 +497,13 @@ An example of a menu-driven program:
 
 They might seem annoying to type out, but they surely make your program look neater to users in console.
 
-#### Recap
 ### Practice Assignments
 Try to do these without your notes. That way, you can test yourself and see if you actually know the material.
+
 #### Design your own calculator!
 Using the knowledge from the above review, the lecture notes, and the book, create your own calculator program that allows 
 these following things:
+
 	1. Simple algebra (addition, subtraction, multiplication, division)
 	2. Square root of a number and raising a number to an exponent
 	3. Modulus of two integers (you should know what this means by now)
@@ -526,10 +529,14 @@ Here are the specifications:
   4. Must count the number of guesses made before getting the correct number.
   
 Like the previous assignment, make sure to create psuedo-code and validate it with me (the SI instructor).
+
 [Example output]()
+
 TIP: For test purposes, you might want to set your "randomly generated" integer to a fixed value. For mine, I used `7`.
+
 __BONUS:__ Using the error-checking techniques from the other github folder (labeled Tutorials), make it so that the program 
 still works, despite entering a character or string as a guessed number.
+
 __BONUS-2:__ Keeping all previous functionalities, allow the user to recontinue the guessing game after guessing correctly.
 
 -------------------------------------------------------------------------------

@@ -5,6 +5,7 @@
 - [Solutions (From Last Week)](#solutions-from-last-week)
 - [Intro](#intro)
 - [Psuedo-code](#psuedo-code)
+- [Side note: Doubles vs. Floats](#side-note:-doubles-vs.-floats)
 - Chapter 3
 	- [cin](#cin)
 	- [getline](#getline)
@@ -14,7 +15,7 @@
 	- [cmath and Generating Random Numbers](#cmath-and-generating-random-numbers)
 	- [Recap](#recap)
 - Chapter 4
-	- [Booleans (Review)](#booleans-(review))
+	- [Booleans (Review)](#booleans-review)
 	- [if-else](#if-else)
 	- [More with if-else](#more-with-if--else)
 	- [switch statements](#switch-statements)
@@ -44,7 +45,7 @@ half of it will cover topics you recently read over (specifically chapter 4).
 
 I'd like to remind you guys that learning your first programming language is no easy task. What you guys are 
 doing is learning a new language on top of learning how it works within itself. This is comparable to learning 
-a language (e.g. Russian) __AND__ its culture. Fortunately for you guys though, you won't have to speak C++.
+a language (e.g. Russian) __AND__ its culture (e.g. the compiler, IDE, etc.). Fortunately for you guys though, you won't have to speak C++.
 
 Another thing: Like taking an intro class for Spanish, learning the beginnings of programming won't let you do 
 too much. As we progress through the course, you'll begin to see more of its application to the real world. 
@@ -55,6 +56,18 @@ When looking at some of the examples on this page, I'll be typing something like
 ```
 This just means I'm too lazy to type out the entire program. The omitted syntax should be self-explanatory and 
 therefore I deemed it unnecessary to include in the examples.
+
+__OMIT?__
+Also, to help understand the certain functions we'll be using, I'll describe what their parameters are. For 
+instance:
+
+```C++
+  getline(istream cin, std::string input_string);
+```
+Lets you know that the input allowed for the `getline` function is cin (of type istream, which will be gone 
+over later in the class), a string. 
+
+__END__
 
 Last note: Remember that, by reading this page, you can't skip the reading and lecture notes. The purpose of
 this page is to help review. Both the reading and lecture notes are more insightful.
@@ -92,8 +105,8 @@ __Psuedo-code:__
 ```
 
 There is no specific way to write psuedo-code (sorry). Just make sure that it explains well enough what you're 
-trying to do in your program, step-by-step. Another good reference for this is by looking at the teacher's example, 
-located on the Titanium page.
+trying to do in your program, step-by-step. Good references for this is by looking at the teacher's example, 
+located on the Titanium page, the book (if it has any), or online posts.
 
 ####Why create psuedocode? 
 Although there are many reasons, here are the two that come up to my mind right now:
@@ -109,6 +122,11 @@ Although there are many reasons, here are the two that come up to my mind right 
       code everything starts to get messy. It's like revising an essay!
 	  
 Getting into a habit of creating psuedocode will help you in the longrun, especially with larger projects.
+
+### Side note: Doubles vs. Floats
+I didn't really go over floats in last week's review, so I figured I might as well cover them a bit here.
+
+A nice reference is [this](http://www.learncpp.com/cpp-tutorial/25-floating-point-numbers/).
 
 ### Chapter 3
 Below are the topics from chapter three, with brief descriptions per topic.
@@ -133,7 +151,7 @@ Example of using `cin`:
   cout << "Here they are added together: " << (num1 + num2) << endl;
   //...code...
 ```
-Console Output:
+**Console Output:**
 ```
   ...
   Enter in a value: 5 5
@@ -141,21 +159,23 @@ Console Output:
   ...
 ```
 #### getline
-Like `cin`, `getline` requires iostream and the standard namespace. Unlike `cin` though, as told by its name 
-the `getline` function can grab and throw an entire line into a variable. Therefore, it's great for strings.
+Like `cin`, `getline` requires iostream and the standard namespace. Unlike `cin` though, as told by its name, 
+the `getline` function can grab and throw an entire line into a variable. It only works for the `string` 
+datatype though.
 
 Example of `getline` in use:
+**C++:**
 ```C++
   //...code...
   std::string some_string = "";
+
+  std::cout<<"Enter in two words (separated by a space): ";
+  std::getline(std::cin, some_string);
   
-  cout<<"Enter in two words (separated by a space): "
-  getline(cin, some_string);
-  
-  cout<<"Here are the two words you inputted: "<<some_string<<"\n";
+  std::cout<<"Here are the two words you inputted: "<<some_string<<"\n";
   //...code...
 ```
-Console Output:
+__Console Output:__
 ```
   ...
   Enter in two words (separated by a space: two words
@@ -163,15 +183,50 @@ Console Output:
   ...
 ```
 Another neat thing about `getline` is that it can be edited so that you can read up to a certain character or 
-value. For example:
+value. Now, editing the previous example, we may have something such as:
 
+__C++:__
 ```C++
   //...code...
+  std::cout<<"Enter in two words (separated by a space and ends with |): ";
+  std::getline(std::cin, some_string, '|'); //reads up to '|'
   
+  std::cout<<"Here are the two words you inputted: "<<some_string<<"\n";
   //...code...
 ```
+__Console Output:__
+```
+  ...
+  Enter in two words (separated by a space: two words|
+  Here are the two words you inputted: two words
+  ...
+```
+
+When doing this, the character or value read up to is called a [delimiter](http://www.thefreedictionary.com/delimiter).
+This comes in handy when reading input such as social security numbers (numbers separated by '-') and when 
+trying to skip parts of a line typed (namely errors in input).
 
 #### iomanip
+Mainly used for cleanliness in output, `iomanip` is a header file used for (if you guessed it) "input/output 
+manipulation". In order to use this, we call `#include <iomanip>` after `iostream`.
+
+The most commonly used manipulators are (where x is an integer):
+  1. setw(x): Lets you print in a field at least x spaces wide. Uses more spaces if specified field is not big enough.
+  2. fixed: Use decimal notation (not E-notation) for floating point values.
+  3. setprecision(x): Two cases for this
+  --* When used with fixed, it prints floating-point values using x digits (after the decimal)
+  --* Without fixed, print floating-point value using x [significant digits](http://www.purplemath.com/modules/rounding2.htm)
+  4. showpoint: Always prints decimal for floating-point values
+  5. left/right: Left or right justification of value
+
+NOTE: If you want to know more about floating-point values (e.g. what they mean, the difference between float and double, etc.)
+click [here](http://www.learncpp.com/cpp-tutorial/25-floating-point-numbers/).
+  
+Example of iomanip in use:
+__C++:__
+```C++
+  
+```
 #### More on Naming Schemes (Constants)
 #### c-string
 #### cmath and Generating Random Numbers
@@ -228,6 +283,7 @@ work in this course) is to help you build a knack on programming (fix this line 
 -------------------------------------------------------------------------------
 
 Copyright &copy; 2014 Joseph Greene <joeisgreene@csu.fullerton.edu>  
+Some notes grabbed from Dr. Tian's Powerpoint
 Released under [The MIT License] (http://opensource.org/licenses/MIT)  
 Project located at <https://github.com/joegreene/Spring-2014-CS-Lab--SI-/>
 

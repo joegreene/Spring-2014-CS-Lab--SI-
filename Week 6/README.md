@@ -71,7 +71,7 @@ __C++:__
 ```C++
   //...code...
   double lbs_of_bananas = 0, total_cost = 0;
-  const double TAX_RATE = 0.75; //const explained [here](#more-on-naming-schemes-constants)
+  const double TAX_RATE = 0.75; //const explained under CH3, "More on Naming Schemes (Constants)"
   const double COST_PER_LB = 0.69;
   
   cout << "How many pounds of bananas will you buy? ";
@@ -124,8 +124,8 @@ When using `cin`, remember these few things:
   1. You must using `#include <iostream>` in order to use this. Note that iostream is "input/output stream"
   2. You must use the namespace `std`. Go about this by either using `using namespace std;` or `std::`.
   3. `cin` works by grabbing input up until it reaches either a space or new line (`'\n'`). 
-  --* In other words, don't use `cin` if you plan to have spaces when grabbing input.
-  --* If you end up putting a space, whatever is leftover goes to the next variable to be inputted.
+  ··* In other words, don't use `cin` if you plan to have spaces when grabbing input.
+  ··* If you end up putting a space, whatever is leftover goes to the next variable to be inputted.
   4. __TBD__
 
 Example of using `cin`:
@@ -199,13 +199,13 @@ Mainly used for cleanliness in output, `iomanip` is a header file used for (if y
 manipulation". In order to use this, we call `#include <iomanip>` after `iostream`.
 
 The most commonly used manipulators are (where x is an integer):
-  1. setw(x): Lets you print in a field at least x spaces wide. Uses more spaces if specified field is not big enough.
-  2. fixed: Use decimal notation (not E-notation) for floating point values.
-  3. setprecision(x): Two cases for this
-  --* When used with fixed, it prints floating-point values using x digits (after the decimal)
-  --* Without fixed, print floating-point value using x [significant digits](http://www.purplemath.com/modules/rounding2.htm)
-  4. showpoint: Always prints decimal for floating-point values
-  5. left/right: Left or right justification of value
+  1. `setw(x)`: Lets you print in a field at least x spaces wide. Uses more spaces if specified field is not big enough.
+  2. `fixed`: Use decimal notation (not E-notation) for floating point values.
+  3. `setprecision(x)`: Two cases for this
+  ··* When used with fixed, it prints floating-point values using x digits (after the decimal)
+  ··* Without fixed, print floating-point value using x [significant digits](http://www.purplemath.com/modules/rounding2.htm)
+  4. `showpoint`: Always prints decimal for floating-point values
+  5. `left/right`: Left or right justification of value
 
 NOTE: If you want to know more about floating-point values (e.g. what they mean, the difference between float and double, etc.)
 click [here](http://www.learncpp.com/cpp-tutorial/25-floating-point-numbers/).

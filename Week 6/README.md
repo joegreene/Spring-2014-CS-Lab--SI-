@@ -56,9 +56,8 @@ this page is to help review. Both the reading and lecture notes are more insight
 
 ### Psuedo-code
 ####What is psuedo-code and how do I use it?
-Think of psuedo-code as a midway translation between C++ and a standard, spoken language (such as English). 
+Think of psuedo-code as a midway translation between C++ and a spoken language (such as English). 
 An example of translating from C++ to psuedo-code (and vice-versa if you read bottom-up):
-
 __C++:__
 ```C++
   //...code...

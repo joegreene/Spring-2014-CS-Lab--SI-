@@ -4,8 +4,8 @@
 - [Solutions (From Last Week)](#solutions-from-last-week)
 - [Intro](#intro)
 - [Psuedo-code](#psuedo-code)
-- [Bits, Bytes, Bases & Range](#bits,-bytes,-bases--range)
-- [Side note: Doubles vs. Floats](#side-note:-doubles-vs.-floats)
+- [Bits, Bytes, Bases & Range](#bits-bytes-bases--range)
+- [Side note: Doubles vs. Floats](#side-note-doubles-vs-floats)
 - Chapter 3
 	- [cin](#cin)
 	- [getline](#getline)
@@ -76,7 +76,7 @@ trying to do in your program, step-by-step. Apart from this, the teacher's notes
 help if you're stuck on this.
 
 ####Why create psuedocode? 
-Two main reasons I can think of right now:
+Two main reasons I can think of right now (there are probably more):
   1. Organization & Cleanliness
     - Especially when creating big projects, it's good to have a set list of instructions you can refer to. 
       Without psuedocode or some sort of agenda to refer to, it's easy to lose track of what you're building 
@@ -103,7 +103,7 @@ if you would like know about the differences between the two.
 
 ### Chapter 3
 #### cin
-When using `cin`, remember these several things:
+When using `cin`, remember these few things:
   1. You must using `#include <iostream>` in order to use this. Note that `iostream` is shorthand for "input/output stream"
   2. You must use the namespace `std`. Go about this by either using `using namespace std;` or `std::` before `cin`.
   3. `cin` works by grabbing input up until it reaches either a space or new line (`'\n'`). It must grab
@@ -183,19 +183,40 @@ The most commonly used manipulators are (where x is an integer):
   1. `setw(x)`: Lets you print in a field at least x spaces wide. Uses more spaces if specified field is not big enough.
   2. `fixed`: Use decimal notation (not E-notation) for floating point values.
   3. `setprecision(x)`: Two cases for this
-  ··* When used with fixed, it prints floating-point values using x digits (after the decimal)
-  ··* Without fixed, print floating-point value using x [significant digits](http://www.purplemath.com/modules/rounding2.htm)
+    - When used with fixed, it prints floating-point values using x digits (after the decimal)
+    - Without fixed, print floating-point value using x [significant digits](http://www.purplemath.com/modules/rounding2.htm)
   4. `showpoint`: Always prints decimal for floating-point values
   5. `left/right`: Left or right justification of value
 
 NOTE: If you want to know more about floating-point values (e.g. what they mean, the difference between float and double, etc.)
 click [here](http://www.learncpp.com/cpp-tutorial/25-floating-point-numbers/).
 
-Example of iomanip in use:
+Example of iomanip in use (copied directly from the lecture notes):
 __C++:__
 ```C++
-  TBD
+  //...code...
+  const float e = 2.718;
+  float price = 18.0;
+  cout << setw(8) << e << endl;
+  cout << left << setw(8) << e
+       << endl;
+  cout << setprecision(2);
+  cout << e << endl;
+  cout << fixed << e << endl;
+  cout << setw(6) << price;
+  //...code...
 ```
+__Output:__
+```C++
+     2.718 (three spaces in front)
+  2.718    (three spaces in end, left justification)
+  2.7      (setprecision using x digits)
+  2.72     (setprecision using x amount of sig figs)
+   18.00   (one space at start to fill 6 spots)
+```
+
+More info on iomanip [here](http://www.cprogramming.com/tutorial/iomanip.html).
+
 #### More on Naming Schemes (Constants & Macro Definitions)
 ##### Declaration
 To declare a constant (that is, a variable that won't change after creating it), do as such:
@@ -224,14 +245,39 @@ Also, taking note that the values do not change over time, try the following cod
 What happens when you try to compile it?
 
 ##### Macro Definitions
-Although less used now because it's the C-standard, when looking at code you might see something called `#DEFINE`. This 
-is just another way to declare constants. 
+Although less used now because it's the C-standard, when looking at code you might see something called `#DEFINE`. They 
+are just another way to declare constants.
 
+Example of a macro definition in use:
+```C++
+  #include "stdafx.h"
+  #include <iostream>
+  #define TAXES .75
+  
+  int _tmain(int argc, _TCHAR* argv[])
+  {
+    cout << "Tax rate is currently: " << TAXES << endl; //prints ".75"
+    
+    return 0;
+  }
+```
 
 For more information on these, click [here](http://www.cprogramming.com/tutorial/cpreprocessor.html).
 
 #### c-string vs string
+I think [this page](http://www.prismnet.com/~mcmahon/Notes/strings.html) explains their differences quite well. If there is any confusion 
+about what is on this page, don't hesitate to ask. 
 
+One confusing part however is understanding the term `array`. We'll talk more about them later in the course, but for now 
+think of them as "a list of something". Therefore, in this instance, we're talking about "a list of characters".
+
+##### C strings
+
+
+For a list of c-string functions, go [here](http://www.cplusplus.com/reference/cstring/).
+
+##### Strings
+For a list of string functions, go [here]().
 #### cmath and Generating Random Numbers
 ##### cmath
 The `cmath` header lets you use specific math functions, such as `tan` (tangent), `sqrt` (square root), and more. A 

@@ -5,13 +5,13 @@
 - [Solutions (From Last Week)](#solutions-from-last-week)
 - [Intro](#intro)
 - [Psuedo-code](#psuedo-code)
-- [Bits, Bytes, Bases & Range](#bits,-bytes,-bases-&-range)
+- [Bits, Bytes, Bases & Range](#bits,-bytes,-bases--range)
 - [Side note: Doubles vs. Floats](#side-note:-doubles-vs.-floats)
 - Chapter 3
 	- [cin](#cin)
 	- [getline](#getline)
 	- [iomanip](#iomanip)
-	- [(More on Naming Schemes) (Constants)](#more-on-naming-schemes-constants)
+	- [More on Naming Schemes (Constants & Macro Definitions)](#more-on-naming-schemes-constants--macro-definitions)
 	- [c-string vs string](#c-string-vs-string)
 	- [cmath and Generating Random Numbers](#cmath-and-generating-random-numbers)
 	- [Recap](#recap)
@@ -23,7 +23,7 @@
 	- [Menu-driven programming] (?)
 	- [Recap](#recap-1)
 - Practice Assignments(#practice-assignments)
-	- Design your own calculator!
+	- Design Your Own Calculator!
 	- Remake a previous program (dunno yet)
 	- Conversion program (SI Units) (?) [best with arrays though...]
 
@@ -190,7 +190,7 @@ When doing this, the character or value scanned for is called a [delimiter](http
 #### iomanip
 Mainly used for cleanliness in output, `iomanip` is a header file used for (if you guessed it) "input/output 
 manipulation". In order to use this, we call `#include <iomanip>` after `iostream`.
-
+##### Various Manipulators
 The most commonly used manipulators are (where x is an integer):
   1. `setw(x)`: Lets you print in a field at least x spaces wide. Uses more spaces if specified field is not big enough.
   2. `fixed`: Use decimal notation (not E-notation) for floating point values.
@@ -202,13 +202,14 @@ The most commonly used manipulators are (where x is an integer):
 
 NOTE: If you want to know more about floating-point values (e.g. what they mean, the difference between float and double, etc.)
 click [here](http://www.learncpp.com/cpp-tutorial/25-floating-point-numbers/).
-  
+
 Example of iomanip in use:
 __C++:__
 ```C++
   TBD
 ```
-#### More on Naming Schemes (Constants)
+#### More on Naming Schemes (Constants & Macro Definitions)
+##### Declaration
 To declare a constant (that is, a variable that won't change after creating it), do as such:
 ```C++
   const double TAX_RATE = 0.75;
@@ -234,11 +235,19 @@ Also, taking note that the values do not change over time, try the following cod
 ```
 What happens when you try to compile it?
 
+##### Macro Definitions
+Although less used now because it's the C-standard, when looking at code you might see something called `#DEFINE`. This 
+is just another way to declare constants. 
+
+
+For more information on these, click [here](http://www.cprogramming.com/tutorial/cpreprocessor.html).
+
 #### c-string vs string
 #### cmath and Generating Random Numbers
 ##### cmath
 The `cmath` header lets you use specific math functions, such as `tan` (tangent), `sqrt` (square root), and more. A 
-more complete list can be found [here](http://www.cplusplus.com/reference/cmath/).
+more complete list can be found [here](http://www.cplusplus.com/reference/cmath/). Click on the ones you're curious about 
+and they will explain each function within `cmath` pretty well.
 
 ##### Random Numbers
 Through the header file `cstdlib`, you can use both the `rand` function. `rand` outputs a random number (between 0 and 
@@ -306,8 +315,9 @@ the book, create your own calculator program that allows the following things:
 	1. Simple algebra (addition, subtraction, multiplication, division)
 	2. Square root of a number and raising a number to an exponent
 	3. Modulus (you should know what this means by now)
-	4. Iunno.
-
+  4. Logarithms
+  
+It must also include a menu for the user (so they know how to input algebraic expressions).
 Remember that the best approach to making a program is by creating it through psuedocode first. For that 
 reason, **BEFORE** you begin programming make sure to validate your psuedocode with another person __AND__
 me.

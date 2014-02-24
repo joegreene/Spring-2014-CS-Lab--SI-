@@ -86,7 +86,7 @@ trying to do in your program, step-by-step. Apart from this, the teacher's notes
 help if you're stuck on this.
 
 ####Why create psuedocode? 
-Although there are many reasons, here are the two that come up to my mind right now:
+Two main reasons I can think of right now:
   1. Organization & Cleanliness
     - Especially when creating big projects, it's good to have a set list of instructions you can refer to. 
       Without psuedocode or some sort of agenda to refer to, it's easy to lose track of what you're building 
@@ -94,7 +94,7 @@ Although there are many reasons, here are the two that come up to my mind right 
   2. Outside help
     - It's easier for someone to help you out if you tell them what you're trying to do. Imagine looking at 
       someone's math homework, but they've written extremely messy all over the place. How are you going to 
-      know what they're doing unless you keep asking them over and over what they're trying to do?
+      know what they're doing unless you keep asking them over and over what they wrote down?
 	  
 Getting into a habit of creating psuedocode will help you in the longrun, especially with larger projects.
 
@@ -256,20 +256,59 @@ log (located below where you type in code) or check the cplusplus.com reference 
 Through the header file `cstdlib`, you can use both the `rand` function. `rand` outputs a random number (between 0 and 
 some maximum integer set by the compiler). 
 
-Note that, when calling `rand`, the value only generates once when 
+When using and creating randomly-generated numbers, there are two key things to think about:
+  1. Range of a value
+    - To set the range of a value, use % for range
+  2. Lower limit
+    - To set the lower limit, use + or - for starting value
+
+Example usage of `rand`:
+```C++
+  #include "stdafx.h"
+  #include <iostream>
+  #include <cstdlib>
+  #define MAX 30 //c-standard macro
+  using namespace std;
+    
+  int _tmain(int argc, _TCHAR* argv[])
+  {
+    int some_num = rand() % MAX + 1; //range of the random value is from 1 to MAX
+    cout << some_num << endl;
+    some_num = rand() % 30 + 1; //what do you think happens here?
+    cout << some_num << endl;
+      
+    return 0;
+  }
+```
+Try the above in Visual Studio. Notice anything weird with the output? Look at the next section for more details if so.
 
 More information on using `rand` [here](http://www.cplusplus.com/reference/cstdlib/rand/).
 
-##### EXTRA: Seed Number (for Randomization)
-Although not commonly required, use `srand` (under `cstdlib`) to re-initialize the random number generator. 
+##### Seed Number (for Randomization)
+Because a randomly-generated number is time-dependent (that is, it generates its seed value by time to be truly random), use 
+`srand` (under `cstdlib`) to re-initialize the random number generator. Also, for the fact that it is time-dependent, we 
+must include the header file `ctime`.
+
 Example of using `srand`:
 ```C++
+  /* srand example */
+  #include <iostream>
+  #include <cstdlib>
+  #include <ctime>
 
+  int main ()
+  {
+    cout << ("First number: %d\n", rand()%100);
+    srand (time(NULL));
+    cout << "Random number: " << rand()%100);
+    srand (1);
+    cout << "Again the first number: " << rand()%100;
+
+    return 0;
+  }
 ```
 
 More info on using `srand` [here](http://www.cplusplus.com/reference/cstdlib/srand/).
-
-#### Recap
 
 ### Chapter 4
 #### Booleans (Review)
@@ -316,7 +355,7 @@ Example of this in use (reusing `some_bool`):
   some_bool = (55 || 66) && !(0 || 3);
   //...code...
 ```
-Guess first, then check your answer by outputting the above in a Visual Studio project.
+Guess first, then check vai the compiler.
 
 For more help with AND, NOT, and OR, look under the topic "Logical Operator" on [this page](http://www.cplusplus.com/doc/tutorial/operators/).
 
@@ -326,10 +365,17 @@ For more help with AND, NOT, and OR, look under the topic "Logical Operator" on 
 Example of if/else statements in use:
 ```C++
   //...code...
-  some_bool
-  if(some_bool == true)
+  bool some_bool
+  if(some_bool) //another way of checking if a boolean is true
+  {
+    cout << "some_bool is true!";
+  }
+  else
+    cout << "some_bool is false!";
 ```
 
+Note in the above example that one case used curly braces, and the other does not. If you only have one line after the if/else statement, 
+then you may omit the curly braces.
 
 ##### Joining Multiple if-else statements
 In order to use multiple
@@ -388,8 +434,6 @@ Switch cases can be combined as well. For example:
   //...code...
 ```
 
-
-
 #### Menu-driven programming
 When someone says that their program is "menu-driven", it just means that a menu is printed to console, listing options 
 for a user to choose. Afterwards, input is tested using if-else or switch statements. They're typically used at the start 
@@ -445,12 +489,10 @@ TIP: For test purposes, you might want to set your "randomly generated" integer 
 __BONUS:__ Using the error-checking techniques from the other github folder (labeled Tutorials), make it so that the program 
 still works, despite entering a character or string as a guessed number.
 __BONUS-2:__ Keeping all previous functionalities, allow the user to recontinue the guessing game after guessing correctly.
-#### Conversion program (SI Units) (?) [best with arrays though...]
 
 -------------------------------------------------------------------------------
 
 Copyright &copy; 2014 Joseph Greene <joeisgreene@csu.fullerton.edu>  
-Some notes grabbed from Dr. Tian's Powerpoint
+Some notes grabbed from Dr. Tian's Chapter 3 Powerpoints
 Released under [The MIT License] (http://opensource.org/licenses/MIT)  
 Project located at <https://github.com/joegreene/Spring-2014-CS-Lab--SI-/>
-

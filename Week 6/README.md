@@ -175,6 +175,8 @@ __Console Output:__
 
 When doing this, the character or value scanned for is called a [delimiter](http://www.thefreedictionary.com/delimiter).
 
+TIP: If you would like to, you can convert strings to other datatypes. For more information, look [here](#c-string-vs-string) under string.
+
 #### iomanip
 Mainly used for cleanliness in output, `iomanip` is a header file used for (if you guessed it) "input/output 
 manipulation". In order to use this, we call `#include <iomanip>` after `iostream`.
@@ -268,16 +270,20 @@ For more information on these, click [here](http://www.cprogramming.com/tutorial
 I think [this page](http://www.prismnet.com/~mcmahon/Notes/strings.html) explains their differences quite well. If there is any confusion 
 about what is on this page, don't hesitate to ask. 
 
-One confusing part however is understanding the term `array`. We'll talk more about them later in the course, but for now 
-think of them as "a list of something". Therefore, in this instance, we're talking about "a list of characters".
+One confusing part however is understanding the term "array". We'll talk more about them later in the course, but for now 
+think of them as "a list of something". Therefore, when we see "character array" we're talking about "a list of characters".
 
 ##### C strings
+The C-standard way of making C++ strings, these are normally avoided because they're finicky to work with.
+
 
 
 For a list of c-string functions, go [here](http://www.cplusplus.com/reference/cstring/).
 
 ##### Strings
-For a list of string functions, go [here]().
+
+For a list of string functions, go [here](http://www.cplusplus.com/reference/string/).
+
 #### cmath and Generating Random Numbers
 ##### cmath
 The `cmath` header lets you use specific math functions, such as `tan` (tangent), `sqrt` (square root), and more. A 

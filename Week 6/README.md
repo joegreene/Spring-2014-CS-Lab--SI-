@@ -505,9 +505,8 @@ Using the knowledge from the above review, the lecture notes, and the book, crea
 these following things:
 
 	1. Simple algebra (addition, subtraction, multiplication, division)
-	2. Square root of a number and raising a number to an exponent
+	2. Square root of a number, raising a number to an exponent, and logarithms
 	3. Modulus of two integers (you should know what this means by now)
-  4. Logarithms
   
 It must also include a menu for the user (so they know how to input algebraic expressions).
 Remember that the best approach to making a program is by creating it through psuedocode first. For that 

@@ -45,7 +45,8 @@ half of it will cover topics you recently read over (specifically chapter 4).
 
 I'd like to remind you guys that learning your first programming language is no easy task. What you guys are 
 doing is learning a new language on top of learning how it works within itself. This is comparable to learning 
-a language (e.g. Russian) __AND__ its culture (e.g. the compiler, IDE, etc.). Fortunately for you guys though, you won't have to speak C++.
+a language (e.g. Russian) __AND__ its culture (e.g. the compiler, IDE, etc.). Fortunately for you guys though, 
+you won't have to speak C++.
 
 Another thing: Like taking an intro class for Spanish, learning the beginnings of programming won't let you do 
 too much. As we progress through the course, you'll begin to see more of its application to the real world. 
@@ -99,11 +100,11 @@ located on the Titanium page, the book (if it has any), or online posts.
 ####Why create psuedocode? 
 Although there are many reasons, here are the two that come up to my mind right now:
   1. Organization & Cleanliness
-  --* Especially when creating big projects, it's good to have a set list of instructions you can refer to. 
+    - Especially when creating big projects, it's good to have a set list of instructions you can refer to. 
       Without psuedocode or some sort of agenda to refer to, it's easy to lose track of what you're building 
       (and thus lose or halt progress).
   2. Outside help
-  --* It's easier for someone to help you out if you tell them what you're trying to do. Imagine looking at 
+    - It's easier for someone to help you out if you tell them what you're trying to do. Imagine looking at 
       someone's math homework, but they've written extremely messy all over the place. How are you going to 
       know what they're doing unless you keep asking them over and over what they're trying to do? Some of you 
       might say "What if we type neat code?". If you end up having hundreds of lines of code, despite having neat 
@@ -112,9 +113,8 @@ Although there are many reasons, here are the two that come up to my mind right 
 Getting into a habit of creating psuedocode will help you in the longrun, especially with larger projects.
 
 ### Side note: Doubles vs. Floats
-I didn't really go over floats in last week's review, so I figured I might as well cover them a bit here.
-
-A nice reference is [this](http://www.learncpp.com/cpp-tutorial/25-floating-point-numbers/).
+I didn't really go over floats in last week's review, but a nice reference is [this](http://www.learncpp.com/cpp-tutorial/25-floating-point-numbers/) 
+if you would like know about the differences between the two.
 
 ### Chapter 3
 Below are the topics from chapter three, with brief descriptions per topic.
@@ -227,6 +227,9 @@ Below are the topics from chapter four, with brief descriptions per topic.
 Recall that booleans, or in syntax `bool`, can only hold two types of values. These values are either 
 `0 (off or false)` or `1 (on or true)`. They are one byte (not one bit). Remember why?
 
+Another important note: When setting a boolean to any integer value other than `0` sets the bool to `true`.
+If this is confusing, think of it as the bool being set to a value. If it is a value, it is true. Else (0), false.
+
 Operators that work on booleans:
 ```C++
   bool some_bool = false; //set to false (or 0)
@@ -235,16 +238,30 @@ Operators that work on booleans:
   some_bool = (55 >= 55); //greater than or equal to (some_bool = true)
   some_bool = (44 <= 43); //less than or equal to (some_bool = false);
 ```
-Remember also that there are three other operators that work on these, `! (not)`, `|| (or)`, and 
+Remember also that there are three other operators that work on these, `! (not)`, `|| (or)`, and `&& (and).
+Using the variable in the above example:
+```C++
+  //...code...
+  some_bool = !some_bool; //NOT some_bool (some_bool = true)
+  some_bool = (true || false); //true OR false (some_bool = true)
+  some_bool = (false && true); //true AND false (some_bool = false)
+  some_bool = (7 || 0); //true OR false (some_bool = false);
+```
+
+__NOTE:__ If you've taken an introduction to logic course or a circuit theory course, the above might be giving you either 
+nightmares or nostalgia. These work exactly like the true/false charts in those classes.
 
 Like using the assignment operator on other various data types, you can combine multiple operators when 
 assigning a value to a bool. 
-Example of this in use:
+Example of this in use (reusing `some_bool`):
 
 ```C++
-  
+  some_bool = (55 || 66) && !(0 || 3); //some_bool = (true) AND NOT(true);
+                                       //          = (true) AND (false);
+                                       //          = (false);
 ```
 
+If AND, NOT, and OR are a bit confusing for you, look at the following 
 
 #### if-else
 #### switch

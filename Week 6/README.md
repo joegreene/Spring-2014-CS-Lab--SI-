@@ -521,7 +521,7 @@ __BONUS:__ Allow the user to use the program until they say to quit. HINT: This 
 Create a program that asks a user to guess a value within a range, and see if the value is right.
 Here are the specifications:
   1. Must generate and allow the user to guess a randomly-generated number. 
-    - Make sure the randomly-generated number stays the same while the user is in the same game. Change it when they replay.
+    - Make sure the randomly-generated number stays the same while the user is in the same game.
     - For the user's sake, have the range between 0 and 10.
   2. Must tell the user whether or not their value is above or below the randomly-generated number
   3. Must allow the user to quit whenever they like to.
@@ -533,11 +533,12 @@ Like the previous assignment, make sure to create psuedo-code and validate it wi
 
 TIP: For test purposes, you might want to set your "randomly generated" integer to a fixed value. For mine, I used `7`.
 
-__BONUS:__ Using the error-checking techniques from the other github folder (labeled Tutorials), make it so that the program 
+__BONUS:__ Keeping all previous functionalities, allow the user to recontinue the guessing game after guessing correctly. Make sure to change the random number after each time!
+
+CHECK BELOW:
+__BONUS-2:__ Using the error-checking techniques from the other github folder (labeled Tutorials), make it so that the program 
 still works, despite entering a character or string as a guessed number.
-
-__BONUS-2:__ Keeping all previous functionalities, allow the user to recontinue the guessing game after guessing correctly.
-
+END OF CHECK
 -------------------------------------------------------------------------------
 
 Copyright &copy; 2014 Joseph Greene <joeisgreene@csu.fullerton.edu>  

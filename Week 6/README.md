@@ -14,17 +14,15 @@
 	- [More on Naming Schemes (Constants & Macro Definitions)](#more-on-naming-schemes-constants--macro-definitions)
 	- [c-string vs string](#c-string-vs-string)
 	- [cmath and Generating Random Numbers](#cmath-and-generating-random-numbers)
-	- [Recap](#recap)
 - Chapter 4
 	- [Booleans (Review)](#booleans-review)
 	- [if-else](#if-else)
 	- [More with if-else](#more-with-if--else)
 	- [switch statements](#switch-statements)
-	- [Menu-driven programming] (?)
-	- [Recap](#recap-1)
+	- [Menu-driven programming](#menu--driven-programming)
 - Practice Assignments(#practice-assignments)
-	- Design Your Own Calculator!
-	- Remake a previous program (dunno yet)
+	- Make Your Own Calculator!
+	- Number Guessing Game (Extra)
 	- Conversion program (SI Units) (?) [best with arrays though...]
 
 ### Review (Mini-Quiz)
@@ -243,17 +241,34 @@ is just another way to declare constants.
 For more information on these, click [here](http://www.cprogramming.com/tutorial/cpreprocessor.html).
 
 #### c-string vs string
+
 #### cmath and Generating Random Numbers
 ##### cmath
 The `cmath` header lets you use specific math functions, such as `tan` (tangent), `sqrt` (square root), and more. A 
 more complete list can be found [here](http://www.cplusplus.com/reference/cmath/). Click on the ones you're curious about 
 and they will explain each function within `cmath` pretty well.
 
+NOTE: Keep in mind that, with each function, they require a specific type of input to be used. Like in the last lab where we 
+were getting errors when using `sqrt`, if you get errors when using a function from `cmath` take a look at either the output 
+log (located below where you type in code) or check the cplusplus.com reference page.
+
 ##### Random Numbers
 Through the header file `cstdlib`, you can use both the `rand` function. `rand` outputs a random number (between 0 and 
 some maximum integer set by the compiler). 
 
-Note that, when calling `rand`
+Note that, when calling `rand`, the value only generates once when 
+
+More information on using `rand` [here](http://www.cplusplus.com/reference/cstdlib/rand/).
+
+##### EXTRA: Seed Number (for Randomization)
+Although not commonly required, use `srand` (under `cstdlib`) to re-initialize the random number generator. 
+Example of using `srand`:
+```C++
+
+```
+
+More info on using `srand` [here](http://www.cplusplus.com/reference/cstdlib/srand/).
+
 #### Recap
 
 ### Chapter 4
@@ -264,20 +279,23 @@ Recall that booleans, or in syntax `bool`, can only hold two types of values. Th
 Another important note: When setting a boolean to any integer value other than `0` sets the bool to `true`. If is zero, 
 it is false. Else, it is true.
 
-##### Operators that Work on Booleans
+##### Boolean Operators
+Example of the `> (greater than)`, `< (less than)`, `== (equal to)`, `>= (greater than or equal to)` and `<= (less than or equal to)` operators.
 ```C++
   //...code...
   bool some_bool = false; //initialization
-  some_bool = (10 < 0); //less than operator
-  some_bool = (14 > 2); //greater than operator
-  some_bool = (55 >= 55); //greater than or equal to
-  some_bool = (44 <= 43); //less than or equal to
+  some_bool = (10 < 0);
+  some_bool = (14 > 2);
+  some_bool = (some_bool == false);
+  some_bool = (55 >= 55);
+  some_bool = (44 <= 43);
   //...code...
 ```
 Try guessing the value of `some_bool` after each line. Afterwards, check using the compiler. You can use `cout` to help 
 check what the value is after each line.
 
-Remember also that there are three other operators that work on these, `! (NOT)`, `|| (OR)`, and `&& (AND)`.
+##### More Boolean Operators
+Remember also that there are three other operators that work on booleans: `! (NOT)`, `|| (OR)`, and `&& (AND)`.
 Reusing the variable in the above example:
 ```C++
   //...code...
@@ -285,8 +303,9 @@ Reusing the variable in the above example:
   some_bool = (true || false);
   some_bool = (false && true);
   some_bool = (7 || 0);
+  //...code...
 ```
-guess and then check what the outputs are using the compiler.
+Guess and then check what the outputs are using the compiler.
 
 ##### Combining Operators into one Assignment
 Like using the assignment operator on other various data types, you can combine multiple operators when 
@@ -302,27 +321,130 @@ Guess first, then check your answer by outputting the above in a Visual Studio p
 For more help with AND, NOT, and OR, look under the topic "Logical Operator" on [this page](http://www.cplusplus.com/doc/tutorial/operators/).
 
 #### if-else
-`if` and `else` statements help with directing flow of a program. 
+`if` and `else` statements help with directing flow of a program. They're namely for boolean operations.
+
+Example of if/else statements in use:
+```C++
+  //...code...
+  some_bool
+  if(some_bool == true)
+```
+
+
+##### Joining Multiple if-else statements
+In order to use multiple
 #### switch
-Similar to using if-else statements, `switch` statements help when testing a variable's value. For example, if 
-we wanted to test whether or not 
+Similar to using if-else statements, `switch` statements help when testing a variable's value. `switch` statements can 
+only be used to test a single value at a time though.
+
+Example usage:
+```C++
+  //...code...
+  char c = 'n'; //initialization
+  cin>>c;
+  switch(c)
+  {
+    case 'a': //if user inputted 'a'
+      cout<<"You inputted \'a\'. Cool.\n";
+      break;
+    case 'b': //if user inputted 'b'
+      cout<<"You inputted \'b\'. Okay...\n";
+      break;
+    default:
+      cout<<"Unchecked/Unknown input. That means your input wasn't \'a\' or \'b\'. Commencing self-destruct sequence...\n";
+      break;
+  }
+  //...code...
+```
+It's always a good idea to include a `default` case. It makes your program more [robust](http://www.linfo.org/robust.html) 
+and helps if a user mistypes input. It's always better safe than sorry!
+
+Switch cases can be combined as well. For example: 
+```C++
+  //...code...
+  switch(grade)
+  {
+    case 'A':
+    case 'a':
+    case 'B':
+    case 'b':
+      cout << "You passed! Nice grade!\n";
+      break;
+    case 'C':
+    case 'c':
+      cout << "You passed! Should've done better though...\n";
+      break;
+    case 'D':
+    case 'd':
+      cout << "Can't tell if you passed or not. Consult the professor.\n";
+      break;
+    case 'F':
+    case 'f':
+      cout << "You didn't pass. Sorry about that.\n";
+      break;
+    default:
+      cout << "I have no idea what your grade is. Consult a psychiatrist or re-input your grade.\n";
+  }
+  //...code...
+```
+
+
+
 #### Menu-driven programming
+When someone says that their program is "menu-driven", it just means that a menu is printed to console, listing options 
+for a user to choose. Afterwards, input is tested using if-else or switch statements. They're typically used at the start 
+of a program.
+
+An example of a menu-driven program:
+```C++
+  //...code...
+    cout << "Choose below your desired choice.\n"
+    cout << "Choice 1: Buy products\n";
+    cout << "Choice 2: Sell products\n";
+    cout << "Choice 3: View more options\n";
+    cout << "Choice 4: Exit program\n";
+    cout << "Enter in your number choice: ";
+  //...code...
+```
+
+They might seem annoying to type out, but they surely make your program look neater to users in console.
+
 #### Recap
 ### Practice Assignments
+Try to do these without your notes. That way, you can test yourself and see if you actually know the material.
 #### Design your own calculator!
-Described quite well by the above title, using the knowledge from the above review, the lecture notes, and 
-the book, create your own calculator program that allows the following things:
+Using the knowledge from the above review, the lecture notes, and the book, create your own calculator program that allows 
+these following things:
 	1. Simple algebra (addition, subtraction, multiplication, division)
 	2. Square root of a number and raising a number to an exponent
-	3. Modulus (you should know what this means by now)
+	3. Modulus of two integers (you should know what this means by now)
   4. Logarithms
   
 It must also include a menu for the user (so they know how to input algebraic expressions).
 Remember that the best approach to making a program is by creating it through psuedocode first. For that 
 reason, **BEFORE** you begin programming make sure to validate your psuedocode with another person __AND__
-me.
-	
-#### Remake a previous program (dunno yet)
+me (the SI instructor).
+
+__BONUS:__ Allow the user to use the program until they say to quit. HINT: This requires some sort of loop.
+
+[Example Output]()
+
+#### Guessing Game
+Create a program that asks a user to guess a value within a range, and see if the value is right.
+Here are the specifications:
+  1. Must generate and allow the user to guess a randomly-generated number. 
+    - Make sure the randomly-generated number stays the same while the user is in the same game. Change it when they replay.
+    - For the user's sake, have the range between 0 and 10.
+  2. Must tell the user whether or not their value is above or below the randomly-generated number
+  3. Must allow the user to quit whenever they like to.
+  4. Must count the number of guesses made before getting the correct number.
+  
+Like the previous assignment, make sure to create psuedo-code and validate it with me (the SI instructor).
+[Example output]()
+TIP: For test purposes, you might want to set your "randomly generated" integer to a fixed value. For mine, I used `7`.
+__BONUS:__ Using the error-checking techniques from the other github folder (labeled Tutorials), make it so that the program 
+still works, despite entering a character or string as a guessed number.
+__BONUS-2:__ Keeping all previous functionalities, allow the user to recontinue the guessing game after guessing correctly.
 #### Conversion program (SI Units) (?) [best with arrays though...]
 
 -------------------------------------------------------------------------------

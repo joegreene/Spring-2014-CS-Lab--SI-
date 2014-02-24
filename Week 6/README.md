@@ -5,7 +5,7 @@
 - [Solutions (From Last Week)](#solutions-from-last-week)
 - [Intro](#intro)
 - [Psuedo-code](#psuedo-code)
-- [Bits, Bytes, Bases & Range](#bits,-bytes,-bases-&-range]
+- [Bits, Bytes, Bases & Range](#bits,-bytes,-bases-&-range)
 - [Side note: Doubles vs. Floats](#side-note:-doubles-vs.-floats)
 - Chapter 3
 	- [cin](#cin)
@@ -253,8 +253,8 @@ Note that, when calling `rand`
 Recall that booleans, or in syntax `bool`, can only hold two types of values. These values are either 
 `0 (off or false)` or `1 (on or true)`. They are one byte (not one bit). Remember why?
 
-Another important note: When setting a boolean to any integer value other than `0` sets the bool to `true`. If it is a 
-value, it is true. Else, false.
+Another important note: When setting a boolean to any integer value other than `0` sets the bool to `true`. If is zero, 
+it is false. Else, it is true.
 
 ##### Operators that Work on Booleans
 ```C++
@@ -266,11 +266,11 @@ value, it is true. Else, false.
   some_bool = (44 <= 43); //less than or equal to
   //...code...
 ```
-Before checking with the compiler, write down what you think `some_bool` is set to after each line. Afterwards, see if 
-your answers matched up with what the actual output is. You can use `cout` to help check what the value is after each line.
+Try guessing the value of `some_bool` after each line. Afterwards, check using the compiler. You can use `cout` to help 
+check what the value is after each line.
 
-Remember also that there are three other operators that work on these, `! (not)`, `|| (or)`, and `&& (and).
-Using the variable in the above example:
+Remember also that there are three other operators that work on these, `! (NOT)`, `|| (OR)`, and `&& (AND)`.
+Reusing the variable in the above example:
 ```C++
   //...code...
   some_bool = !some_bool;
@@ -278,7 +278,7 @@ Using the variable in the above example:
   some_bool = (false && true);
   some_bool = (7 || 0);
 ```
-Like the previous example, guess and then check what the outputs are using the compiler.
+guess and then check what the outputs are using the compiler.
 
 ##### Combining Operators into one Assignment
 Like using the assignment operator on other various data types, you can combine multiple operators when 
@@ -291,13 +291,12 @@ Example of this in use (reusing `some_bool`):
 ```
 Guess first, then check your answer by outputting the above in a Visual Studio project.
 
-
 For more help with AND, NOT, and OR, look under the topic "Logical Operator" on [this page](http://www.cplusplus.com/doc/tutorial/operators/).
 
 #### if-else
-
+`if` and `else` statements help with directing flow of a program. 
 #### switch
-Nearly similar to using if-else statements, `switch` statements help when testing a variable's value. For example, if 
+Similar to using if-else statements, `switch` statements help when testing a variable's value. For example, if 
 we wanted to test whether or not 
 #### Menu-driven programming
 #### Recap

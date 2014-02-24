@@ -1,7 +1,6 @@
 # Week 6
 
 ## Contents
-- [Review (Mini-quiz)](#review-mini-quiz)
 - [Solutions (From Last Week)](#solutions-from-last-week)
 - [Intro](#intro)
 - [Psuedo-code](#psuedo-code)
@@ -25,15 +24,6 @@
 	- Number Guessing Game (Extra)
 	- Conversion program (SI Units) (?) [best with arrays though...]
 
-### Review (Mini-Quiz)
-Alright guys. For the first five or so minutes of class I'd like you all to briefly review your notes from 
-chapters 1 to 4. Use the lecture notes, book, and my online notes to help you all out. I'll have the questions 
-on the projector.
-
-Another note: I don't know exactly how Dr. Tian will make your exams, and this is only a guess on my part.
-
-__TO-DO__
-
 ### Solutions (From Last Week)
 Above this are the .cpp solutions from last week's exercises. For each week from now on, I'm going to place 
 the solutions to the previous week's solutions there.
@@ -49,8 +39,8 @@ When looking at some of the examples on this page, I'll be typing something like
 This just means I'm too lazy to type out the entire program. The omitted syntax should be self-explanatory and 
 therefore I deemed it unnecessary to include in the examples.
 
-Last note: Remember that, by reading this page, you can't skip the reading and lecture notes. The purpose of
-this page is to help review. Both the reading and lecture notes are more insightful.
+Last note: Although I thank you guys for reading this work I made for you guys, you can't use this as a substitute for 
+the book and the lecture notes. This page only serves as both review of the notes and further practice.
 
 ### Psuedo-code
 ####What is psuedo-code and how do I use it?

@@ -345,12 +345,10 @@ Notice anything weird with the output? Look at the next section for more details
 More information on using `rand` [here](http://www.cplusplus.com/reference/cstdlib/rand/).
 
 ##### Seed Number (for Randomization)
-Note that in the title before this topic I used the prefix "psuedo-" (meaning "fake"). That's because there's a specific formula used to create the `rand` value. 
+Note that in the title before this topic I used the prefix "psuedo-" (meaning "fake"). That's because there's a specific formula used to create the `rand` value.
 By calling `srand`, we can (re-)initialize the number generator each time we run a program.
 
-To call `srand` we use the `cstdlib` library/header, and to use the `time` function (typically required with `srand`) we include the library/header `ctime`.
-
-__NOTE:__ If you don't call `srand` before creating a randomized value, you'll receive the same number after each program call. 
+To call `srand` we use the `cstdlib` library/header, and to use the `time` function (something typically required with `srand` to re-initialize the psuedo-random number generator well) we include the library/header `ctime`.
 
 Go back to the `rand` example, plug in the following (either one) before the initialization of `some_num` and still inside `main`, and notice the difference after compiling and running a few times.
 ```C++
@@ -361,7 +359,7 @@ Go back to the `rand` example, plug in the following (either one) before the ini
   
   srand(time(0));
 ```
-It should be generating properly now. Remember as well to include the `ctime` header too, as required. Either segments of code above should work.
+Remember as well to include the `ctime` header too, as required. It should be generating properly now. 
 
 More info on using `srand` [here](http://stackoverflow.com/questions/7748071/same-random-numbers-every-time-i-run-the-program) and [here](http://www.cplusplus.com/reference/cstdlib/srand/). 
 Also, check pgs 43 and 44 of the powerpoint.
@@ -513,21 +511,20 @@ They might seem annoying to type out, but they surely make your program look nea
 Try to do these without your notes. That way, you can test yourself and see if you actually know the material.
 
 #### Design your own calculator!
-Using the knowledge from the above review, the lecture notes, and the book, create your own calculator program that allows 
+Using the knowledge from the above review, the lecture notes, and the book, create your own calculator program that contains 
 these following things:
 
-	1. Simple algebra (addition, subtraction, multiplication, division) and
-	2. Modulus of two integers
-  
-It must also include a menu for the user (so they know how to input algebraic expressions).
+	1. Simple algebra (addition, subtraction, multiplication, division) 
+	2. Modulus (of two integers)
+  3. A menu (so the user knows how to input numbers and operations)
 
 __NOTE:__ Remember that the best approach to making a program is by creating it through psuedocode first. For that 
 reason, **BEFORE** you begin programming make sure to validate your psuedocode with another person.
 
-__BONUS:__ Allow the user to use the square root, power, and logarithm (base-10) functions. 
-__BONUS-2:__ Allow the user to set the amount of significant digits to be outputted.
+__BONUS:__ Allow the user to set the amount of significant digits to be outputted.
+__BONUS-2:__ Allow the user to use the square root, power, and logarithm (base-10) functions. 
 
-[Example Outputs (with Bonuses]()
+[Example Outputs](http://imgur.com/a/BYgY6)
 
 #### Guessing Game
 Create a program that asks a user to guess a value within a range, and see if the value is right.
@@ -543,6 +540,8 @@ Like the previous assignment, make sure to create psuedo-code and validate it wi
 
 __TIP:__ For test purposes, you might want to set your "randomly generated" integer to a fixed value. For mine, I used `2`.
 __TIP-2:__ If your program keeps generating the same randomly-generated number (when using the correct function), refer to the topic about random numbers on this page.
+
+...
 -------------------------------------------------------------------------------
 
 Copyright &copy; 2014 Joseph Greene <joeisgreene@csu.fullerton.edu>  

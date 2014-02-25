@@ -546,12 +546,12 @@ Try to do these without your notes. That way, you can test yourself and see if y
 begin referring to other sources.
 
 #### 1) Design your own calculator
-Using the knowledge from the above review, the lecture notes, and the book, create your own calculator program that contains 
-these following things:
+Using the knowledge from the above review, the lecture notes, and the book, create your own calculator program that contains these following functionalities:
 
-	1. Simple algebra (addition, subtraction, multiplication, division) 
+	1. Simple algebra (addition, subtraction, multiplication, division)
 	2. Modulus (of two integers)
-  3. A menu (so the user knows how to input numbers and operations)
+
+Also include a menu (so the user knows how to input numbers and operations). I've provided example outputs below to help you get started on this part.
 
 __NOTE:__ Remember that the best approach to making a program is by creating it through psuedocode first. For that 
 reason, **BEFORE** you begin programming make sure to make and validate your psuedocode with another person for this project.

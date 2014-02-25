@@ -95,8 +95,11 @@ If I get enough people asking about this topic, I'll try my best to explain up o
 Other than that, the following links should explain bits, bytes, bases and range pretty well:
 
 [Bits and Bytes](http://computer.howstuffworks.com/bytes1.htm)
+
 [Converting Bases](http://www.cplusplus.com/doc/hex/)
+
 [Determining Size of a Datatype](http://www.tutorialspoint.com/cplusplus/cpp_sizeof_operator.htm)
+
 [Range of Values (check posts in thread)](http://www.cplusplus.com/forum/beginner/44774/)
 
 ### Side note: Doubles vs. Floats
@@ -110,8 +113,9 @@ When using `cin`, remember these few things:
   1. You must using `#include <iostream>` in order to use this. Note that `iostream` is shorthand for "input/output stream"
   2. You must use the namespace `std`. Go about this by either using `using namespace std;` or `std::` before `cin`.
   3. `cin` works by grabbing input up until it reaches either a space or new line (`'\n'`).
-    - Don't use `cin` if you plan to have spaces when grabbing input.
-    - If you end up putting a space, whatever is leftover goes to the next variable to be inputted.
+    - Don't use `cin` if you plan to have spaces when grabbing input. Instead, use `getline`.
+    - If you end up putting a space, whatever is leftover goes to the next variable to be inputted (or it gets left in the stream 
+      until the program closes).
 
 Example of using `cin`:
 ```C++
@@ -152,7 +156,7 @@ Example of `getline` in use:
 __Console Output:__
 ```
   ...
-  Enter in two words (separated by a space: two words
+  Enter in two words (separated by a space): two words
   Here are the two words you inputted: two words
   ...
 ```
@@ -171,7 +175,7 @@ __C++:__
 __Console Output:__
 ```
   ...
-  Enter in two words (separated by a space: two words|
+  Enter in two words (separated by a space and ends with |): two words|
   Here are the two words you inputted: two words
   ...
 ```

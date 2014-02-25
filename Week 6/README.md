@@ -21,7 +21,7 @@
 	- [Menu-driven programming](#menu--driven-programming)
 - Practice Assignments(#practice-assignments)
 	- Make Your Own Calculator!
-	- Number Guessing Game (Extra)
+	- Guessing Game
 	- Conversion program (SI Units) (?) [best with arrays though...]
 
 ### Solutions (From Last Week)
@@ -297,22 +297,30 @@ The `cmath` header lets you use specific math functions, such as `tan` (tangent)
 more complete list can be found [here](http://www.cplusplus.com/reference/cmath/). Click on the ones you're curious about 
 and they will explain each function within `cmath` pretty well.
 
-NOTE: Keep in mind that, with each function, they require a specific type of input to be used. Like in the last lab where we 
-were getting errors when using `sqrt`, if you get errors when using a function from `cmath` take a look at either the output 
-log (located below where you type in code) or check the cplusplus.com reference page.
+NOTE: Keep in mind that, with each function, they require a specific type of input to be used. Remember in the last lab how we 
+were getting errors when inputting an integer for `sqrt`? If you get errors when using a function from `cmath` take a look at either the output 
+log (located below where you type in code) or check the cplusplus.com reference page (on the complete list link above).
 
-##### Random Numbers
-Through the header file `cstdlib`, you can use both the `rand` function. `rand` outputs a random number (between 0 and 
-some maximum integer set by the compiler). 
+##### (Psuedo-)Random Numbers
+Through the header file `cstdlib`, you can use the `rand` function. `rand` outputs a "random" number (between 0 and some maximum integer set by the compiler).
 
 When using and creating randomly-generated numbers, there are two key things to think about:
 
   1. Range of a value
     - To set the range of a value, use % for range
-  2. Lower limit
+  2. Lower limit (starting position)
     - To set the lower limit, use + or - for starting value
 
 Example usage of `rand`:
+```C++
+  //...code 
+  int some_num = rand() % 10 + 1; //range of the random value is from 1 to 10
+  some_num = rand() % 100 - 20; //random value from -20 to 80
+  some_num = rand() % 30 + 1900; //random value from 1900 to 1930
+  //...code...
+```
+
+Try compiling and running the following a few times in Visual Studio:
 ```C++
   #include "stdafx.h"
   #include <iostream>
@@ -324,41 +332,32 @@ Example usage of `rand`:
   {
     int some_num = rand() % MAX + 1; //range of the random value is from 1 to MAX
     cout << some_num << endl;
-    some_num = rand() % MAX + 1; //what do you think happens here?
-    cout << some_num << endl;
-      
     return 0;
   }
 ```
-Try the above in Visual Studio. Notice anything weird with the output? Look at the next section for more details if so.
+Notice anything weird with the output? Look at the next section for more details if so.
 
 More information on using `rand` [here](http://www.cplusplus.com/reference/cstdlib/rand/).
 
 ##### Seed Number (for Randomization)
 Because a randomly-generated number is time-dependent (that is, it generates its seed value by time to be truly random), use 
-`srand` (under `cstdlib`) to re-initialize the random number generator. Also, for the fact that it is time-dependent, we 
-must include the header file `ctime`.
+`srand` (under `cstdlib`) to re-initialize the random number seed. Also, for the fact that it is time-dependent, we 
+must include the header file `ctime`. 
 
-Example of using `srand`:
+__NOTE:__ If you don't call `srand` before creating a randomized value, you'll receive the same number after each program call. 
+
+Go back to the `rand` example, plug in the following (either one) before the initialization of `some_num` and still inside `main`, and notice the difference after compiling and running a few times.
 ```C++
-  /* srand example */
-  #include <iostream>
-  #include <cstdlib>
-  #include <ctime>
-
-  int main ()
-  {
-    cout << ("First number: %d\n", rand()%100);
-    srand (time(NULL));
-    cout << "Random number: " << rand()%100);
-    srand (1);
-    cout << "Again the first number: " << rand()%100;
-
-    return 0;
-  }
+  unsigned seed = time(0);
+  srand(seed);
+  
+  OR (as a quicker way to type it)
+  
+  srand(time(0));
 ```
+It should be generating properly now. Remember as well to include the `ctime` header too, as required. Either segments of code above should work.
 
-More info on using `srand` [here](http://www.cplusplus.com/reference/cstdlib/srand/).
+More info on using `srand` [here](http://stackoverflow.com/questions/7748071/same-random-numbers-every-time-i-run-the-program) and [here](http://www.cplusplus.com/reference/cstdlib/srand/).
 
 ### Chapter 4
 #### Booleans (Review)
@@ -431,7 +430,7 @@ then you may omit the curly braces.
 In order to use multiple
 #### switch
 Similar to using if-else statements, `switch` statements help when testing a variable's value. `switch` statements can 
-only be used to test a single value at a time though.
+only be used to test a single, integer-type value though.
 
 Example usage:
 ```C++
@@ -510,16 +509,18 @@ Try to do these without your notes. That way, you can test yourself and see if y
 Using the knowledge from the above review, the lecture notes, and the book, create your own calculator program that allows 
 these following things:
 
-	1. Simple algebra (addition, subtraction, multiplication, division)
-	2. Square root of a number, raising a number to an exponent, and logarithms
-	3. Modulus of two integers (you should know what this means by now)
+	1. Simple algebra (addition, subtraction, multiplication, division) and
+	2. Modulus of two integers
   
 It must also include a menu for the user (so they know how to input algebraic expressions).
-Remember that the best approach to making a program is by creating it through psuedocode first. For that 
-reason, **BEFORE** you begin programming make sure to validate your psuedocode with another person __AND__
-me (the SI instructor).
 
-[Example Output]()
+__NOTE:__ Remember that the best approach to making a program is by creating it through psuedocode first. For that 
+reason, **BEFORE** you begin programming make sure to validate your psuedocode with another person.
+
+__BONUS:__ Allow the user to use the square root, power, and logarithm (base-10) functions. 
+__BONUS-2:__ Allow the user to set the amount of significant digits to be outputted.
+
+[Example Outputs (with Bonuses]()
 
 #### Guessing Game
 Create a program that asks a user to guess a value within a range, and see if the value is right.
@@ -529,16 +530,12 @@ Here are the specifications:
   2. Must tell the user whether or not their value is above or below the randomly-generated number
   3. Tell the user the random number (if they guess wrong).
   
-Like the previous assignment, make sure to create psuedo-code and validate it with me (the SI instructor).
+Like the previous assignment, make sure to create psuedo-code and validate it with another group.
 
-[Example output]()
+[Example outputs](http://imgur.com/a/4HJlR)
 
-TIP: For test purposes, you might want to set your "randomly generated" integer to a fixed value. For mine, I used `7`.
-
-CHECK BELOW:
-__BONUS-2:__ Using the error-checking techniques from the other github folder (labeled Tutorials), make it so that the program 
-still works, despite entering a character or string as a guessed number.
-END OF CHECK
+__TIP:__ For test purposes, you might want to set your "randomly generated" integer to a fixed value. For mine, I used `2`.
+__TIP-2:__ If your program keeps generating the same randomly-generated number (when using the correct function), refer to the topic about random numbers on this page.
 -------------------------------------------------------------------------------
 
 Copyright &copy; 2014 Joseph Greene <joeisgreene@csu.fullerton.edu>  

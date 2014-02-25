@@ -408,7 +408,7 @@ Example of this in use (reusing `some_bool`):
   some_bool = (55 || 66) && !(0 || 3);
   //...code...
 ```
-Guess first, then check vai the compiler.
+Guess first, then check via the compiler.
 
 For more help with AND, NOT, and OR, look under the topic "Logical Operator" on [this page](http://www.cplusplus.com/doc/tutorial/operators/).
 

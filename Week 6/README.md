@@ -455,7 +455,7 @@ Example:
   //...code...
   if(input < 50)
   {
-    if(input < 100)
+    if(input < 100) //nested if
       cout << "Input is greater than 100!";
     else
       cout << "Input is less than 100 but greater than 50!";
@@ -583,5 +583,6 @@ __TIP-2:__ If your program keeps generating the same randomly-generated number (
 
 Copyright &copy; 2014 Joseph Greene <joeisgreene@csu.fullerton.edu>  
 Some notes grabbed from Dr. Tian's Chapter 3 Powerpoints
+
 Released under [The MIT License] (http://opensource.org/licenses/MIT)  
 Project located at <https://github.com/joegreene/Spring-2014-CS-Lab--SI-/>

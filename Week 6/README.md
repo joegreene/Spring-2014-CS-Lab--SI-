@@ -271,7 +271,7 @@ Example of a macro definition in use:
   }
 ```
 
-For more information on these, click [here](http://www.cprogramming.com/tutorial/cpreprocessor.html).
+For more information on these, click [here](http://www.cprogramming.com/tutorial/cpreprocessor.html) (under "Macros").
 
 #### c-string vs string
 I think [this page](http://www.prismnet.com/~mcmahon/Notes/strings.html) explains their differences quite well. If there is any confusion 
@@ -280,16 +280,17 @@ about what is on this page, don't hesitate to ask.
 One confusing part however is understanding the term "array". We'll talk more about them later in the course, but for now 
 think of them as "a list of something". Therefore, when we see "character array" we're talking about "a list of characters".
 
-##### C strings
-The C-standard way of making C++ strings, these are normally avoided because they're finicky to work with.
+##### c-strings
+The C-standard way of making C++ strings, these are normally avoided because they're finicky to work with and initialize. 
 
-
-
-For a list of c-string functions, go [here](http://www.cplusplus.com/reference/cstring/).
+For a list of c-string functions, go [here](http://www.cplusplus.com/reference/cstring/). Other than that, check the powerpoint notes for 
+more information as well (slides 34 through 42).
 
 ##### Strings
+The C++-standard way of making c-strings. These are normally used because they are easier to initialize and work with overall.
 
-For a list of string functions, go [here](http://www.cplusplus.com/reference/string/).
+For a list of string functions, go [here](http://www.cplusplus.com/reference/string/). Other than that, check the powerpoint notes for 
+more information as well (slides 34 through 42).
 
 #### cmath and Generating Random Numbers
 ##### cmath

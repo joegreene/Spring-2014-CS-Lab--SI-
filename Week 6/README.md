@@ -554,7 +554,7 @@ these following things:
   3. A menu (so the user knows how to input numbers and operations)
 
 __NOTE:__ Remember that the best approach to making a program is by creating it through psuedocode first. For that 
-reason, **BEFORE** you begin programming make sure to validate your psuedocode with another person.
+reason, **BEFORE** you begin programming make sure to make and validate your psuedocode with another person for this project.
 
 __BONUS:__ Allow the user to set the amount of significant digits to be outputted.
 

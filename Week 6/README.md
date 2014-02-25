@@ -413,8 +413,7 @@ Guess first, then check vai the compiler.
 For more help with AND, NOT, and OR, look under the topic "Logical Operator" on [this page](http://www.cplusplus.com/doc/tutorial/operators/).
 
 #### if-else
-`if` and `else` statements help with directing flow of a program. They're namely for boolean operations. You can have `if` statements by themselves, but 
-`else if` must go after `if` or `else if` and `else` goes at the end.
+`if` and `else` statements help with directing flow of a program. They're used with boolean operations. You can have `if` statements by themselves, but `else if` must go after `if` or another `else if`, and `else` goes at the end of a chain of `if` or `else if` statements.
 
 Example of if/else statements in use:
 ```C++
@@ -440,12 +439,14 @@ Example:
   if (something_happened && (1==1))
       cout << "Something happened, and 1 is equal to 1!";
   else if (something_happened && (1 != 1))
-      cout << "Something happened, but 1 is not equal to 1 (huh?).";
+  		cout << "Something happened, but for some reason 2 is not equal to 2 (huh?).";
   else
     cout << "Nothing happened. Oh well...";
   //...code...
 ```
 It's up to you to decide which to do, and whichever seems more appealing to the reader.
+
+More info [here](http://www.cprogramming.com/tutorial/lesson2.html) on if statements.
 
 ##### More with if-else
 You can "nest" if-statements within others.
@@ -461,6 +462,30 @@ Example:
       cout << "Input is less than 100 but greater than 50!";
   }
   //...code...
+```
+
+Also, you can have multiple else-if statements after an if statement.
+
+Example:
+```C++
+	//...code...
+	bool has_apples = false;
+	bool has_oranges = true;
+	if (has_apples && has_oranges)
+	{
+		cout << "Hey, you've apples AND oranges!";
+	}
+	else if (!has_apples && has_oranges)
+	{
+		cout << "You do not have apples, but you have oranges at least.";
+	}
+	else if (has_apples && !has_oranges)
+	{
+		cout << "It's cool to have apples, but oranges are where it is at.";
+	}
+	else
+		cout << "What are you doing?! Get some apples or oranges!";
+	//...code...
 ```
 
 #### switch

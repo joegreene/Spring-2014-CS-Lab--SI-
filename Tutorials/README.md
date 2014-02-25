@@ -7,6 +7,7 @@ Topics:
   - Shortcuts
   - Packaging Your Solutions (Via Archives)
   - Common Pitfalls When Creating Solutions
+  - Understanding the Output Log
 - Syntax:
   - Commenting
   - Naming Schemes
@@ -22,6 +23,7 @@ to this page, talk with Joe (the SI instructor) so he may add to the page.
 ## Shortcuts
 ## Packaging Your Solutions (Via Archives)
 ## Common Pitfalls When Creating Solutions
+## Understanding the Output Log
 # Syntax (and General Programming):
 ## Commenting
 ## Naming Schemes

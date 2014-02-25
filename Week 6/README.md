@@ -12,7 +12,7 @@
 	- [iomanip](#iomanip)
 	- [More on Naming Schemes (Constants & Macro Definitions)](#more-on-naming-schemes-constants--macro-definitions)
 	- [c-string vs string](#c-string-vs-string)
-	- [cmath and Generating Random Numbers](#cmath-and-generating-random-numbers)
+	- [cmath and Generating (Psuedo-)Random Numbers](#cmath-and-generating-psuedo-random-numbers)
 - Chapter 4
 	- [Booleans (Review)](#booleans-review)
 	- [if-else](#if-else)
@@ -182,11 +182,12 @@ __Console Output:__
 
 When doing this, the character or value scanned for is called a [delimiter](http://www.thefreedictionary.com/delimiter).
 
-TIP: If you would like to, you can convert strings to other datatypes. For more information, look [here](#c-string-vs-string) under string.
+__TIP:__ If you would like to, you can convert strings to other datatypes. For more information, look [here](http://www.cplusplus.com/reference/string/).
 
 #### iomanip
 Mainly used for cleanliness in output, `iomanip` is a header file used for (if you guessed it) "input/output 
 manipulation". In order to use this, we call `#include <iomanip>` after `iostream`.
+
 ##### Various Manipulators
 The most commonly used manipulators are (where x is an integer):
   1. `setw(x)`: Lets you print in a field at least x spaces wide. Uses more spaces if specified field is not big enough.
@@ -201,6 +202,7 @@ NOTE: If you want to know more about floating-point values (e.g. what they mean,
 click [here](http://www.learncpp.com/cpp-tutorial/25-floating-point-numbers/).
 
 Example of iomanip in use (copied directly from the lecture notes):
+
 __C++:__
 ```C++
   //...code...
@@ -292,20 +294,22 @@ The C++-standard way of making c-strings. These are normally used because they a
 For a list of string functions, go [here](http://www.cplusplus.com/reference/string/). Other than that, check the powerpoint notes for 
 more information as well (slides 34 through 42).
 
-#### cmath and Generating Random Numbers
+#### cmath and Generating (Psuedo-)Random Numbers
 ##### cmath
 The `cmath` header lets you use specific math functions, such as `tan` (tangent), `sqrt` (square root), and more. A 
 more complete list can be found [here](http://www.cplusplus.com/reference/cmath/). Click on the ones you're curious about 
 and they will explain each function within `cmath` pretty well.
 
 NOTE: Keep in mind that, with each function, they require a specific type of input to be used. Remember in the last lab how we 
-were getting errors when inputting an integer for `sqrt`? If you get errors when using a function from `cmath` take a look at either the output 
-log (located below where you type in code) or check the cplusplus.com reference page (on the complete list link above).
+were getting errors when inputting an integer for `sqrt`? That's because it required `double` for its input. Take a look at the output log 
+(located below your code) if you get errors when using a cmath function (or any really).
+
+For more information as well, check the powerpoint (page 43).
 
 ##### (Psuedo-)Random Numbers
 Through the header file `cstdlib`, you can use the `rand` function. `rand` outputs a "random" number (between 0 and some maximum integer set by the compiler).
 
-When using and creating randomly-generated numbers, there are two key things to think about:
+When using and creating values through `rand`, there are two key things to think about:
 
   1. Range of a value
     - To set the range of a value, use % for range
@@ -341,9 +345,10 @@ Notice anything weird with the output? Look at the next section for more details
 More information on using `rand` [here](http://www.cplusplus.com/reference/cstdlib/rand/).
 
 ##### Seed Number (for Randomization)
-Because a randomly-generated number is time-dependent (that is, it generates its seed value by time to be truly random), use 
-`srand` (under `cstdlib`) to re-initialize the random number seed. Also, for the fact that it is time-dependent, we 
-must include the header file `ctime`. 
+Note that in the title before this topic I used the prefix "psuedo-" (meaning "fake"). That's because there's a specific formula used to create the `rand` value. 
+By calling `srand`, we can (re-)initialize the number generator each time we run a program.
+
+To call `srand` we use the `cstdlib` library/header, and to use the `time` function (typically required with `srand`) we include the library/header `ctime`.
 
 __NOTE:__ If you don't call `srand` before creating a randomized value, you'll receive the same number after each program call. 
 
@@ -358,7 +363,8 @@ Go back to the `rand` example, plug in the following (either one) before the ini
 ```
 It should be generating properly now. Remember as well to include the `ctime` header too, as required. Either segments of code above should work.
 
-More info on using `srand` [here](http://stackoverflow.com/questions/7748071/same-random-numbers-every-time-i-run-the-program) and [here](http://www.cplusplus.com/reference/cstdlib/srand/).
+More info on using `srand` [here](http://stackoverflow.com/questions/7748071/same-random-numbers-every-time-i-run-the-program) and [here](http://www.cplusplus.com/reference/cstdlib/srand/). 
+Also, check pgs 43 and 44 of the powerpoint.
 
 ### Chapter 4
 #### Booleans (Review)
@@ -527,7 +533,7 @@ __BONUS-2:__ Allow the user to set the amount of significant digits to be output
 Create a program that asks a user to guess a value within a range, and see if the value is right.
 Here are the specifications:
   1. Must generate and allow the user to guess a randomly-generated number. 
-    - For the user's sake, have the range between 0 and 10.
+    - For the user's sake, have the range between 0 and some small max. Set the max by using a constant integer.
   2. Must tell the user whether or not their value is above or below the randomly-generated number
   3. Tell the user the random number (if they guess wrong).
   

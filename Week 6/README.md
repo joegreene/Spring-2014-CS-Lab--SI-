@@ -522,6 +522,7 @@ __NOTE:__ Remember that the best approach to making a program is by creating it 
 reason, **BEFORE** you begin programming make sure to validate your psuedocode with another person.
 
 __BONUS:__ Allow the user to set the amount of significant digits to be outputted.
+
 __BONUS-2:__ Allow the user to use the square root, power, and logarithm (base-10) functions. 
 
 [Example Outputs](http://imgur.com/a/BYgY6)
@@ -539,6 +540,7 @@ Like the previous assignment, make sure to create psuedo-code and validate it wi
 [Example outputs](http://imgur.com/a/4HJlR)
 
 __TIP:__ For test purposes, you might want to set your "randomly generated" integer to a fixed value. For mine, I used `2`.
+
 __TIP-2:__ If your program keeps generating the same randomly-generated number (when using the correct function), refer to the topic about random numbers on this page.
 
 ...

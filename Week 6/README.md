@@ -19,8 +19,8 @@
 	- [More with if-else](#more-with-if--else)
 	- [switch statements](#switch-statements)
 	- [Menu-driven programming](#menu--driven-programming)
-- Practice Assignments(#practice-assignments)
-	- Make Your Own Calculator!
+- [Practice Assignments](#practice-assignments)
+	- Design your own calculator
 	- Guessing Game
 	- Conversion program (SI Units) (?) [best with arrays though...]
 
@@ -508,9 +508,10 @@ An example of a menu-driven program:
 They might seem annoying to type out, but they surely make your program look neater to users in console.
 
 ### Practice Assignments
-Try to do these without your notes. That way, you can test yourself and see if you actually know the material.
+Try to do these without your notes. That way, you can test yourself and see if you actually know the material. If you're absolutely stuck, ask a friend, then 
+begin referring to other sources.
 
-#### Design your own calculator!
+#### Design your own calculator
 Using the knowledge from the above review, the lecture notes, and the book, create your own calculator program that contains 
 these following things:
 

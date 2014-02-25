@@ -414,25 +414,56 @@ Guess first, then check vai the compiler.
 For more help with AND, NOT, and OR, look under the topic "Logical Operator" on [this page](http://www.cplusplus.com/doc/tutorial/operators/).
 
 #### if-else
-`if` and `else` statements help with directing flow of a program. They're namely for boolean operations.
+`if` and `else` statements help with directing flow of a program. They're namely for boolean operations. You can have `if` statements by themselves, but 
+`else if` must go after `if` or `else if` and `else` goes at the end.
 
 Example of if/else statements in use:
 ```C++
   //...code...
-  bool some_bool
-  if(some_bool) //another way of checking if a boolean is true
+  bool some_bool = true;
+  if(some_bool) //another way of checking if a boolean is true other than "some_bool == true"
   {
     cout << "some_bool is true!";
   }
-  else
+  else if (!some_bool)
     cout << "some_bool is false!";
+  else
+    cout << "If some_bool can only be true or false... how did you get here?";
 ```
 
 Note in the above example that one case used curly braces, and the other does not. If you only have one line after the if/else statement, 
-then you may omit the curly braces.
+then you may omit the curly braces. If you choose to type this way though, it can become quite disorienting with more lines.
 
-##### Joining Multiple if-else statements
-In order to use multiple
+Example:
+```C++
+  //...code...
+  bool something_happened = true;
+  if (something_happened && (1==1))
+      cout << "Something happened, and 1 is equal to 1!";
+  else if (something_happened && (1 != 1))
+      cout << "Something happened, but 1 is not equal to 1 (huh?).";
+  else
+    cout << "Nothing happened. Oh well...";
+  //...code...
+```
+It's up to you to decide which to do, and whichever seems more appealing to the reader.
+
+##### More with if-else
+You can "nest" if-statements within others.
+
+Example:
+```C++
+  //...code...
+  if(input < 50)
+  {
+    if(input < 100)
+      cout << "Input is greater than 100!";
+    else
+      cout << "Input is less than 100 but greater than 50!";
+  }
+  //...code...
+```
+
 #### switch
 Similar to using if-else statements, `switch` statements help when testing a variable's value. `switch` statements can 
 only be used to test a single, integer-type value though.

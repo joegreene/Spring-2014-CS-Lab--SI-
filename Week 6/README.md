@@ -39,13 +39,14 @@ When looking at some of the examples on this page, I'll be typing something like
 This just means I'm too lazy to type out the entire program. The omitted syntax should be self-explanatory and 
 therefore I deemed it unnecessary to include in the examples.
 
-Last note: Although I thank you guys for reading this work I made for you guys, you can't use this as a substitute for 
+Also, although I thank you guys for reading this work I made for you guys, you can't use this as a substitute for 
 the book and the lecture notes. This page only serves as both review of the notes and further practice.
 
 ### Psuedo-code
 ####What is psuedo-code and how do I use it?
 Think of psuedo-code as a midway translation between C++ and a spoken language (such as English). 
 An example of translating from C++ to psuedo-code (and vice-versa if you read bottom-up):
+
 __C++:__
 ```C++
   //...code...
@@ -81,12 +82,13 @@ Two main reasons I can think of right now (there are probably more):
     - Especially when creating big projects, it's good to have a set list of instructions you can refer to. 
       Without psuedocode or some sort of agenda to refer to, it's easy to lose track of what you're building 
       (and thus lose or halt progress).
-  2. Outside help
-    - It's easier for someone to help you out if you tell them what you're trying to do. Imagine looking at 
-      someone's math homework, but they've written extremely messy all over the place. How are you going to 
-      know what they're doing unless you keep asking them over and over what they wrote down?
+  2. To Help Others Help You
+    - It's easier for someone to help you out if they can refer to a list of what you're trying to accomplish. Imagine 
+      looking at someone's math homework, but they've written extremely messy all over the place. How are you going to 
+      know what they're doing unless you keep asking them over and over what steps they took?
 	  
-Getting into a habit of creating psuedocode will help you in the longrun, especially with larger projects.
+Getting into a habit of creating psuedocode will help you in the longrun, especially with larger projects. If you'd like 
+more information on psuedo-code, check [this wikipedia article](http://en.wikipedia.org/wiki/Pseudocode).
 
 ### Bits, Bytes, Bases & Range
 If I get enough people asking about this topic, I'll try my best to explain up on the board on this topic with more detail.
@@ -99,7 +101,7 @@ Other than that, the following links should explain bits, bytes, bases and range
 
 ### Side note: Doubles vs. Floats
 I didn't really go over floats in last week's review, but a nice reference is [this](http://www.learncpp.com/cpp-tutorial/25-floating-point-numbers/) 
-if you would like know about the differences between the two.
+if you would like know about the differences between the two. I'm pretty sure the book has some information as well.
 
 ### Chapter 3
 #### cin
@@ -107,7 +109,7 @@ When using `cin`, remember these few things:
 
   1. You must using `#include <iostream>` in order to use this. Note that `iostream` is shorthand for "input/output stream"
   2. You must use the namespace `std`. Go about this by either using `using namespace std;` or `std::` before `cin`.
-  3. `cin` works by grabbing input up until it reaches either a space or new line (`'\n'`). It must grab
+  3. `cin` works by grabbing input up until it reaches either a space or new line (`'\n'`).
     - Don't use `cin` if you plan to have spaces when grabbing input.
     - If you end up putting a space, whatever is leftover goes to the next variable to be inputted.
 
@@ -115,7 +117,7 @@ Example of using `cin`:
 ```C++
   //...code...
   int num1, num2;
-  num1 = num2 = 0; //initialization
+  num1 = num2 = 0; //good practice to initialize, even before using cin
   cout << "Enter in two integers: ";
   cin >> num1 >> num2;
   

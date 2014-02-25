@@ -16,13 +16,12 @@
 - Chapter 4
 	- [Booleans (Review)](#booleans-review)
 	- [if-else](#if-else)
-	- [More with if-else](#more-with-if--else)
-	- [switch statements](#switch-statements)
-	- [Menu-driven programming](#menu--driven-programming)
+	- [More with if-else](#more-with-if-else)
+	- [switch statements](#switch)
+	- [Menu-driven programming](#menu-driven-programming)
 - [Practice Assignments](#practice-assignments)
-	- Design your own calculator
-	- Guessing Game
-	- Conversion program (SI Units) (?) [best with arrays though...]
+	- 1) Design your own calculator
+	- 2) Guessing Game
 
 ### Solutions (From Last Week)
 Above this are the .cpp solutions from last week's exercises. For each week from now on, I'm going to place 
@@ -546,7 +545,7 @@ They might seem annoying to type out, but they surely make your program look nea
 Try to do these without your notes. That way, you can test yourself and see if you actually know the material. If you're absolutely stuck, ask a friend, then 
 begin referring to other sources.
 
-#### Design your own calculator
+#### 1) Design your own calculator
 Using the knowledge from the above review, the lecture notes, and the book, create your own calculator program that contains 
 these following things:
 
@@ -563,7 +562,7 @@ __BONUS-2:__ Allow the user to use the square root, power, and logarithm (base-1
 
 [Example Outputs](http://imgur.com/a/BYgY6)
 
-#### Guessing Game
+#### 2) Guessing Game
 Create a program that asks a user to guess a value within a range, and see if the value is right.
 Here are the specifications:
   1. Must generate and allow the user to guess a randomly-generated number. 

@@ -324,7 +324,7 @@ Example usage of `rand`:
   {
     int some_num = rand() % MAX + 1; //range of the random value is from 1 to MAX
     cout << some_num << endl;
-    some_num = rand() % 30 + 1; //what do you think happens here?
+    some_num = rand() % MAX + 1; //what do you think happens here?
     cout << some_num << endl;
       
     return 0;
@@ -519,27 +519,21 @@ Remember that the best approach to making a program is by creating it through ps
 reason, **BEFORE** you begin programming make sure to validate your psuedocode with another person __AND__
 me (the SI instructor).
 
-__BONUS:__ Allow the user to use the program until they say to quit. HINT: This requires some sort of loop.
-
 [Example Output]()
 
 #### Guessing Game
 Create a program that asks a user to guess a value within a range, and see if the value is right.
 Here are the specifications:
   1. Must generate and allow the user to guess a randomly-generated number. 
-    - Make sure the randomly-generated number stays the same while the user is in the same game.
     - For the user's sake, have the range between 0 and 10.
   2. Must tell the user whether or not their value is above or below the randomly-generated number
-  3. Must allow the user to quit whenever they like to.
-  4. Must count the number of guesses made before getting the correct number.
+  3. Tell the user the random number (if they guess wrong).
   
 Like the previous assignment, make sure to create psuedo-code and validate it with me (the SI instructor).
 
 [Example output]()
 
 TIP: For test purposes, you might want to set your "randomly generated" integer to a fixed value. For mine, I used `7`.
-
-__BONUS:__ Keeping all previous functionalities, allow the user to recontinue the guessing game after guessing correctly. Make sure to change the random number after each time!
 
 CHECK BELOW:
 __BONUS-2:__ Using the error-checking techniques from the other github folder (labeled Tutorials), make it so that the program 

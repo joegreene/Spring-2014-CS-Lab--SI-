@@ -446,17 +446,17 @@ Example usage:
   {
     case 'a': //if user inputted 'a'
       cout<<"You inputted \'a\'. Cool.\n";
-      break;
+      break;  //to avoid going into case 'b'
     case 'b': //if user inputted 'b'
       cout<<"You inputted \'b\'. Okay...\n";
-      break;
+      break;  //to avoid into the default case
     default:
       cout<<"Unchecked/Unknown input. That means your input wasn't \'a\' or \'b\'. Commencing self-destruct sequence...\n";
-      break;
+      break; //not required in this case, but doesn't matter if left here
   }
   //...code...
 ```
-It's always a good idea to include a `default` case. It makes your program more [robust](http://www.linfo.org/robust.html) 
+Although not required, it's always a good idea to include a `default` case. It makes your program more [robust](http://www.linfo.org/robust.html) 
 and helps if a user mistypes input. It's always better safe than sorry!
 
 Switch cases can be combined as well. For example: 
@@ -487,7 +487,11 @@ Switch cases can be combined as well. For example:
   }
   //...code...
 ```
-Lets you mix characters `a, A, b, B` together, `c, C`, together, and so on.
+This lets you mix characters `a, A, b, B` together, `c, C`, together, and so on. By doing this, you can avoid typing more 
+(which is efficient for both yourself and the program).
+
+More info (with a nice diagram) [here](http://www.tutorialspoint.com/cplusplus/cpp_switch_statement.htm).
+
 #### Menu-driven programming
 When someone says that their program is "menu-driven", it just means that a menu is printed to console, listing options 
 for a user to choose. Afterwards, input is tested using if-else or switch statements. They're typically used at the start 

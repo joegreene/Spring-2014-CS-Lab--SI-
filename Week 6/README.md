@@ -487,7 +487,7 @@ Switch cases can be combined as well. For example:
   }
   //...code...
 ```
-
+Lets you mix characters `a, A, b, B` together, `c, C`, together, and so on.
 #### Menu-driven programming
 When someone says that their program is "menu-driven", it just means that a menu is printed to console, listing options 
 for a user to choose. Afterwards, input is tested using if-else or switch statements. They're typically used at the start 
@@ -536,7 +536,7 @@ Here are the specifications:
   2. Must tell the user whether or not their value is above or below the randomly-generated number
   3. Tell the user the random number (if they guess wrong).
   
-Like the previous assignment, make sure to create psuedo-code and validate it with another group.
+Like the previous assignment, make sure to create psuedo-code and validate it with another group before programming.
 
 [Example outputs](http://imgur.com/a/4HJlR)
 

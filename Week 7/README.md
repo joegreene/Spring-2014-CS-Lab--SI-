@@ -27,7 +27,7 @@ if you wish to do so.
 I've also added more exercises to the bottom of this sheet if in case you finish all the work and review early.
 
 ### Chapter 4
-A continuation of last week's work. If you've brough it with you, it might be handy to have your book at hand. Else, either ask a friend or use Google to help you out.
+A continuation of last week's work. If you've brought it with you, it might be handy to have your book at hand. Else, either ask a friend or use Google to help you out.
 
 #### Validating User Input
 If we want, we can use if, else, else-if, and switch statements for validating user input. Because we have control 
@@ -41,7 +41,7 @@ Example (with if-else):
   //...code...
   int percent = 50;
   
-  if (percent > 100 || percent < 0)
+  if (percent > 100 || percent < 0) //if the percent is either above 100 OR below 0
   {
     cout << "Invalid percent" << endl;
   }
@@ -54,9 +54,10 @@ Example (with if-else):
 ```
 
 For switch statements: Although other cases can be used, primarily the `default` case is used for validation. If all other cases are not met, `default` is reached and everything else in the switch statement is ignored.
+An example is gone over in the section "Little More With switch".
 
 #### Block & Scope
-Blocks describe the area in which a variable exists, whereas scope describes the area in which a variable can act upon. 
+Blocks describe the area in which a variable or item exists, whereas scope describes the area in which a variable or item can act upon. 
 
 Example: 
 
@@ -81,8 +82,10 @@ Example:
   }
 ```
 
-In this case, `some_var` is located within a block outside of the if statement and its scope is both outside and inside the , one instance of `some_var2` is 
+In this case, `some_var` is located within a block outside of the if-statement and its scope is both outside and inside the if statement. `some_var2` is located and created inside the if-statement, therefore 
+defining its scope within the if-statement only and exists only in that block. When the program exits the if-statement, `some_var2` is destroyed (which is the reason why calling `cout` on it later is illegal).
 
+For more info, click [here](http://www.tutorialspoint.com/cplusplus/cpp_variable_scope.htm).
 
 #### Using `break`
 `break` allows you to stop execution in a block of code. You'll see these frequently used in switch cases.
@@ -97,7 +100,7 @@ Example:
   {
     cout << "Variable some_bool is false\n" << endl;
     break;
-    cout << "These bananas aren't for sale!" << endl;
+    cout << "How did you get here?" << endl;
   }
   
   //...code...
@@ -221,17 +224,17 @@ Because this is a ternary operator, it can only be used for two cases (a true an
 `a ? b : c;`.
 
 #### Enumeration
-An extremely handy tool in programming, [enumeration](http://www.merriam-webster.com/dictionary/enumerate) allows us to create a list of variables with incrementing values. By default, the first 
-value is set to 0 and any succeeding variables in the list are one higher than the previous.
+An extremely handy tool in programming, [enumeration](http://www.merriam-webster.com/dictionary/enumerate), or `enum`, allows us to create our own type of data type, containing a set of named 
+constant integers. 
 
-A C++ example of enumeration:
+A C++ example of enumeration (list of variables only):
 ```C++
   //...code...
+  enum { JAN = 1, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC }; //assigns values one through twelve
   
+  cout << MAY << endl;
   //...code...
 ```
-
-By default
 
 More information [here](http://www.cprogramming.com/tutorial/enum.html).
 
@@ -250,9 +253,10 @@ The prompts for these are located under the files section at the top of this pag
 
   Features:
   - Make sure not to use any `iomanip` features (especially for rounding).
-  - Only use an if-else or switch statement for validating user input. __DO NOT__ use it for rounding.
-  - Scan for an integer type, NOT a decimal value! 
-  - Allow the user to input three numbers to round. This can be done by either three prompts or one line.
+  - __DO NOT__ use an if-else or switch statement for rounding. However, you may use it for user validation.
+  - Scan for an integer type, __NOT__ a decimal value!
+  -   
+  - Allow the user to input three decimal numbers to round. The user must be prompted per number.
   - If the user enters in a value that isn't a floating-type, tell them their input is wrong.
 
 NOTE: For this exercise, refrain from using topics covered in later chapters (or outside class). Stick with Chapters 1 through 4 material.

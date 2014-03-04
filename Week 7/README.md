@@ -6,9 +6,9 @@
 - [Chapter 4](#chapter-4)
   - [Validating User Input](#validating-user-input)
   - [Block & Scope](#block--scope)
-  - [`break`](#`break`)
-  - [Little More With `switch`](#little-more-with-switch)
-  - [More with `string` and `char`](#more-with-`string`-and-`char`)
+  - [Using `break`](#break)
+  - [Little More With switch](#little-more-with-switch)
+  - [More with `string` and `char`](#more-with-string-and-char)
   - [The Conditional Operator](#the-conditional-operator)
   - [Enumerated Data Types](#enumerated-data-types)
 - [Class Practice](#class-practice)
@@ -53,7 +53,7 @@ Example (with if-else):
   //...code...
 ```
 
-For switch statements: Although other cases can be used primarily the default case is an example of user validation. If all other cases are not met, default is reached and ran through.
+For switch statements: Although other cases can be used, primarily the `default` case is used for validation. If all other cases are not met, `default` is reached and everything else in the switch statement is ignored.
 
 #### Block & Scope
 Blocks describe the area in which a variable exists, whereas scope describes the area in which a variable can act upon. 
@@ -75,7 +75,7 @@ Example:
     }
     
     cout << some_var2; /* illegal call, because some_var2 does not exist in this 
-                          lock and this is outside of some_var2's scope (from the if statement) */
+                          lock and is outside of some_var2's scope (from the if statement) */
        
     return 0;
   }
@@ -84,7 +84,7 @@ Example:
 In this case, `some_var` is located within a block outside of the if statement and its scope is both outside and inside the , one instance of `some_var2` is 
 
 
-#### `break`
+#### Using `break`
 `break` allows you to stop execution in a block of code. You'll see these frequently used in switch cases.
 
 Example:
@@ -234,32 +234,29 @@ More information [here](http://www.cprogramming.com/tutorial/enum.html).
 All the below worksheet problems should be done by pencil/paper.
 
 #### Worksheets
-- Logical Operator Worksheets
+- Logical Operator Worksheet
 - Syntax Worksheet
 - Relational Operators, Arithmetic Operators, and Type Coercion Worksheet
 
-The files for these are located under the files section at the top of this page.
+The prompts for these are located under the files section at the top of this page.
 
 #### Separate Exercises
 1. Make a program, complete with user input validation (for incorrect input), that rounds a decimal value up or down.
 
   Features:
   - Make sure not to use any `iomanip` features (especially for rounding).
-  - Do not use if-else-else if or switch statements in this exercise.
+  - Only use an if-else or switch statement for validating user input. __DO NOT__ use it for rounding.
   - Scan for an integer type, NOT a decimal value! 
   - Allow the user to input three numbers to round. This can be done by either three prompts or one line.
   - If the user enters in a value that isn't a floating-type, tell them their input is wrong.
 
-2. TBD
-
-NOTE: For both exercises, refrain from using topics covered in later chapters (or outside class). Stick with Chapters 1 through 4 material.
+NOTE: For this exercise, refrain from using topics covered in later chapters (or outside class). Stick with Chapters 1 through 4 material.
 
 Example outputs can be found in the folder "Example Outputs" under the files section at the top of this page.
 
 ### Extra Challenges
-
-
-If you feel comfortable with all the work we've done so far, I would suggest reading ahead in our book (Chapter 5) because it's a rather hefty chapter.
+If you feel comfortable with all the work we've done so far, I would suggest reading ahead in our book (Chapter 5) because it's a rather hefty chapter. Plus, it's one less thing to 
+worry about in the future.
 
 Other than that, here's a list of resources/practice you may check out (that relate to Chapter 5):
   1. [Loops (look under iteration statements)](http://www.cplusplus.com/doc/tutorial/control/)

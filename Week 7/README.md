@@ -6,7 +6,7 @@
 - [Chapter 4](#chapter-4)
   - [Validating User Input](#validating-user-input)
   - [Block & Scope](#block--scope)
-  - [Using `break`](#break)
+  - [Using `break`](#using-break)
   - [Little More With switch](#little-more-with-switch)
   - [More with `string` and `char`](#more-with-string-and-char)
   - [The Conditional Operator](#the-conditional-operator)
@@ -160,7 +160,7 @@ Anything strange happen with any of the outputs? If so, list the errors and fix 
 
 More info on `switch` [here](http://www.tutorialspoint.com/cplusplus/cpp_switch_statement.htm).
 
-#### More With Strings and Characters
+#### More with `string` and `char`
 Like booleans and other integer types, relational operators can be used on strings and characters. For example:
 
 ```C++
@@ -224,7 +224,7 @@ The equivalent of this, by using an if-else statement, is as follows:
 Because this is a ternary operator, it can only be used for two cases (a true and false case). Good way to remember this is by saying "__IF__ a __THEN__ b __ELSE__ c", where
 `a ? b : c;`.
 
-#### Enumeration
+#### Enumerated Data Types
 An extremely handy tool in programming, [enumeration](http://www.merriam-webster.com/dictionary/enumerate), or `enum`, allows us to create our own type of data type, containing a set of named 
 constant integers.
 
@@ -274,10 +274,6 @@ All the below worksheet problems should be done by pencil/paper.
 
 #### Worksheets
 - Logical Operator Worksheet
-- Syntax Worksheet
-- Relational Operators, Arithmetic Operators, and Type Coercion Worksheet
-
-The prompts for these are located under the files section at the top of this page.
 
 #### Separate Exercises
 Make a program, complete with user input validation (for incorrect input), that rounds a decimal value up or down.

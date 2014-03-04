@@ -3,17 +3,18 @@
 ## Contents
 - [Solutions (From Last Week)](#solutions-from-last-week)
 - [Intro](#intro)
-- [Chapter 4]()
-  - [Validating User Input]()
-  - [Block & Scope]()
-  - [`break`]()
-  - [Little More With `switch`]()
-  - [More with `string` and `char`]()
-  - [The Conditional Operator]()
-  - [Enumerated Data Types]()
-- [Worksheets & Extra Practice]()
-  - [Solutions to Worksheets & Extra Practice]()
-- [Extra Challenges]()
+- [Chapter 4](#chapter-4)
+  - [Validating User Input](#validating-user-input)
+  - [Block & Scope](#block--scope)
+  - [`break`](#`break`)
+  - [Little More With `switch`](#little-more-with-switch)
+  - [More with `string` and `char`](#more-with-`string`-and-`char`)
+  - [The Conditional Operator](#the-conditional-operator)
+  - [Enumerated Data Types](#enumerated-data-types)
+- [Class Practice](#class-practice)
+  - [Worksheets](#worksheets)
+  - [Separate Exercises](#separate-exercises)
+- [Extra Challenges](#extra-challenges)
 
 ### Solutions (From Last Week)
 Located above all this (under files section). Remember that these are only EXAMPLES of the solutions (in programming, there's always alternative ways to do a task). 
@@ -26,6 +27,63 @@ if you wish to do so.
 I've also added more exercises to the bottom of this sheet if in case you finish all the work and review early.
 
 ### Chapter 4
+A continuation of last week's work.
+
+#### Validating User Input
+If we want, we can use if, else, else-if, and switch statements for validating user input. Because we have control 
+over the input given to us, we can direct the flow in which the program uses said input.
+
+With if-else statements, we can determine faulty input by a range of values and simple rationality.
+
+Example (with if-else):
+
+```C++
+  //...code...
+  int percent = 50;
+  
+  if (percent > 100 || percent < 0)
+  {
+    cout << "Invalid percent" << endl;
+  }
+  else
+  {
+    //do necessary procedures with percent
+  }
+  
+  //...code...
+```
+
+For switch statements: Although other cases can be used primarily the default case is an example of user validation. If all other cases are not met, default is reached and ran through.
+
+#### Block & Scope
+Blocks describe the area in which a variable exists, whereas scope describes the area in which a variable can act upon. 
+
+Example: 
+
+```C++
+  #include <iostream>
+  using namespace std;
+  
+  int main() 
+  {
+    int some_var = 0; //initialization
+       
+    if (some_var == 0)
+    {
+      int some_var2 = some_var; //legal, some_var2 is within some_var's scope
+      cout << some_var << endl; //legal, still in same block of some_var
+    }
+    
+    cout << some_var2; /* illegal call, because some_var2 does not exist in this 
+                          lock and this is outside of some_var2's scope (from the if statement) */
+       
+    return 0;
+  }
+```
+
+In this case, `some_var` is located within a block outside of the if statement and its scope is both outside and inside the , one instance of `some_var2` is 
+
+
 #### `break`
 `break` allows you to stop execution in a block of code. You'll see these frequently used in switch cases.
 
@@ -52,7 +110,7 @@ Output:
   ...
 ```
 
-#### Little more with `switch`
+#### Little More With `switch`
 Remember that, with switch statements, the `break` statement is essential for all cases except `default`. I leave it there out of both habit and to remind myself that other cases require it.
 
 Try out the following code with each letter input:
@@ -93,50 +151,45 @@ Try out the following code with each letter input:
   }
 ```
 
-Anything strange happen with any of the outputs? Fix the code so that it works as intended.
+Anything strange happen with any of the outputs? If so, list the errors and fix the code so that it works as intended.
 
-#### Validating User Input
-If we want, we can use if, else, else-if, and switch statements for validating user input. Because we have control 
-over the input given to us, we can direct the flow in which the program uses said input.
-
-With if-else statements, we can determine faulty input by a range of values and simple rationality.
-
-Example (with if-else):
+#### More With Strings and Characters
+Like booleans and other integer types, relational operators can be used on strings and characters. For example:
 
 ```C++
   //...code...
+  char not_string = 'b';
+  string not_single_char = "this is a string";
+  
+  if (not_string == 'b')
+    //do something here
+  if (not_single_char == "this is a string")    
+    //do something here
+  //...code...
 ```
 
-If you've corrected the example under "Little More With `switch`", the default case is an example of user validation. In its case, 
-we determined the case that isn't any of the others taken care of.
+When using relational operators in this case, we're really just comparing each character's integer value (a.k.a. the ASCII value). With `string`, the comparison per character is done for us.
 
-#### Block & Scope
-Blocks describe the area in which a variable exists, whereas scope describes the area in which a variable can act upon. 
+Unfortunately, we cannot use relational operators on c-strings. For those, each individual character must manually be tested and can be quite troublesome to work with.
 
-Example: 
+By including the `cctype` library into our program's code, we can also perform more various checks on individual characters. I won't go through all of them since there are a lot, but examples of using them are here:
 
 ```C++
-  #include <iostream>
-  using namespace std;
+  //...code...
+  char some_char = 'Z';
   
-  int main() 
-  {
-    int some_var = 0; //initialization
-       
-    if (some_var == 0)
-    {
-      int some_var2 = some_var; //legal, some_var2 is within some_var's scope
-      cout << some_var << endl; //legal, still in same block of some_var
-    }
-    
-    cout << some_var2; /* illegal call, because some_var2 does not exist in this 
-                          lock and this is outside of some_var2's scope (from the if statement) */
-       
-    return 0;
-  }
+  some_char = tolower(some_char); //sets some_char to 'z'
+  
+  cout << isupper(some_char); //false, as it is 'z'
+  cout << isdigit(some_char); //false, it is the letter z
+  cout << isalpha(some_Char); //true, 'z' is an alphabetical character
+  
+  //...code...
 ```
 
-In this case, `some_var` is located within a block outside of the if statement and its scope is both outside and inside the , one instance of `some_var2` is 
+Just by looking at it, what do you think using `cout << isupper(toupper(some_char));` will be if we include that into the above program? 
+
+For a list of functions in the `cctype` library, check [here](http://www.cplusplus.com/reference/cctype/). For more help, try [here](http://cse.csusb.edu/dick/samples/c++.cctype.html).
 
 #### The Conditional Operator
 Something not seen too often, the conditional operator can be used to create short if/else statements. It is a ternary operator, meaning it acts upon three variables/values.
@@ -165,19 +218,6 @@ The equivalent of this using an if-else statement is as follows:
 Because this is a ternary operator, it can only be used for two cases (a true and false case). Good way to remember this is by saying "IF a THEN b ELSE c", where
 `a ? b : c;`.
 
-#### More With Strings and Characters
-Like booleans and other integer types, relational operators can be used on strings and characters. For example:
-
-```C++
-  //...code...
-  
-  //...code...
-```
-
-Unfortunately, we cannot use relational operators on c-strings. For those, each individual character must be tested and can be quite troublesome.
-
-Using the `cctype` header, we can also 
-
 #### Enumeration
 An extremely handy tool in programming, [enumeration](http://www.merriam-webster.com/dictionary/enumerate) allows us to create a list of variables with incrementing values. 
 
@@ -190,16 +230,15 @@ A C++ example of enumeration:
 
 More information [here](http://www.cprogramming.com/tutorial/enum.html).
 
-### Worksheets & Extra Practice
-All the below work problems should be done by pencil/paper.
+### Class Practice
+All the below worksheet problems should be done by pencil/paper.
 
-#### Problems
-- [Some list of boolean shiz]()
-- [if/else outputs]()
-- [syntax worksheet (what's wrong with the line and fix the code segment)]()
-- [iomanip]()
-- [cmath stuff]()
-When you are done with these, check with other groups 
+#### Worksheets
+- Logical Operator Worksheets
+- Syntax Worksheet
+- Relational Operators, Arithmetic Operators, and Type Coercion Worksheet
+
+The files for these are located under the files section at the top of this page.
 
 #### Separate Exercises
 1. Make a program, complete with user input validation (for incorrect input), that rounds a decimal value up or down.
@@ -216,6 +255,7 @@ When you are done with these, check with other groups
 NOTE: For both exercises, refrain from using topics covered in later chapters (or outside class). Stick with Chapters 1 through 4 material.
 
 Example outputs can be found in the folder "Example Outputs" under the files section at the top of this page.
+
 ### Extra Challenges
 
 
@@ -229,7 +269,7 @@ Other than that, here's a list of resources/practice you may check out (that rel
 -------------------------------------------------------------------------------
 
 Copyright &copy; 2014 Joseph Greene <joeisgreene@csu.fullerton.edu>  
-Some notes grabbed from Dr. Tian's Chapter 3 Powerpoints
+Some notes grabbed from Dr. Tian's Chapter 4 Powerpoint (located on Titanium)
 
 Released under [The MIT License] (http://opensource.org/licenses/MIT)  
 Project located at <https://github.com/joegreene/Spring-2014-CS-Lab--SI-/>

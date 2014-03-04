@@ -27,7 +27,7 @@ if you wish to do so.
 I've also added more exercises to the bottom of this sheet if in case you finish all the work and review early.
 
 ### Chapter 4
-A continuation of last week's work.
+A continuation of last week's work. If you've brough it with you, it might be handy to have your book at hand. Else, either ask a friend or use Google to help you out.
 
 #### Validating User Input
 If we want, we can use if, else, else-if, and switch statements for validating user input. Because we have control 
@@ -110,6 +110,8 @@ Output:
   ...
 ```
 
+More info (included with switch) [here](http://www.tutorialspoint.com/cplusplus/cpp_switch_statement.htm).
+
 #### Little More With `switch`
 Remember that, with switch statements, the `break` statement is essential for all cases except `default`. I leave it there out of both habit and to remind myself that other cases require it.
 
@@ -152,6 +154,8 @@ Try out the following code with each letter input:
 ```
 
 Anything strange happen with any of the outputs? If so, list the errors and fix the code so that it works as intended.
+
+More info on `switch` [here](http://www.tutorialspoint.com/cplusplus/cpp_switch_statement.htm).
 
 #### More With Strings and Characters
 Like booleans and other integer types, relational operators can be used on strings and characters. For example:
@@ -198,13 +202,11 @@ Example of a conditional operator in use (same one as the powerpoint):
 
 ```C++
   //...code...
-  
   x < 0 ? y = 10 : z = 20;
-  
   //...code...
 ```
 
-The equivalent of this using an if-else statement is as follows:
+The equivalent of this, by using an if-else statement, is as follows:
 
 ```C++
   //...code...
@@ -215,11 +217,12 @@ The equivalent of this using an if-else statement is as follows:
   //...code...
 ```
 
-Because this is a ternary operator, it can only be used for two cases (a true and false case). Good way to remember this is by saying "IF a THEN b ELSE c", where
+Because this is a ternary operator, it can only be used for two cases (a true and false case). Good way to remember this is by saying "__IF__ a __THEN__ b __ELSE__ c", where
 `a ? b : c;`.
 
 #### Enumeration
-An extremely handy tool in programming, [enumeration](http://www.merriam-webster.com/dictionary/enumerate) allows us to create a list of variables with incrementing values. 
+An extremely handy tool in programming, [enumeration](http://www.merriam-webster.com/dictionary/enumerate) allows us to create a list of variables with incrementing values. By default, the first 
+value is set to 0 and any succeeding variables in the list are one higher than the previous.
 
 A C++ example of enumeration:
 ```C++
@@ -227,6 +230,8 @@ A C++ example of enumeration:
   
   //...code...
 ```
+
+By default
 
 More information [here](http://www.cprogramming.com/tutorial/enum.html).
 

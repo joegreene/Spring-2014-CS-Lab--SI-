@@ -249,13 +249,12 @@ All the below worksheet problems should be done by pencil/paper.
 The prompts for these are located under the files section at the top of this page.
 
 #### Separate Exercises
-1. Make a program, complete with user input validation (for incorrect input), that rounds a decimal value up or down.
+Make a program, complete with user input validation (for incorrect input), that rounds a decimal value up or down.
 
   Features:
   - Make sure not to use any `iomanip` features (especially for rounding).
   - __DO NOT__ use an if-else or switch statement for rounding. However, you may use it for user validation.
   - Scan for an integer type, __NOT__ a decimal value!
-  -   
   - Allow the user to input three decimal numbers to round. The user must be prompted per number.
   - If the user enters in a value that isn't a floating-type, tell them their input is wrong.
 

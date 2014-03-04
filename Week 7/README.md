@@ -13,7 +13,7 @@
   - [Enumerated Data Types](#enumerated-data-types)
 - [Class Practice](#class-practice)
   - [Worksheets](#worksheets)
-  - [Separate Exercises](#separate-exercises)
+  - [Separate Exercise](#separate-exercise)
 - [Extra Challenges](#extra-challenges)
 
 ### Solutions (From Last Week)
@@ -275,7 +275,7 @@ All the below worksheet problems should be done by pencil/paper.
 #### Worksheets
 - Logical Operator Worksheet
 
-#### Separate Exercises
+#### Separate Exercise
 Make a program, complete with user input validation (for incorrect input), that rounds a decimal value up or down.
 
   Features:

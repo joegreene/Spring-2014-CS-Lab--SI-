@@ -194,7 +194,8 @@ By including the `cctype` library into our program's code, we can also perform m
   //...code...
 ```
 
-Just by looking at it, what do you think using `cout << isupper(toupper(some_char));` will be if we include that into the above program? 
+Just by looking at it, what do you think using `cout << isupper(toupper(some_char));` will be if we include that into the above program? Try it out in Visual Studio if you are unsure, 
+and make sure to include `cctype`.
 
 For a list of functions in the `cctype` library, check [here](http://www.cplusplus.com/reference/cctype/). For more help, try [here](http://cse.csusb.edu/dick/samples/c++.cctype.html).
 
@@ -225,15 +226,45 @@ Because this is a ternary operator, it can only be used for two cases (a true an
 
 #### Enumeration
 An extremely handy tool in programming, [enumeration](http://www.merriam-webster.com/dictionary/enumerate), or `enum`, allows us to create our own type of data type, containing a set of named 
-constant integers. 
+constant integers.
 
-A C++ example of enumeration (list of variables only):
+When using `enum`, it is optional to give it a name. If we want to make a variable of the enumerated type though, we must give the enumeration a name. 
+
+A C++ example of enumeration:
 ```C++
   //...code...
-  enum { JAN = 1, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC }; //assigns values one through twelve
   
-  cout << MAY << endl;
-  //...code...
+  #include "stdafx.h"
+  #include <iostream>
+  #include <cctype> //explained in "More with Strings and Characters"
+  
+  using namespace std;
+  
+  enum Months { JAN = 1, FEB, MAR, APR, MAY, JUN, 
+              JUL, AUG, SEP, OCT, NOV, DEC }; //assigns values one through twelve to the constant integers
+  
+  int _tmain(int argc, _TCHAR* argv[])
+  {
+    Months first_month = JAN; //set a variable of type Months to JAN
+    int month = MAY;
+    
+    cout << month << endl; //prints out 5
+    
+    month = MAY + 1; //makes month = 6 now.
+    
+    if(month == JUN) //if month's integer value is equal to the constant integer JUN in enum
+      cout << "It is June. And it is not: " << first_month << endl;
+    else
+      cout << "Not June. It might be: " << first_month << endl;
+    
+    return 0;
+  }
+```
+
+Output:
+```
+  5
+  It is June. And it is not: 1
 ```
 
 More information [here](http://www.cprogramming.com/tutorial/enum.html).
@@ -253,10 +284,10 @@ Make a program, complete with user input validation (for incorrect input), that 
 
   Features:
   - Make sure not to use any `iomanip` features (especially for rounding).
-  - __DO NOT__ use an if-else or switch statement for rounding. However, you may use it for user validation.
-  - Scan for an integer type, __NOT__ a decimal value!
-  - Allow the user to input three decimal numbers to round. The user must be prompted per number.
-  - If the user enters in a value that isn't a floating-type, tell them their input is wrong.
+  - __DO NOT__ use an if-else or switch statement for rounding. However, you may use either for validation.
+  - Make sure that the program accounts for both positive and negative values when rounding.
+  - Allow the user to input three decimal numbers to round. The user can either be prompted per number, or they can all be inputted at once.
+  - If the user enters in a value that isn't a decimal value, let them know they are incorrect.
 
 NOTE: For this exercise, refrain from using topics covered in later chapters (or outside class). Stick with Chapters 1 through 4 material.
 

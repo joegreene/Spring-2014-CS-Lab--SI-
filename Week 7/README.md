@@ -273,7 +273,7 @@ More information [here](http://www.cprogramming.com/tutorial/enum.html).
 All the below worksheet problems should be done by pencil/paper.
 
 #### Worksheets
-- Logical Operator Worksheet
+- Logical Operator Worksheet (handed out).
 
 #### Separate Exercise
 Make a program, complete with user input validation (for incorrect input), that rounds a decimal value up or down.

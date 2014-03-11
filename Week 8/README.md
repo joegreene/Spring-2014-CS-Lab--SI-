@@ -3,14 +3,14 @@
 ## Contents
 - [Solutions (From Last Week)](#solutions-from-last-week)
 - [Intro](#intro)
-- [Chapter 5: 5.1 - 5.6](#chapter-5-5.1-5.6)
+- [Chapter 5: 5.1 - 5.6](#chapter-5-51---56)
   - [`while` loops](#while-loops)
     - [Multiple Conditionals in a `while` loop](#multiple-conditionals-in-a-while-loop)
     - [Pitfall: Infinite Looping](#pitfall-infinite-looping)
     - [Input Validation](#input-validation)
-  - [Increment & Decrement Operators](#increment-decrement-operators)
+  - [Increment & Decrement Operators](#increment--decrement-operators)
   - [Counters](#counters)
-  - [More Loops: do-while & for](#more-loops-do--while-for)
+  - [More Loops: do-while & for](#more-loops-do-while--for)
     - [`do-while` loops](#do-while-loops)
     - [`for` loops](#for-loops)
 - [Class Practice](#class-practice)
@@ -19,7 +19,8 @@
 - [Extra Challenges](#extra-challenges)
 
 ### Solutions (From Last Week)
-In the usual spot (under files location).
+In the usual spot (under files location) above. If there are any issues with it, let me (the SI instructor) know. It's not necessarily a robust copy, but it serves as 
+an example of how to scan for a decimal value, round, and so forth.
 
 ### Intro
 Before attempting this section, you'll want to have a steady knowledge about using booleans, flow control (if-else), logical operators, and relational operators. If you don't, go 
@@ -162,7 +163,7 @@ Example (C++):
   //...code...
 ```
 
-PRACTICE: Create your own code-snippet that asks for a user to enter a number between a range (e.g. 0 through 10). If it is out of bounds, tell them they have an invalid input and 
+__PRACTICE:__ Create your own code-snippet that asks for a user to enter a number between a range (e.g. 0 through 10). If it is out of bounds, tell them they have an invalid input and 
 request them to input again.
 
 The book has more information on this if you'd like to read more on this topic.
@@ -301,15 +302,13 @@ Although they can be handy in some sort of code implementations, most of the tim
 the above code to make it with under a `while` loop?
 
 ##### `for` loops 
-`for` loops are like `while` loops, except they contain their own counter within them.
-
-
+[This link](http://www.tutorialspoint.com/cplusplus/cpp_for_loop.htm) explains `for` loops pretty well.
 
 ### Class Practice
 All the below worksheet problems should be done by pencil/paper.
 
 #### Worksheets
-- Logical Operator Worksheet
+- 
 
 #### Separate Exercise
 Either remake the calculator exercise from Week 6 [here](https://github.com/joegreene/Spring-2014-CS-Lab--SI-/tree/master/Week%206) such that it allows the user to user the program as 
@@ -323,13 +322,11 @@ Example outputs can be found in the folder "Example Outputs" under the files sec
 
 ### Extra Challenges
   1. [Work With An Online Compiler, ideone](http://ideone.com/).
-  2. [Learn More About Git]()
+  2. 
   
   ...
 -------------------------------------------------------------------------------
-
-Copyright &copy; 2014 Joseph Greene <joeisgreene@csu.fullerton.edu>  
-Some notes grabbed from Dr. Tian's Chapter 4 Powerpoint (located on Titanium)
+Copyright &copy; 2014 Joseph Greene <joeisgreene@csu.fullerton.edu>
 
 Released under [The MIT License] (http://opensource.org/licenses/MIT)  
 Project located at <https://github.com/joegreene/Spring-2014-CS-Lab--SI-/>

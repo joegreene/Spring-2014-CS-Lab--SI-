@@ -308,7 +308,7 @@ the above code to make it with under a `while` loop?
 All the below worksheet problems should be done by pencil/paper.
 
 #### Worksheets
-- Will be passed out.
+- Work will be done on the whiteboard.
 
 #### Separate Exercise
 Either remake the calculator exercise from Week 6 [here](https://github.com/joegreene/Spring-2014-CS-Lab--SI-/tree/master/Week%206) such that it allows the user to user the program as 

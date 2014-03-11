@@ -308,7 +308,7 @@ the above code to make it with under a `while` loop?
 All the below worksheet problems should be done by pencil/paper.
 
 #### Worksheets
-- 
+- Will be passed out.
 
 #### Separate Exercise
 Either remake the calculator exercise from Week 6 [here](https://github.com/joegreene/Spring-2014-CS-Lab--SI-/tree/master/Week%206) such that it allows the user to user the program as 
@@ -317,8 +317,6 @@ much as they'd like to.
 __OR__
 
 Remake the guessing game program from Week 6 [here](https://github.com/joegreene/Spring-2014-CS-Lab--SI-/tree/master/Week%206) to repeat until the user guesses the correct number, or decides to quit.
-
-Example outputs can be found in the folder "Example Outputs" under the files section at the top of this page.
 
 ### Extra Challenges
   1. [Work With An Online Compiler, ideone](http://ideone.com/).

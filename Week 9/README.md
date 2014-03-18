@@ -62,21 +62,34 @@ __NOTE:__ In my previous programming courses, on exams we focused more on terms 
 to know the other terms too, but the others weren't focused on as much from what I remember.
 
 ### Chapter 2
-Just operator stuff. Good to practice if you're still are hesitant with type coercion, division, modulus, etc.
+Just operator stuff. Good to practice if you're still are hesitant with type coercion, division, modulus, etc. I've sort of snuck in `cmath` into the first portion as well. For all of 
+these (except cmath), check the Chapter 2 notes for more information if required. cmath can be found under Chapter 3.
 
 #### Operators
 ##### Arithmetic & Assignment
-Questions to ask yourself:
+Other than below, check Lab 3 and 4 for practice as well.
+
+__Questions and Practice__:
 
 1. What is an assignment operator? Give an example of one in use.
 2. How would you translate [this]() into C++ code? You only need to provide a snippet.
 3. Create a program to calculate the square root of a number, including imaginary numbers. An example output is provided in the "example outputs" folder.
 
+##### Relational Operators
+Other than the practice we did in the SI session, check Lab 4 for practice.
+
+
+
+##### Logical Operators
+Other than the practice we did in the SI session, check Lab 4 and 5 for practice.
+
+
+
 ### Chapter 3
 Only covers one topic: iomanip. You might want to try this one at home, since it might take a bit to type out. 
 
 #### iomanip
-Refer to either some online reference, your notes, the teacher's notes, or [Week 6's notes]() on this site to review these topics. 
+Refer to either some online reference, Lab 4, the teacher's notes, or [Week 6's notes](https://github.com/joegreene/Spring-2014-CS-Lab--SI-/tree/master/Week%206) on this site to review these topics. 
 
 __PRACTICE:__
 Create a program that converts fahrenheit to celsius (or vice-versa, doesn't matter) but prints out its result similar to the example outputs provided 

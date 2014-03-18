@@ -82,10 +82,10 @@ __Questions:__
 
 1. What is the order of precedence (greatest to least) of the relational operators?
 2. What are two ways to see if a number is greater than or equal to a value? Less than? Equal to? HINT: Think both positively and negatively.
-3. 
 
 ##### Logical Operators
-Other than the practice we did in the SI session, check Lab 4 and 5 for practice.
+Other than the practice we did in the SI session, check Lab 4 and 5 for practice. It might help to take a glance at the Truth Tables section, 
+located at the bottom of this page.
 
 __Practice:__
 
@@ -95,12 +95,13 @@ __Questions:__
 
 1. What is the order of precedence (greatest to least) of the logical operators?
 2. What are two ways to see if a boolean expression is true? False?
-3. Can we replace the following expression with ORs only and get the same result? Why or why not?
+3. Can we replace the following expression with ORs and NOTs only and get the same result? Why or why not?
    - Expression: a && b, where a and b are booleans.
-4. Can we replace the following expression with ANDs only and get the same result? Why or why not?
+4. Can we replace the following expression with ANDs and NOTs only and get the same result? Why or why not?
    - Expression: a || b, where a and b are booleans.
 5. If we get the following boolean expression, is there an easy way to tell whether or not the expression is true or false if 
-   a, b, c are bools, a is true, b is false, and c is -1, and the expression is a && c || b? How so? What about if b is true and a is false?
+   `a`, `b`, `c` are type `bool`, `a` and `c` are either true or false, `b = true`, and the expression is `a && c || b`? How so? 
+   What if we only had two booleans, `d` as unknown and `e = -1`, where we had an expression `(d || e) && (!d)`? How so?
    
 ### Chapter 3
 Only covers one topic: iomanip. You might want to try this one at home, since it might take a bit to type out. 

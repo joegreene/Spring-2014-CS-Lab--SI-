@@ -3,7 +3,7 @@
 
 #include "stdafx.h"
 #include <iostream>
-#include <cstdlib>
+#include <cstdlib> //all the required headers/includes up here
 #include <ctime>
 
 using namespace std;
@@ -18,7 +18,7 @@ int _tmain(int argc, _TCHAR* argv[])
                              //customizable, make a lower limit variable
   const int RAND_NUM = rand() % MAX + LOWER_LIMIT; //static random number
                                                    //(static == doesn't change)
-  const int QUIT_VALUE = 55;
+  const int QUIT_VALUE = 55; //value for quitting
   int guess = 0; //"  " guess
   int num_tries = 0; //number of guesses
 

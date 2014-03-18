@@ -6,7 +6,7 @@
 - [Chapter 1](#chapter-1)
   - [Definitions & Terms](#definitions--terms)
 - [Chapter 2](#chapter-2)
-  - [Operators (General)](#operators-(general))
+  - [Operators (General)](#operators-general)
     - [Arithmetic & Assignment](#arithmetic--assignment)
     - [Relational Operators](#relational-operators)
     - [Logical Operators](#logical-operators)
@@ -111,7 +111,7 @@ Refer to either some online reference, Lab 4, the teacher's notes, or [Week 6's 
 
 __PRACTICE:__
 
-Create a program that converts fahrenheit to celsius (or vice-versa, doesn't matter) but prints out its result similar to the example outputs provided 
+1. Create a program that converts fahrenheit to celsius (or vice-versa, doesn't matter) but prints out its result similar to the example outputs provided 
 under the example outputs folder on this page (at the top). 
 
 __NOTE:__ The output does not need to be exactly the same as mine. This is merely practice, but if you can get it to look like mine then that's cool too.
@@ -123,6 +123,8 @@ too much about having the digits cover more, although you're free to use iomanip
 Make sure to use `iomanip`, have the menu, and _DO NOT__ simply type in spaces to do the correct output. It doesn't need to loop like the output does, just have similar output for doing the work 
 (i.e. ask the user once, then quit). If you'd like, practice loops (although they won't be on the upcoming exam next week). I only included loops in my version to make my life easier to show example 
 outputs.
+
+2. Make a program to print out the truth tables for AND, OR, and NOT. My suggestion is to have each column have three spaces (for cleanliness).
 
 ### Chapter 4
 Review over if/else statements, switch cases, and enumerated data types.

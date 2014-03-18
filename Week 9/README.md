@@ -69,7 +69,7 @@ Other than below, check Lab 3 and 4 for practice as well.
 __Questions and Practice__:
 
 1. What is an assignment operator? Give an example of one in use.
-2. How would you translate [this]() into C++ code? You only need to provide a snippet.
+2. How would you translate the equation on the board into C++ code? You only need to provide a snippet.
 3. Create a program to calculate the square root of a number, including imaginary numbers. An example output is provided in the "example outputs" folder.
 4. Create a program that prints the maximum and minimum of any two inputted numbers __WITHOUT__ an if/else or switch statement.
 5. What is type coercion? What is the order of precedence with data types?
@@ -169,6 +169,10 @@ __Questions:__
 
 #### Conditional Operator
 Refer to the Chapter 4 powerpoint, the book, [Week 7](https://github.com/joegreene/Spring-2014-CS-Lab--SI-/tree/master/Week%207) notes, or an online resource.
+
+__Practice:__
+
+1. Create a code snippet, using a conditional operator, that rounds a double value. Negative rounds down, positive rounds up.
 
 ### Miscellaneous
 #### Truth Tables

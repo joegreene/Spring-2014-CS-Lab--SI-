@@ -58,9 +58,6 @@ See if you can come up with the definitions/examples/etc. per term.
 
 Look at the power point notes of Chapter 1 for answers.
 
-__NOTE:__ In my previous programming courses, on exams we focused more on terms relating to syntax, memory types, algorithms, high/low level languages, and types of errors. It's good 
-to know the other terms too, but the others weren't focused on as much from what I remember.
-
 ### Chapter 2
 Just operator stuff. Good to practice if you're still are hesitant with type coercion, division, modulus, etc. I've sort of snuck in `cmath` into the first portion as well. For all of 
 these (except cmath), check the Chapter 2 notes for more information if required. cmath can be found under Chapter 3.
@@ -75,16 +72,36 @@ __Questions and Practice__:
 2. How would you translate [this]() into C++ code? You only need to provide a snippet.
 3. Create a program to calculate the square root of a number, including imaginary numbers. An example output is provided in the "example outputs" folder.
 4. Create a program that prints the maximum and minimum of any two inputted numbers __WITHOUT__ an if/else or switch statement.
+5. What is type coercion? What is the order of precedence with data types?
+6. What is the order of precedence (greatest to least) of the arithmetic operators?
 
 ##### Relational Operators
 Check Lab 4 for practice.
+
+__Questions:__
+
+1. What is the order of precedence (greatest to least) of the relational operators?
+2. What are two ways to see if a number is greater than or equal to a value? Less than? Equal to? HINT: Think both positively and negatively.
+3. 
 
 ##### Logical Operators
 Other than the practice we did in the SI session, check Lab 4 and 5 for practice.
 
 __Practice:__
+
 Check above, inside Boolean.txt, for practice on this that we did earlier.
 
+__Questions:__
+
+1. What is the order of precedence (greatest to least) of the logical operators?
+2. What are two ways to see if a boolean expression is true? False?
+3. Can we replace the following expression with ORs only and get the same result? Why or why not?
+   - Expression: a && b, where a and b are booleans.
+4. Can we replace the following expression with ANDs only and get the same result? Why or why not?
+   - Expression: a || b, where a and b are booleans.
+5. If we get the following boolean expression, is there an easy way to tell whether or not the expression is true or false if 
+   a, b, c are bools, a is true, b is false, and c is -1, and the expression is a && c || b? How so? What about if b is true and a is false?
+   
 ### Chapter 3
 Only covers one topic: iomanip. You might want to try this one at home, since it might take a bit to type out. 
 
@@ -92,6 +109,7 @@ Only covers one topic: iomanip. You might want to try this one at home, since it
 Refer to either some online reference, Lab 4, the teacher's notes, or [Week 6's notes](https://github.com/joegreene/Spring-2014-CS-Lab--SI-/tree/master/Week%206) on this site to review these topics. 
 
 __PRACTICE:__
+
 Create a program that converts fahrenheit to celsius (or vice-versa, doesn't matter) but prints out its result similar to the example outputs provided 
 under the example outputs folder on this page (at the top). 
 
@@ -112,6 +130,7 @@ Review over if/else statements, switch cases, and enumerated data types.
 Refer to the Chapter 4 powerpoint, the book, the [Week 6](https://github.com/joegreene/Spring-2014-CS-Lab--SI-/tree/master/Week%206) notes, or some other online source and try the following:
 
 __Problems:__
+
 1. Write two different ways to check whether or not a character variable equals 'y' (e.g. if input is yes). Print to the user whether they chose yes or no afterwards.
 2. Write two ways to check if a value is between a set range, then for each way see if the value is the average of the range. In this, have the upper limit as 100 and lower limit as 1.
 
@@ -120,10 +139,12 @@ Refer to the powerpoint on Chapter 4, the [Week 6](https://github.com/joegreene/
 notes, or any online sources to do the following:
 
 __PRACTICE:__
+
 1. Make a program that can calculate the square root of a number, even if the number inputted is negative. Remember to use only a switch case in this. HINT: sqrt(-49) = sqrt(-1) * sqrt(49); example output: sqrt(-49) = 7i
 2. Redo problem 1 from the if/else statements section so that you're only using a switch statement, and write it in two different ways (HINT: Nearly the same technique as if/else).
 
 __Questions:__
+
 1. Which is more robust: switch or if/else? Why?
 2. Can all if/else statements be translated to switch cases? Why or why not? Give an example as proof.
 3. Can all switch statements be translated to if/else cases? Why or why not? Give an example as proof.
@@ -133,9 +154,11 @@ __Questions:__
 Either look at the Chapter 4 powerpoint, the book, the [Week 7](https://github.com/joegreene/Spring-2014-CS-Lab--SI-/tree/master/Week%207) notes, or some online reference.
 
 __Practice:__
+
 1. Make a program that allows the user to input a number (from 1 to 7) and outputs the day of the week, alongside stating whether or not its a weekend, weekday, or humpday (Wednesday).
 
 __Questions:__
+
 1. What does it mean for a data type to be enumerated?
 2. In what situations would we use an enumerated data type? In which situations would enumerated data types prove to be inferior to other methods?
 3. Can we set up enumerated data types without an identifier? 

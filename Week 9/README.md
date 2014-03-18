@@ -4,7 +4,7 @@
 - [Solutions (From Last Week)](#solutions-from-last-week)
 - [Intro](#intro)
 - [Chapter 1](#chapter-1)
-  - [Definitions & Terms](#definitions-terms)
+  - [Definitions & Terms](#definitions--terms)
 - [Chapter 2](#chapter-2)
   - [Operators (General)](#operators-(general))
     - [Arithmetic & Assignment](#arithmetic--assignment)
@@ -13,7 +13,7 @@
 - [Chapter 3](#chapter-3)
   - [iomanip](#iomanip)
 - [Chapter 4](#chapter-4)
-  - [if/else statements](#if-else)
+  - [if/else statements](#ifelse-statements)
   - [switch](#switch)
   - [enum](#enum)
   - [Conditional Operator](#conditional-operator)
@@ -65,7 +65,7 @@ to know the other terms too, but the others weren't focused on as much from what
 Just operator stuff. Good to practice if you're still are hesitant with type coercion, division, modulus, etc. I've sort of snuck in `cmath` into the first portion as well. For all of 
 these (except cmath), check the Chapter 2 notes for more information if required. cmath can be found under Chapter 3.
 
-#### Operators
+#### Operators (General)
 ##### Arithmetic & Assignment
 Other than below, check Lab 3 and 4 for practice as well.
 

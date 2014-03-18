@@ -74,16 +74,16 @@ __Questions and Practice__:
 1. What is an assignment operator? Give an example of one in use.
 2. How would you translate [this]() into C++ code? You only need to provide a snippet.
 3. Create a program to calculate the square root of a number, including imaginary numbers. An example output is provided in the "example outputs" folder.
+4. Create a program that prints the maximum and minimum of any two inputted numbers __WITHOUT__ an if/else or switch statement.
 
 ##### Relational Operators
-Other than the practice we did in the SI session, check Lab 4 for practice.
-
-
+Check Lab 4 for practice.
 
 ##### Logical Operators
 Other than the practice we did in the SI session, check Lab 4 and 5 for practice.
 
-
+__Practice:__
+Check above, inside Boolean.txt, for practice on this that we did earlier.
 
 ### Chapter 3
 Only covers one topic: iomanip. You might want to try this one at home, since it might take a bit to type out. 
@@ -134,7 +134,6 @@ Either look at the Chapter 4 powerpoint, the book, the [Week 7](https://github.c
 
 __Practice:__
 1. Make a program that allows the user to input a number (from 1 to 7) and outputs the day of the week, alongside stating whether or not its a weekend, weekday, or humpday (Wednesday).
-2. 
 
 __Questions:__
 1. What does it mean for a data type to be enumerated?
@@ -153,8 +152,11 @@ is by using a truth table. I don't think you guys will need this for the upcomin
 [This site](http://www.cs.utah.edu/~germain/PPS/Topics/truth_tables_and_logic.html) looks promising to help you guys out. If you'd like too, I can write up an example 
 on the board to better clarify this topic.
 
+### Extra Challenges
+TBD
+
 -------------------------------------------------------------------------------
 Copyright &copy; 2014 Joseph Greene <joeisgreene@csu.fullerton.edu>
-
+Some information obtained from Prof. Tian's powerpoints for her classroom.
 Released under [The MIT License] (http://opensource.org/licenses/MIT)  
 Project located at <https://github.com/joegreene/Spring-2014-CS-Lab--SI-/>

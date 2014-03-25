@@ -320,7 +320,6 @@ Remake the guessing game program from Week 6 [here](https://github.com/joegreene
 
 ### Extra Challenges
   1. [Work With An Online Compiler, ideone](http://ideone.com/).
-  2. 
   
   ...
 -------------------------------------------------------------------------------

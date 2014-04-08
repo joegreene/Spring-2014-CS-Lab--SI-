@@ -120,6 +120,6 @@ e. "Let's go."
 
 2) What are the five steps taken when compiling a program for use?
 
-3) What is a programming language? What programming language are we concerning ourselves with? Name two other programming languages you've heard of.
+3) What is a programming language? What programming language are we working with?
 
 4) What is an algorithm?

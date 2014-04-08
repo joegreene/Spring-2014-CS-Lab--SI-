@@ -19,7 +19,7 @@ review previous material. If you'd like to refer to it, [here](https://github.co
 Work with a partner (or your row) to solve the questions listed in the file named `Questions.md` above on the list, or click [here](https://github.com/joegreene/Spring-2014-CS-Lab--SI-/blob/master/Week%2010/Questions.md).
 
 ### Practice Assignments
-1. Try to print out a diamond and  using the same techniques as we did for printing a square and triangle. HINT: Try splitting the diamond in half.
+1. Try to print out a diamond and  using the same techniques as we did for printing a square and triangle. HINT: There is a more optimized way than splitting the diamond in half.
 2. Using the same logic from the Tic-Tac-Toe game we made, try to make a Connect-Four game.
 3. Conditional Ping-Pong (dear lawd)
 

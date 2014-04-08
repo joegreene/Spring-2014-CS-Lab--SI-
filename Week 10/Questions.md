@@ -14,8 +14,11 @@
 ```
 
 a. 12
+
 b. 3
+
 c. 0
+
 d. 4
 
 2) What is `some_dbl` equal to after the below code segment is run?
@@ -33,9 +36,13 @@ d. 4
 ```
 
 a. 2.0
+
 b. 4.0
+
 c. -1.3
+
 d. Compile error
+
 e. 3.0
 
 3) What is the output of the following code if the user inputs `22 3` into the input stream?
@@ -59,9 +66,13 @@ e. 3.0
 ```
 
 a. "First. Done."
+
 b. "First. Firstish. Done."
+
 c. "First. Second. Done."
+
 d. None of the above
+
 e. "Third."
 
 4) What is the output of the following code?
@@ -72,8 +83,11 @@ e. "Third."
 ```
 
 a. 6
+
 b. 0
+
 c. 55
+
 d. 7
 
 5) What is the output of the following code?
@@ -91,29 +105,14 @@ d. 7
 ```
 
 a. "Okay Alright"   
+
 b. "Alright."
+
 c. Compile error.
+
 d. "Okay Alright Let's go."
+
 e. "Let's go."
-
-5) What is the output of the following code?
-```C++
-  int seven = 5;
-
-  while (seven <
-
-```
-
-a.
-b.
-c.
-d.
-
-6) How many types of values can be put in a `bool`?
-a. 2^32 - 1
-b. 4
-c. 2
-d. Impossible to answer.
 
 ### Free Response Questions
 

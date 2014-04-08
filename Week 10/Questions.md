@@ -118,7 +118,7 @@ e. "Let's go."
 
 1) What are the five data types we most concern ourselves with in this class?
 
-2) What are the five steps taken when compiling a program for use?
+2) What are the five steps taken when compiling a program for use (high-level to executable)?
 
 3) What is a programming language? What programming language are we working with?
 

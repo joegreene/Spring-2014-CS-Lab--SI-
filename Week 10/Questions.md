@@ -13,13 +13,13 @@
   cout << i % 4 << endl;
 ```
 
-a. 12
-
-b. 3
-
-c. 0
-
-d. 4
+a. 12 
+ 
+b. 3 
+ 
+c. 0 
+ 
+d. 4 
 
 2) What is `some_dbl` equal to after the below code segment is run?
 
@@ -35,14 +35,14 @@ d. 4
   
 ```
 
-a. 2.0
-
-b. 4.0
-
-c. -1.3
-
-d. Compile error
-
+a. 2.0 
+ 
+b. 4.0 
+ 
+c. -1.3 
+ 
+d. Compile error 
+ 
 e. 3.0
 
 3) What is the output of the following code if the user inputs `22 3` into the input stream?
@@ -65,15 +65,15 @@ e. 3.0
     cout << "Done. ";
 ```
 
-a. "First. Done."
-
-b. "First. Firstish. Done."
-
-c. "First. Second. Done."
-
-d. None of the above
-
-e. "Third."
+a. "First. Done." 
+ 
+b. "First. Firstish. Done." 
+ 
+c. "First. Second. Done." 
+ 
+d. None of the above 
+ 
+e. "Third." 
 
 4) What is the output of the following code?
 
@@ -82,13 +82,13 @@ e. "Third."
   cout << i % 7 << endl;
 ```
 
-a. 6
-
-b. 0
-
-c. 55
-
-d. 7
+a. 6 
+ 
+b. 0 
+ 
+c. 55 
+ 
+d. 7 
 
 5) What is the output of the following code?
 
@@ -104,15 +104,15 @@ d. 7
     cout << "Let's go." << endl;
 ```
 
-a. "Okay Alright"   
+a. "Okay Alright" 
 
-b. "Alright."
+b. "Alright." 
 
-c. Compile error.
+c. Compile error. 
 
-d. "Okay Alright Let's go."
+d. "Okay Alright Let's go." 
 
-e. "Let's go."
+e. "Let's go." 
 
 ### Free Response Questions
 

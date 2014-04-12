@@ -67,7 +67,7 @@ Where `i` and `n` are the same as the equation, and the `i^2` part was changed (
 
 Output:
 ```
-  The summation of f(x) = x^2 from i=0 to n where n=4 is 
+  The summation of i^2 from i=0 to 4 is 
 ```
 
 The table (of iterations) in the code above is as follows, where each row represents an iteration:
@@ -275,7 +275,7 @@ If we were to type out the summation problem again, the following is a `for` loo
 
 This prints out the same exact output as the other loops, and has the same table as before. Note that, if we wanted to, we could have initialized `i` outside of the `for` loop and update inside of the loop. 
 
-For instance, this is another way to implement a solution: 
+For instance, this is another way to implement a solution for the summation problem: 
 ```C++
   int sum = 0;
   int i = 0;
@@ -288,7 +288,23 @@ For instance, this is another way to implement a solution:
   cout << "The summation of i^2 from i=0 to " << n << " is " << sum << endl;
 ```
 
-If we have the update inside the curly braces of the for loop however, it defeats the niceties of a `for` loop. 
+If we have the update inside the curly braces of the for loop however, it defeats the niceties of a `for` loop.
+
+If we do not have the conditional check inside the for loop, the code will infinitively loop. This is because the blank space is evaluated as true. For instance: 
+```C++
+  for(int x = 0; ; x++)
+    cout << "The loop is at: " << x << endl;
+```
+
+Will print out:
+```
+  The loop is at: 0
+  The loop is at: 1
+  The loop is at: 2
+  ...
+```
+
+And so on, infinitively.
 
 #### Summary (of Loops)
 - Three types of loops: `while`, `do-while`, `for`.
@@ -303,7 +319,7 @@ If we have the update inside the curly braces of the for loop however, it defeat
 Code for the following assignments will be provided via the top of this page. Try to do them yourselves first, however.
 
 1. Using loops, try to print out the factorial of a number (allowing the user to enter the value). Have error-checking (i.e. make sure that, if f(n) = n!, that 
- 0 <= n <= ). If you want to calculate bigger factorials, refer to [this](#http://msdn.microsoft.com/en-us/library/s3f49ktz.aspx) to fiddle with datatype ranges.
+ n >= 0). If you want to calculate big factorials (e.g. where n! is some value more than 2^64), refer to [this](#http://msdn.microsoft.com/en-us/library/s3f49ktz.aspx) to fiddle with datatype ranges.
 2. Using loops, print out the 8th term of the fibonacci sequence. Some of you might have been exposed to this, but if not then look [here](#http://en.wikipedia.org/wiki/Fibonacci_number).
  
 3. Just like the other shapes we've printed out, try to print out a diamond-shape. There are two ways: Either use two equilateral triangles or use absolute value.

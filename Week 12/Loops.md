@@ -73,7 +73,7 @@ Output:
 
 The table (of iteration) is as follows:
 
-| i (beginning) | `sum` (during update) | `sum` (after) | i (end of iteration) |
+| i (beginning) | `sum` (during update) | `sum` (after) | `i` (end of iteration) |
 | --- | --- | --- | --- |
 | 0 | `sum = 0 + 0^2` | 0 | 1 |
 | 1 | `sum = 0 + 1^2` | 1 | 2 |

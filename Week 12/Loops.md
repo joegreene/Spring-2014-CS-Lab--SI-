@@ -206,14 +206,45 @@ The `do-while` representation is as follows:
   }while(continue);
 ```
 
-Just by looking at it, we can see the `do-while` representation
+Just by looking at it we can see that the `do-while` representation is much more compact, however there is a catch with the `while` representation in which 
+we can make it just as neat as the `do-while` version.
+
+If we simply initialize `bool continue` at the start, we can have nearly the same exact code. For instance:
+```C++
+  bool continue = true; //changed line
+  int choice;
+
+  while()
+  {
+    cout << "1. Add sales\n";
+    cout << "2. Print sales\n";
+    cout << "3. Quit\n";
+    cout << "Enter a choice: ";
+    cin >> choice;
+    
+    if(choice == 1)
+    {
+      //do code for adding sales
+    } 
+    else if(choice == 2)
+    {
+      //do code for printing
+    } 
+    else if(choice == 3)
+      continue = false; //quit
+    else
+      cout << "Incorrect input. Restarting prompt...\n";
+  }
+```
+
+Therefore, we may also remove `continue = true;` line in three of the checks (as it is now redundant). 
 
 For this reason, the following is true:
 
 Any `while` loop can replace any `do-while` loop, but not true vice-versa. 
 
 Although saying the above statement (nearly) renders `do-while` loops as obsolete, there might be times in which 
-implementing `do-while` is cleaner.
+implementing `do-while` is cleaner. It's mainly up to personal preference.
 
 #### for
 Differing from the previous two types, a `for` loop's purpose is to loop a piece of code a set amount of times. This differs from `while` and `do-while` because 

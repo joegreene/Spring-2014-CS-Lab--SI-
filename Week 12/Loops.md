@@ -71,7 +71,7 @@ Output:
   The summation of f(x) = x^2 from i=0 to n where n=4 is 
 ```
 
-The table (of iteration) is as follows:
+The table (of iterations) in the code above is as follows, where each row represents an iteration:
 
 | i (beginning) | `sum` (during update) | `sum` (after) | `i` (end of iteration) |
 | --- | --- | --- | --- |
@@ -82,7 +82,7 @@ The table (of iteration) is as follows:
 | 4 | `sum = 14 + 4^2` | 30 | 5 |
 | 5 | `OUT OF LOOP (no change)` | 30 | 5 |
 
-__NOTE:__ Notice that in the last line, the loop is not ran. Therefore, `i` and `summation` do not update.
+__NOTE:__ Notice that in the last line the loop is not ran. Therefore, `i` and `summation` do not update.
 
 #### do-while
 Almost the same as `while`, `do-while` runs the code inside the loop __at least once__ before checking the conditional. Because of this, 

@@ -74,13 +74,13 @@ Output:
 The table (of iteration) is as follows:
 
 | i (beginning) | `sum` (during update) | `sum` (after) | i (end of iteration) |
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | 0 | `sum = 0 + 0^2` | 0 | 1 |
 | 1 | `sum = 0 + 1^2` | 1 | 2 |
-| 2 | `sum = 1 + 2^2` | 5 | | 3 |
+| 2 | `sum = 1 + 2^2` | 5 | 3 |
 | 3 | `sum = 5 + 3^2` | 14 | 4 |
-| 4 | `sum = 14 + 4^2` | 30 | | 5 |
-| 5 | `OUT OF LOOP (no change)` | 30 | | 5 |
+| 4 | `sum = 14 + 4^2` | 30 | 5 |
+| 5 | `OUT OF LOOP (no change)` | 30 | 5 |
 
 __NOTE:__ Notice that in the last line, the loop is not ran. Therefore, `i` and `summation` do not update.
 

@@ -2,23 +2,23 @@
 
 ## Contents
 - [Intro](#intro)
-- [Loops Review & Shape-Printing](#loops-review-shape--printing)
+- [File IO]
 - [Practice Assignments](#practice-assignments)
 - [Extra Challenges](#extra-challenges)
 
 ### Intro
-Today's SI session will be split up into two sections: One to briefly go over loops and talk about shape-printing, and the other half to talk about arrays 
-(a topic that'll be gone over in the lecture today).
+This is an optional section and will not be covered in this course. It will, however, be heavily covered in CS121 and CS131. If you plan on going up to
+those courses, or if you want to simply learn a cool thing, hopefully this page helps you in your endeavors.
 
-For the first half, there will be a mini-lecture
-
-### Loops Review & Shape-Printing
+### File IO
+TBD
 
 ### Practice Assignments
-1. Try to print out a diamond and  using the same techniques as we did for printing a square and triangle. HINT: Try splitting the diamond in half.
+1. TBD
 
 ### Extra Challenges
-TBD
+You can check out how to work with binary files as well. I personally haven't had much experience with them, but [here](#) 
+if you are interested.
 
 -------------------------------------------------------------------------------
 Copyright &copy; 2014 Joseph Greene <joeisgreene@csu.fullerton.edu>

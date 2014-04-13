@@ -173,7 +173,9 @@ A `while` loop example of printing this type of menu can be made by doing the fo
   }
 ```
 
-Notice how messy the code is for this? Well, with `do-while` we can just throw that entire chunk of code above the `while` loop inside. The `do-while` representation is as follows:
+Notice how messy the code is for this? Well, with `do-while` we can just throw that entire chunk of code above the `while` loop inside. 
+
+The `do-while` representation is as follows:
 ```C++
   bool continue;
   int choice;

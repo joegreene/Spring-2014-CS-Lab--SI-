@@ -8,11 +8,6 @@
   - [do-while versus while](#do-while-versus-while)
   - [for](#for)
   - [Summary (of Loops)](#summary-of-loops)
-- [Shape-Printing](#shape--printing)
-  - [Square](#square)
-  - [Right-Triangle](#right--triangle)
-  - [Equilateral Triangle](#equilateral-triangle)
-  - [Diamond](#diamond)
 - [Practice Assignments](#practice-assignments)
 - [Extra Challenges](#extra-challenges)
 
@@ -41,18 +36,20 @@ The syntax structure of a `while` loop is as follows:
 ```C++
   while(conditional expression is true)
   {
-    //do some code
+    //body (where looped code is put)
   }
 ``` 
 
-__NOTE:__ In the above part, "condition is true" refers back to boolean expressions.
+__NOTE:__ In the above part, "conditional expression is true" refers back to boolean expressions.
+
+Just like if/else statements, the curly braces under the while loop are optional if you have only __one__ line of code within the body
 
 __EXAMPLE:__ If we were to solve the summation problem from the beginning of this section, we would have something along the lines of:
 ```C++
   int i = 0;
   int n = 4; //for test purposes, set upper limit to 4
   int sum = 0;
-  while(i <= n)
+  while(i <= n) 
   {
     sum = sum + pow(static_cast<double>(i), 2.0); //same as sum+=pow((double)i, 2.0);
                                                   //NOTE: Remember that we need to change i 
@@ -89,13 +86,16 @@ Almost the same as `while`, `do-while` runs the code inside the loop __at least 
 
 An example implementation of a `do-while` loop:
 ```C++
-  do {
-    //do code
+  do
+  {
+    //body (where looped code is put)
   }while(conditional expression is true);
 ```
 
-Keep in mind that the semi-colon at the end is __required__ for this type of loop. The reason for this is to distinct itself from the previous while loop. More information 
+Keep in mind that the semi-colon at the end is __required__ for this type of loop. One reason for this is to distinct itself from the previous while loop. More information 
 [here](#http://stackoverflow.com/questions/942251/in-c-c-why-does-the-do-whileexpression-need-a-semi-colon)
+
+Also, just like the `while` loop, if there is only one line of code being changed then the curly braces may be omitted.
 
 Here's an example code of solving the summation problem from the start: 
 ```C++
@@ -255,7 +255,7 @@ An example implementation of a for loop:
 ```C++
   for(initialization; conditional check; update)
   {
-    //do code
+    //body (where looped code is put)
   }
 ```
 
@@ -322,10 +322,7 @@ Code for the following assignments will be provided via the top of this page. Tr
 1. Using loops, try to print out the factorial of a number (allowing the user to enter the value). Have error-checking (i.e. make sure that, if `f(n) = n!`, that 
  `n >= 0`). If you want to calculate big factorials (e.g. where `n! >= 2^64`), refer to [this](#http://msdn.microsoft.com/en-us/library/s3f49ktz.aspx) to fiddle with datatype ranges.
 2. Using loops, print out the 8th term of the fibonacci sequence. Some of you may have been exposed to this in a math class, but if not then look [here](#http://en.wikipedia.org/wiki/Fibonacci_number).
-3. Just like the other shapes we've printed out, try to print out a diamond-shape. There are two ways: Either use two equilateral triangles or use absolute value.
-
-### Extra Challenges
-TBD
+3. Just like the other shapes we've printed out, finish the example on the diamond shape. When finished with that, try making a more efficient version (HINT: You'll be using absolute value).
 
 -------------------------------------------------------------------------------
 Copyright &copy; 2014 Joseph Greene <joeisgreene@csu.fullerton.edu>

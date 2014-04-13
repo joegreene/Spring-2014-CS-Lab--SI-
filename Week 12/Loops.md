@@ -67,12 +67,12 @@ Where `i` and `n` are the same as the equation, and the `i^2` part was changed (
 
 Output:
 ```
-  The summation of i^2 from i=0 to 4 is 
+  The summation of i^2 from i=0 to 4 is 30
 ```
 
 The table (of iterations) in the code above is as follows, where each row represents an iteration:
 
-| i (beginning) | `sum` (during update) | `sum` (after) | `i` (end of iteration) |
+| `i` (beginning) | `sum` (during update) | `sum` (after) | `i` (end of iteration) |
 | --- | --- | --- | --- |
 | 0 | `sum = 0 + 0^2` | 0 | 1 |
 | 1 | `sum = 0 + 1^2` | 1 | 2 |
@@ -108,7 +108,7 @@ Here's an example code of solving the summation problem from the start:
   do
   {
     sum = sum + pow(static_cast<double>(i), 2.0);
-    ++i; //update i
+    ++i;
   }while(i <= n);
   
   cout << "The summation of i^2 from i=0 to " << n << " is " << sum << endl;
@@ -245,7 +245,7 @@ may remove these lines as well.
 
 For this reason, the following is true:
 
-Any `while` loop can replace any `do-while` loop, but not true vice-versa. 
+> Any `while` loop can replace any `do-while` loop, but not true vice-versa. 
 
 Although saying the above statement (nearly) renders `do-while` loops as obsolete, there might be times in which 
 implementing `do-while` is cleaner. It's mainly up to personal preference.
@@ -268,6 +268,7 @@ The only part that is necessary is the "conditional check", and we'll talk about
 If we were to type out the summation problem again, the following is a `for` loop example of solving it:
 ```C++
   int sum = 0;
+  int n = 4;
   
   for (int i = 0; i <= n; ++i) //i is the initialized value, comparison is same as before, and 
   {
@@ -283,10 +284,12 @@ For instance, this is another way to implement a solution for the summation prob
 ```C++
   int sum = 0;
   int i = 0;
+  int n = 4;
+  
   for (; i <= n;) //omitted initialization and update
   {
     sum+=pow(static_cast<double>(i), 2.0);
-    ++i; //
+    ++i;
   }
   
   cout << "The summation of i^2 from i=0 to " << n << " is " << sum << endl;
@@ -313,7 +316,8 @@ And so on, infinitively.
 #### Summary (of Loops)
 - Three types of loops: `while`, `do-while`, `for`.
 - `while` and `for` loops are pretest loops, whereas `do-while` is a post-test loop.
-- `while` can always replace `do-while` with the right initialization/implementation
+- `while` can always replace `do-while` with the right initialization/implementation.
+- `while` and `for` have the chance to never run, whereas `do-while` always runs at least one time.
 - General rule of thumb for when to use each type of loop:
   - `while`: when the conditional expression is not known when to end (such as requesting values that determine the conditional)
   - `do-while`: menus (can be done under `while` of course)

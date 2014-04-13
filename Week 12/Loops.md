@@ -2,7 +2,7 @@
 
 ## Contents
 - [Intro](#intro)
-- [Loops Review & Shape-Printing](#loops-review-shape--printing)
+- [Loops Review](#loops-review)
   - [while](#while)
   - [do-while](#do-while)
   - [do-while versus while](#do-while-versus-while)
@@ -17,7 +17,10 @@ This part of the notes will go more over loops and shape-printing.
 As a side note: To iterate means to perform repeatedly. Each loop (that is iterating) is called an iteration. The counter in 
 a loop is called an iterator (as long as the counter is determining how many times the loop loops). ALSDKMfix ASLKDM
 
-### Loops Review & Shape-Printing
+The (best) approach to working with loops, especially nested loops, is by writing out on paper what happens per iteration. Nested loops 
+are talked about on another page under this week's work.
+
+### Loops Review
 Recall that there are three types of loops: `while`, `do-while`, and `for` loops. Each will be split below, providing example code 
 to solve something like the summation of a math function from `i` to `n`.
 
@@ -321,8 +324,8 @@ Code for the following assignments will be provided via the top of this page. Tr
 
 1. Using loops, try to print out the factorial of a number (allowing the user to enter the value). Have error-checking (i.e. make sure that, if `f(n) = n!`, that 
  `n >= 0`). If you want to calculate big factorials (e.g. where `n! >= 2^64`), refer to [this](#http://msdn.microsoft.com/en-us/library/s3f49ktz.aspx) to fiddle with datatype ranges.
+ 
 2. Using loops, print out the 8th term of the fibonacci sequence. Some of you may have been exposed to this in a math class, but if not then look [here](#http://en.wikipedia.org/wiki/Fibonacci_number).
-3. Just like the other shapes we've printed out, finish the example on the diamond shape. When finished with that, try making a more efficient version (HINT: You'll be using absolute value).
 
 -------------------------------------------------------------------------------
 Copyright &copy; 2014 Joseph Greene <joeisgreene@csu.fullerton.edu>

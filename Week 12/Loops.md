@@ -145,7 +145,7 @@ A `while` loop example of printing this type of menu can be made by doing the fo
     cout << "Incorrect input. Restarting prompt...\n"; 
     continue = true;
   } 
-  while()
+  while(continue)
   {
     cout << "1. Add sales\n";
     cout << "2. Print sales\n";
@@ -173,9 +173,7 @@ A `while` loop example of printing this type of menu can be made by doing the fo
   }
 ```
 
-Notice how messy the code is for this? Well, with `do-while` we can just throw that entire chunk of code above the `while` loop inside
-
-The `do-while` representation is as follows:
+Notice how messy the code is for this? Well, with `do-while` we can just throw that entire chunk of code above the `while` loop inside. The `do-while` representation is as follows:
 ```C++
   bool continue;
   int choice;
@@ -206,15 +204,15 @@ The `do-while` representation is as follows:
   }while(continue);
 ```
 
-Just by looking at it we can see that the `do-while` representation is much more compact, however there is a catch with the `while` representation in which 
-we can make it just as neat as the `do-while` version.
+Just by looking at it we can see that the `do-while` representation is much more compact, however there is a catch with the `while` 
+representation where we can make it just as neat as the `do-while` version.
 
 If we simply initialize `bool continue` at the start, we can have nearly the same exact code. For instance:
 ```C++
   bool continue = true; //changed line
   int choice;
 
-  while()
+  while(continue)
   {
     cout << "1. Add sales\n";
     cout << "2. Print sales\n";
@@ -237,7 +235,8 @@ If we simply initialize `bool continue` at the start, we can have nearly the sam
   }
 ```
 
-Therefore, we may also remove `continue = true;` line in three of the checks (as it is now redundant). 
+Note that we may also remove `continue = true;` in three of the checks (as it is now redundant). If we do the same process on the `do-while` example, we 
+may remove these lines as well.
 
 For this reason, the following is true:
 
@@ -318,10 +317,9 @@ And so on, infinitively.
 ### Practice Assignments
 Code for the following assignments will be provided via the top of this page. Try to do them yourselves first, however.
 
-1. Using loops, try to print out the factorial of a number (allowing the user to enter the value). Have error-checking (i.e. make sure that, if f(n) = n!, that 
- n >= 0). If you want to calculate big factorials (e.g. where n! is some value more than 2^64), refer to [this](#http://msdn.microsoft.com/en-us/library/s3f49ktz.aspx) to fiddle with datatype ranges.
-2. Using loops, print out the 8th term of the fibonacci sequence. Some of you might have been exposed to this, but if not then look [here](#http://en.wikipedia.org/wiki/Fibonacci_number).
- 
+1. Using loops, try to print out the factorial of a number (allowing the user to enter the value). Have error-checking (i.e. make sure that, if `f(n) = n!`, that 
+ `n >= 0`). If you want to calculate big factorials (e.g. where `n! >= 2^64`), refer to [this](#http://msdn.microsoft.com/en-us/library/s3f49ktz.aspx) to fiddle with datatype ranges.
+2. Using loops, print out the 8th term of the fibonacci sequence. Some of you may have been exposed to this in a math class, but if not then look [here](#http://en.wikipedia.org/wiki/Fibonacci_number).
 3. Just like the other shapes we've printed out, try to print out a diamond-shape. There are two ways: Either use two equilateral triangles or use absolute value.
 
 ### Extra Challenges

@@ -17,13 +17,13 @@ As a side note: I don't know if you all have realized this yet, but I made the t
 will automatically jump you to its section, instead of needing to scroll all the way down to get to each section.
 
 ### Loops Review & Shape-Printing
-Located [here](#https://github.com/joegreene/Spring-2014-CS-Lab--SI-/blob/master/Week%2012/Loops.md).
+Located [here](../blob/master/Week%2012/Loops.md).
 
 ### Arrays Preview
-Located [here](#https://github.com/joegreene/Spring-2014-CS-Lab--SI-/blob/master/Week%2012/Arrays.md).
+Located [here](../blob/master/Week%2012/Arrays.md).
 
 ### File Input/Output (IO)
-Located [here](#).
+Located [here](../blob/master/Week 12/File_IO.md).
 
 ### Practice Assignments
 These are all listed under their relevant note pages, except for [this](#github tic-tac-toe) one, which will help with honing-in on using both loops and if-else checks 

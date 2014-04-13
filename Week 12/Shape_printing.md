@@ -212,7 +212,7 @@ Top-right is a bit different, but not so bad. We'll need a for loop to cover the
   
   for(r = base; r > 0; --r)
   {
-    for(c = base; c > r; --c) //spaces; inner loop #1
+    for(c = base; c > r; --c) //spaces, inner loop #1
     {
       cout << "  ";
     }

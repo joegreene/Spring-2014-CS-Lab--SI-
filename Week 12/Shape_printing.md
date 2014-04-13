@@ -33,30 +33,48 @@ Note that it does not print 5 because, by then, z is equal to 5 and the conditio
 
 A little bit crazy-sounding, but if we wanted to loop a loop multiple times, we may do the following: 
 ```C++
-  for(int i = 0; i < 3; ++i)
+  for(int i = 0; i < 2; ++i) //run this twice
   {
-    for(int j = 0; j < 2; ++j)
+    for(int j = 0; j < 3; ++j) //run this three times two times 
     {
-      
+      cout << j << " ";
     }
+    cout << endl;
   }
 ```
 
 Which prints out the following: 
 ```
-  
+  0 1 2 
+  0 1 2 
 ```
 
-Note how the integer `j` determines how much we print per line, and how the integer `i` determines how many lines we print.
+Here is a table (of iteration):
+| `i` (start of outer loop) | Output (after inner loop ends) | Output (end of outer loop) | `i` (end of outer loop) |
+| 0 | "0 1 2" |  "\n"   | 1 |
+| 1 | "0 1 2" |  "\n"   | 2 |
+| 2 | Not run | Not run | 2 |
 
-If you know what [matrices](#http://www.mathsisfun.com/algebra/matrix-introduction.html) are (from math), it's handy to think about the iterated integers as rows and columns.
+Here is a list of the steps, if it makes more sense than the above:
+1. Run outer loop
+2. Run inside loop
+3. Print `j` three times
+4. Done with inner loop, end line, iterate outer loop
+5. Run inside loop a second time
+6. Print `j` three times
+7. Done with inner loop, end line, iterate outer loop
+8. Done with outer loop, end of nested loop
+
+
+Note how the integer `j` determines how much we print per line (3 integers), and how the integer `i` determines how many lines we print (two lines).
+
+If you know what [matrices](#http://www.mathsisfun.com/algebra/matrix-introduction.html) are (from math), it's handy to think about the iterated integers as rows (each line) and columns (amount per row).
 
 ### Shape-Printing
-Using nested loops, we can print out various 2-dimensional shapes in the console window. It's handy to 
-think of 
+Using nested loops, we can print out various 2-dimensional shapes in the console window.
 
 #### Square
-
+If we were to want to print out a 
 
 #### Right-Triangle
 #### Equilateral Triangle](#equilateral-triangle)

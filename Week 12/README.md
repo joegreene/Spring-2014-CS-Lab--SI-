@@ -2,7 +2,8 @@
 
 ## Contents
 - [Intro](#intro)
-- [Loops Review & Shape-Printing](#loops-review--shape-printing)
+- [Loops Review](#loops-review)
+- [Shape Printing](#shape-printing)
 - [Arrays Preview](#arrays-preview)
 - [File Input/Output (IO)](#file-inputoutput-IO)
 - [Practice Assignments](#practice-assignments)
@@ -17,13 +18,16 @@ As a side note: I don't know if you all have realized this yet, but I made the t
 will automatically jump you to its section, instead of needing to scroll all the way down to get to each section.
 
 ### Loops Review & Shape-Printing
-Located [here](../blob/master/Week%2012/Loops.md).
+Located [here](../Week%2012/Loops.md).
+
+### Shape Printing
+Located [here](../Week%2012/Loops.md).
 
 ### Arrays Preview
-Located [here](../blob/master/Week%2012/Arrays.md).
+Located [here](..Week%2012/Arrays.md).
 
 ### File Input/Output (IO)
-Located [here](../blob/master/Week 12/File_IO.md). This is optional.
+Located [here](../Week 12/File_IO.md). This is optional.
 
 ### Practice Assignments
 These are all listed under their relevant note pages.

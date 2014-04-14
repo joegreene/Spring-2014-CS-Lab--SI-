@@ -57,7 +57,7 @@ Which prints out the following:
 
 Here is a table (of iteration):
 | `i` (start of outer loop) | Output (after inner loop ends) | Output (end of outer loop) | `i` (end of outer loop) | 
-| :---: | :---: | :---: | :---: | :---: |
+| :---: | :---: | :---: | :---: |
 | 0 | "0 1 2" |  "\n"   | 1 |
 | 1 | "0 1 2" |  "\n"   | 2 |
 | 2 | Not run | Not run | 2 |
@@ -247,13 +247,16 @@ Here are the steps it takes:
   1. First run of outer loop, (row == base == 3)
     a. First inner loop does nothing (since both c and r equal base, the check is c > base)
     b. Second inner loop prints an asterisk three times (since r equals base, base - r equals 0, the check is c > 0)
+    
   2. Second run of outer loop, (row == base - 1 == 2)
     a. First inner loop prints one space (since c == base, and r == base - 1, the check is c > 2)
     b. Second inner loop prints two asterisks (since r equals base - 1, base - r equals 1, the check is c > 1)
+    
   3. Third run of outer loop, (row == base - 2 == 1)
     a. First inner loop prints two spaces (since c == base, and r = base - 2, the check is c > 1)
     b. Second inner loop prints one asterisk (since r equals base - 2, base - r equals 2, the check is c > 2)
-  DONE
+    
+  4. DONE
 ```
 
 The fourth type (bottom-right) will be left as an exercise. It's nearly the same as top-right.
@@ -299,12 +302,15 @@ By iteration (just like the top-right example from the previous section), we hav
   1. Outer-loop first run (r == 0)
     a. First inner loop prints three spaces
     b. Second inner loop prints one asterisk
+    
   2. Outer-loop second run (r == 1)
     a. First inner loop prints two spaces
     b. Second inner loop prints three asterisks
+    
   3. Outer-loop third run (r == 2)
     a. First inner loop prints one space
     b. Second inner loop prints five asterisks
+    
   4. DONE (r == 3, base == 3, so r < side is false)
 ```
 
@@ -316,6 +322,7 @@ In a somewhat mathematical approach:
     There are one space and five asterisks in the third row.
   
   2. Note how in in the first row we have base spaces, then the second is base - 1, then base - 2.
+  
   3. Note also how, upon each iteration of the for loop, we have an odd number of asterisks (i.e. 1, then 3, then 5).
   
   4. From here we can make a general equation for the number of spaces per row, and another for the number of asterisks we need per row.
@@ -360,7 +367,7 @@ The best way to do this is by looking at it as a grid and check when the asteris
 
 For instance, here is a grid of how the above code works (read as left to right, top to bottom): 
 | - | 3 | 2 | 1 | 0 | -1 | -2 |
-| --- | --- | --- | --- | --- | --- | --- |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 3 | " " | " " | " " | "*" | " " | " " |
 | 2 | " " | " " | "*" | "*" | "*" | " " |
 | 1 | " " | "*" | "*" | "*" | "*" | "*" |
@@ -461,15 +468,19 @@ Since we already went over the top loop, here's how the second loop works (by it
   1. First run of second outer loop (r == side)
     a. First inner loop prints no spaces (c == r == side)
     b. Second inner loop prints seven asterisks (c == 2(r)+1 == 7)
+    
   2. Second run of second outer loop (r == side - 1)
     a. First inner loop prints one space (c == r == side - 1)
     b. Second inner loop prints five asterisks (c == 2(r)+1 == 5)
+    
   3. Third run of second outer loop (r == side - 2)
     a. First inner loop prints two spaces (c == r == side - 2)
     b. Second inner loop prints three asterisks (c == 2(r)+1 == 3)
+    
   4. Fourth run of second outer loop (r == side - 3 == side - side == 0)
     a. First inner loop prints three spaces (c == r == side - 3 = 0)
     b. Second inner loop prints one asterisk (c == 2(r)+1 == 1)
+    
   5. DONE (r == -1 && r < 0)
 ```
 

@@ -56,7 +56,7 @@ Which prints out the following:
 ```
 
 Here is a table (of iteration):
-| `i` (start of outer loop) | Output (after inner loop ends) | Output (end of outer loop) | `i` (end of outer loop) |
+| `i` (start of outer loop) | Output (after inner loop ends) | Output (end of outer loop) | `i` (end of outer loop) | 
 | --- | --- | --- | --- | --- |
 | 0 | "0 1 2" |  "\n"   | 1 |
 | 1 | "0 1 2" |  "\n"   | 2 |
@@ -368,16 +368,14 @@ For instance, here is a grid of how the above code works (read as left to right,
 | 1 | " " | "*" | "*" | "*" | "*" | "*" |
 
 Note that, if we were to ignore signs, the following is true: 
-```
-  If we add the row and column, we see that asterisks are printed when row plus column is less than the side.
-```
+> The asterisks are printed when |row| + |col| is less than the side length.
 
 More specifically, we see when `|row| + |col| >= 3` is true, where `T` means true and `F` means false:
 | - | 3 | 2 | 1 | 0 | -1 | -2 |
 | --- | --- | --- | --- | --- | --- | --- |
 | 3 | F | F | F | T | F | F |
 | 2 | F | F | T | T | T | F |
-| 1 | F | T | T | T | T | T|
+| 1 | F | T | T | T | T | T |
 
 To think of this as a number scheme:
 ```
@@ -406,7 +404,7 @@ Using `if((abs(r) + abs(c)) == side)` gives the following:
  *   *
 ```
 
-Why do you think the printing behaves that way? If you don't know, check back to the grid.
+Why do you think the printing behaves that way? If you don't know, the grid explanation might help.
 
 #### Diamond
 We'll go over one way of solving this, then the second way will be left for you to do as an exercise.

@@ -31,6 +31,5 @@ if you wish to do so.
 
 -------------------------------------------------------------------------------
 Copyright &copy; 2014 Joseph Greene <joeisgreene@csu.fullerton.edu>
-Some information obtained from Prof. Tian's powerpoints for her classroom.
 Released under [The MIT License] (http://opensource.org/licenses/MIT)  
 Project located at <https://github.com/joegreene/Spring-2014-CS-Lab--SI-/>

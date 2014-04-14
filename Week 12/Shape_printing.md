@@ -17,6 +17,7 @@ utilize nested loops for processes such as printing shapes in the console window
 comprehend iterative processing, pattern solving, and (a bit on) optimization of code.
 
 NOTE: We will be counting in these loops from 0 to n, where n is the last value we get to in our loops.
+
 NOTE 2: I'm sure there are plenty of examples online on how to do these. If you only copy what is going on from an online example, chances are you won't understand how the 
 looping process actually works. Take time in learning the material, or else future problems will be more troublesome than they should be. Attempt doing the work on your 
 own or with a partner before consulting online help. 
@@ -56,6 +57,7 @@ Which prints out the following:
 ```
 
 Here is a table (of iteration):
+
 | `i` (start of outer loop) | Output (after inner loop ends) | Output (end of outer loop) | `i` (end of outer loop) | 
 | :---: | :---: | :---: | :---: |
 | 0 | "0 1 2" |  "\n"   | 1 |
@@ -366,6 +368,7 @@ Which prints exactly the same thing as before.
 The best way to do this is by looking at it as a grid and check when the asterisks or spaces are placed.
 
 For instance, here is a grid of how the above code works (read as left to right, top to bottom): 
+
 | - | 3 | 2 | 1 | 0 | -1 | -2 |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 3 | " " | " " | " " | "*" | " " | " " |
@@ -376,6 +379,7 @@ Note that, if we were to ignore signs, the following is true:
 > The asterisks are printed when |row| + |col| is less than the side length.
 
 More specifically, we see when `|row| + |col| >= 3` is true, where `T` means true and `F` means false:
+
 | - | 3 | 2 | 1 | 0 | -1 | -2 |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 3 | F | F | F | T | F | F |

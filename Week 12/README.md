@@ -23,11 +23,17 @@ Located [here](../blob/master/Week%2012/Loops.md).
 Located [here](../blob/master/Week%2012/Arrays.md).
 
 ### File Input/Output (IO)
-Located [here](../blob/master/Week 12/File_IO.md).
+Located [here](../blob/master/Week 12/File_IO.md). This is optional.
 
 ### Practice Assignments
-These are all listed under their relevant note pages, except for [this](#github tic-tac-toe) one, which will help with honing-in on using both loops and if-else checks 
-if you wish to do so.
+These are all listed under their relevant note pages.
+
+### Extra Challenges
+If you haven't yet, check out the File IO notes listed above.
+
+If the schedule allows it, we might be able to make a game of [tic-tac-toe](#http://xoax.net/cpp/crs/console/lessons/Lesson9/) together. If you end up 
+somehow finishing all the other material on this page, you can try this tutorial out. It's a video tutorial, however, so you'll have to either find another elsewhere 
+without two-dimensional arrays (a topic we will cover either next week or the one after), or 
 
 -------------------------------------------------------------------------------
 Copyright &copy; 2014 Joseph Greene <joeisgreene@csu.fullerton.edu>

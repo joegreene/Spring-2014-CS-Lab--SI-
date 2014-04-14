@@ -57,6 +57,7 @@ Which prints out the following:
 
 Here is a table (of iteration):
 | `i` (start of outer loop) | Output (after inner loop ends) | Output (end of outer loop) | `i` (end of outer loop) |
+| --- | --- | --- | --- | --- |
 | 0 | "0 1 2" |  "\n"   | 1 |
 | 1 | "0 1 2" |  "\n"   | 2 |
 | 2 | Not run | Not run | 2 |
@@ -361,6 +362,7 @@ The best way to do this is by looking at it as a grid and check when the asteris
 
 For instance, here is a grid of how the above code works (read as left to right, top to bottom): 
 | - | 3 | 2 | 1 | 0 | -1 | -2 |
+| --- | --- | --- | --- | --- | --- | --- |
 | 3 | " " | " " | " " | "*" | " " | " " |
 | 2 | " " | " " | "*" | "*" | "*" | " " |
 | 1 | " " | "*" | "*" | "*" | "*" | "*" |
@@ -372,6 +374,7 @@ Note that, if we were to ignore signs, the following is true:
 
 More specifically, we see when `|row| + |col| >= 3` is true, where `T` means true and `F` means false:
 | - | 3 | 2 | 1 | 0 | -1 | -2 |
+| --- | --- | --- | --- | --- | --- | --- |
 | 3 | F | F | F | T | F | F |
 | 2 | F | F | T | T | T | F |
 | 1 | F | T | T | T | T | T|

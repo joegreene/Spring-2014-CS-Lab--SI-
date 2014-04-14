@@ -14,8 +14,8 @@
 ### Intro
 This part of the notes will go more over loops and shape-printing. 
 
-As a side note: To iterate means to perform repeatedly. Each loop (that is iterating) is called an iteration. The counter in 
-a loop is called an iterator (as long as the counter is determining how many times the loop loops). ALSDKMfix ASLKDM
+As a side note: To `iterate` means to perform repeatedly. Each time the loop iterates is called an `iteration`. The counter in 
+a loop is called an `iterator` (as long as the counter is determining how many times the loop iterates).
 
 The (best) approach to working with loops, especially nested loops, is by writing out on paper what happens per iteration. Nested loops 
 are talked about on another page under this week's work.
@@ -319,7 +319,7 @@ And so on, infinitively.
 - `while` can always replace `do-while` with the right initialization/implementation.
 - `while` and `for` have the chance to never run, whereas `do-while` always runs at least one time.
 - General rule of thumb for when to use each type of loop:
-  - `while`: when the conditional expression is not known when to end (such as requesting values that determine the conditional)
+  - `while`: when the conditional expression is not known when to end (such as requesting values that determine the conditional expression)
   - `do-while`: menus (can be done under `while` of course)
   - `for`: iterative processes (such as summation or factorials, where we know how many times to loop the program)
   
@@ -329,7 +329,7 @@ Code for the following assignments will be provided via the top of this page. Tr
 1. Using loops, try to print out the factorial of a number (allowing the user to enter the value). Have error-checking (i.e. make sure that, if `f(n) = n!`, that 
  `n >= 0`). If you want to calculate big factorials (e.g. where `n! >= 2^64`), refer to [this](#http://msdn.microsoft.com/en-us/library/s3f49ktz.aspx) to fiddle with datatype ranges.
  
-2. Using loops, print out the 8th term of the fibonacci sequence. Some of you may have been exposed to this in a math class, but if not then look [here](#http://en.wikipedia.org/wiki/Fibonacci_number).
+2. Using loops, print out the 8th term of the Fibonacci sequence. Some of you may have been exposed to this in a math class, but if not then look [here](#http://en.wikipedia.org/wiki/Fibonacci_number).
 
 -------------------------------------------------------------------------------
 Copyright &copy; 2014 Joseph Greene <joeisgreene@csu.fullerton.edu>

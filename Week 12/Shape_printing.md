@@ -57,7 +57,7 @@ Which prints out the following:
 
 Here is a table (of iteration):
 | `i` (start of outer loop) | Output (after inner loop ends) | Output (end of outer loop) | `i` (end of outer loop) | 
-| --- | --- | --- | --- | --- |
+| :---: | :---: | :---: | :---: | :---: |
 | 0 | "0 1 2" |  "\n"   | 1 |
 | 1 | "0 1 2" |  "\n"   | 2 |
 | 2 | Not run | Not run | 2 |
@@ -101,8 +101,8 @@ Output:
   4 | 4 | 8 | 12 | 16 | 
 ```
 
-Note: If you really want to, you can edit the output on the inside to make correct spacing (and get all the pipes (`|`) aligned by using `iomanip`, however that 
-will make the code more messy to read as an example. 
+Note: If you really want to, you can edit the output on the inside to make correct spacing (and get all the pipes (`|`) aligned by using `iomanip`. I did not do 
+that because that would make the example more difficult to read.
 
 Make sure you understand how the nested loops section works, or else shape-printing in general will make no sense to you whatsoever.
 
@@ -259,11 +259,10 @@ Here are the steps it takes:
 The fourth type (bottom-right) will be left as an exercise. It's nearly the same as top-right.
 
 #### Equilateral Triangle](#equilateral-triangle)
-If you don't kremember what an equilateral triangle is: It's a triangle with all three side lengths equal (and all angles are 60 degrees, as a triangle's angles add up to 180 degrees).
+If you don't kremember what an equilateral triangle is:
+> An equilateral triangle is a triangle with all three side lengths equal (and each angle is 60 degrees).
 
 This one is a bit tricky, but not impossible. There are two ways to go about this one: One with three loops, another with absolute value.
-
-
 
 In one instance, we may do the following (three loops):
 ```C++
@@ -298,37 +297,36 @@ There are two ways to look at this: One in a mathematical approach, and another 
 By iteration (just like the top-right example from the previous section), we have:
 ```
   1. Outer-loop first run (r == 0)
-    a. 
-    b. 
+    a. First inner loop prints three spaces
+    b. Second inner loop prints one asterisk
   2. Outer-loop second run (r == 1)
-    a. 
-    b. 
+    a. First inner loop prints two spaces
+    b. Second inner loop prints three asterisks
   3. Outer-loop third run (r == 2)
-    a. 
-    b. 
+    a. First inner loop prints one space
+    b. Second inner loop prints five asterisks
   4. DONE (r == 3, base == 3, so r < side is false)
 ```
 
 In a somewhat mathematical approach:
 ```
-  Take a look at what is printed per row.
+  1. Take a look at what is printed per row.
     There are three spaces and one asterisk in the first row.
     There are two spaces and three asterisks in the second row.
     There are one space and five asterisks in the third row.
   
-  Note how in in the first row we have base spaces, then the second is base - 1, then base - 2.
-  Note also how, upon each iteration of the for loop, we have an odd number of asterisks (i.e. 1, then 3, then 5).
+  2. Note how in in the first row we have base spaces, then the second is base - 1, then base - 2.
+  3. Note also how, upon each iteration of the for loop, we have an odd number of asterisks (i.e. 1, then 3, then 5).
   
-  From here we can make a general equation for the number of spaces per row, and another for the number of asterisks we need per row.
+  4. From here we can make a general equation for the number of spaces per row, and another for the number of asterisks we need per row.
     Number of spaces = base - row where row is the row we are currently on (we start at 0 in this case).
-      NOTE: We can change this 
     Number of asterisks = 2(row) + 1, where this is the definition of odd numbers (row starts at 0 here too).
   
-  We need to print the spaces before the asterisks.
+  5. We need to print the spaces before the asterisks.
   
-  Therefore, our loops (inside the outer loop) should look as follows:
+  6. Therefore, our loops (inside the outer loop) should look as follows:
     for(c = r; c < side; ++c) // for spaces
-    for (c = 0; c < ((2 * r) + 1); ++c) //asterisks
+    for(c = 0; c < ((2 * r) + 1); ++c) //asterisks
 ```
 
 NOTE: I know that the base doesn't have the same amount of asterisks as the sides. If you were to account for the gaps on the sides, the actual side lengths come out as roughly the same.
@@ -372,7 +370,7 @@ Note that, if we were to ignore signs, the following is true:
 
 More specifically, we see when `|row| + |col| >= 3` is true, where `T` means true and `F` means false:
 | - | 3 | 2 | 1 | 0 | -1 | -2 |
-| --- | --- | --- | --- | --- | --- | --- |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 3 | F | F | F | T | F | F |
 | 2 | F | F | T | T | T | F |
 | 1 | F | T | T | T | T | T |
@@ -461,17 +459,17 @@ The first loop is exactly the same as the previous, whereas the second is adding
 Since we already went over the top loop, here's how the second loop works (by iteration):
 ```C++
   1. First run of second outer loop (r == side)
-    a. 
-    b. 
+    a. First inner loop prints no spaces (c == r == side)
+    b. Second inner loop prints seven asterisks (c == 2(r)+1 == 7)
   2. Second run of second outer loop (r == side - 1)
-    a. 
-    b. 
+    a. First inner loop prints one space (c == r == side - 1)
+    b. Second inner loop prints five asterisks (c == 2(r)+1 == 5)
   3. Third run of second outer loop (r == side - 2)
-    a. 
-    b. 
+    a. First inner loop prints two spaces (c == r == side - 2)
+    b. Second inner loop prints three asterisks (c == 2(r)+1 == 3)
   4. Fourth run of second outer loop (r == side - 3 == side - side == 0)
-    a. 
-    b. 
+    a. First inner loop prints three spaces (c == r == side - 3 = 0)
+    b. Second inner loop prints one asterisk (c == 2(r)+1 == 1)
   5. DONE (r == -1 && r < 0)
 ```
 

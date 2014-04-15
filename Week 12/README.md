@@ -10,9 +10,7 @@
 - [Extra Challenges](#extra-challenges)
 
 ### Intro
-Today's SI session will be split up into two sections: One to briefly go over loops and talk about shape-printing, and the other half to talk about arrays 
-(a topic that'll be gone over in the lecture today). There is an optional third section too (which is not part of the core curriculum, but really handy 
-to know), dealing with file input/output (IO).
+Today's SI session will be split up into three sections: One to briefly go over loops, another to talk about shape-printing, and a third to talk about arrays (a topic that'll be gone over in the lecture today). There is a fourth section I planned, although I didn't have enough time to type it up completely.
 
 As a side note: I don't know if you all have realized this yet, but I made the topics on the top work as links. This means you can click the blue text and it 
 will automatically jump you to its section, instead of needing to scroll all the way down to get to each section.

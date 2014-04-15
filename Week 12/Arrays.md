@@ -71,9 +71,10 @@ Well, a couple of reasons for this include: So we have an extra value to work wi
 Keep in mind that, to account for starting at zero, we have to shift back one value from the maximum (in our case, our last value is six and not seven).
 
 Here is a general rule when accessing an array:
-> The valid index range of an array is 0 <= n < length of array
+> The valid index range of an array is 0 <= n < length of array, where n is an integer
 
-If we attempt to access a index outside of the above range, what we get is an `out of bounds exception`. The exception name is pretty self-explanatory from the general rule we just went over.
+
+If we attempt to access a index outside of the above range, what we get is an `out of bounds exception`. This is because there are no negative positions nor are there positions outside of the array within the array. This probably seems like a no-brainer, but many errors with arrays come from this and being confused on what index you're on.
 
 If we were to initialize the remainder of our code, we would have something like the following:
 ```C++
@@ -137,13 +138,24 @@ are all valid arrays.
 
 Remember [c(haracter) strings](#https://www.prismnet.com/~mcmahon/Notes/strings.html)? Those are `char` arrays. Strings are technically character arrays as well, but can change size during compilation of the program's run time. This is one of the reasons we prefer using strings over cstrings in C++, and on top of that they're just plain easier to work with.
 
+Note how we have been using "constant" numbers to define arrays? Because the size of an array is defined at start up, we're forced to stick with whatever size we allocate it to on initialization. This is one downfall of using an array.
+
+If we wanted to have a variable define the size of the array, we can use the following:
+```C++
+  const int AMT_STUDENTS = 20;
+  char grades[AMT_STUDENTS];
+```
+
+We can't use an a variable such as `int amt` because it isn't constant, and we can't use a `double` to represent the size of an array (we can't have half a position/index). We can't set the size of the array to a negative number, namely because that would make no sense logically.
+
 #### Summary: Arrays
 - Use an array...
   - When you have a list of similar variables (e.g. a score list or a list of merchandise)
   - Know the size of the array won't change over the course of the program (IMPORTANT!!!)
-- Arrays can be definied three ways: explicitly (when defining the size) and implicitly (when the contents define the size), and a mixture of both
+- Arrays can be defined three ways: explicitly (when defining the size) and implicitly (when the contents define the size), and a mixture of both
 - The syntax structure of an array is always the same: datatype, name plus brackets with an optional size inside, then an optional initialization of some or all the variables. You must have either the size, the initialization, or both.
 - It's best to initialize the array as soon as possible, like other variables, so you don't get uninitialization errors.
+- The reange of indices in an array are `0 <= n < length of array` where n is an integer.
 
 ### Practice Assignments
 1. Create an array to hold a list of the first 100 even integers using a loop, then print them out. Afterwards, print the sum of the array (i.e. sum of the first 100 even integers). You may mix the initialization and print list steps together if you know how to.

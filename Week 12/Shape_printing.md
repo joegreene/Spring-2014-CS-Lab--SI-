@@ -9,7 +9,6 @@
   - [Equilateral Triangle](#equilateral-triangle)
   - [Diamond](#diamond)
 - [Practice Assignments](#practice-assignments)
-- [Extra Challenges](#extra-challenges)
 
 ### Intro
 A bit of an extension to the [loops page](#), this will go furthermore into looping by introducting nested loops, and how we can 

@@ -31,7 +31,7 @@ I didn't have enough time to finish this page for this week (and I didn't think 
 These are all listed under their relevant note pages.
 
 ### Extra Challenges
-If you haven't yet, check out the File IO notes listed above.
+If you haven't yet, check out the File IO notes listed above (incomplete though).
 
 If the schedule allows it, we might be able to make a game of [tic-tac-toe](#http://xoax.net/cpp/crs/console/lessons/Lesson9/) together. If you end up 
 somehow finishing all the other material on this page, you can try this tutorial out. It's a video tutorial, however, so you'll have to either find another elsewhere 

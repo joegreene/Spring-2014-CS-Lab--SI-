@@ -158,7 +158,7 @@ We can't use an a variable such as `int amt` because it isn't constant, and we c
 - The reange of indices in an array are `0 <= n < length of array` where n is an integer.
 
 ### Practice Assignments
-1. Create an array to hold a list of the first 100 even integers using a loop, then print them out. Afterwards, print the sum of the array (i.e. sum of the first 100 even integers). You may mix the initialization and print list steps together if you know how to.
+1. Create an array to hold a list of the first 100 even integers using a loop, then print them out. Afterwards, print the sum of the array (i.e. sum of the first 100 even integers). You may mix the initialization and print list steps together if you know how to. An example of the list is: 0, 2, 4, ... and so on.
 
 ### Extra Challenges
 1. Make a program to sort a list of numbers given by a user. You may want to look up sorting algorithms online, or use a temporary variable to hold a value as it goes. 

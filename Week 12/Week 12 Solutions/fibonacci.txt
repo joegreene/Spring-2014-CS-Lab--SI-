@@ -1,0 +1,24 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() 
+{
+	// your code goes here
+	int fn1 = 1; //initial condition; f_(n-1)
+	int fn2 = 1; //initial condition; f_(n-2)
+	int fn = 0;
+	
+	int num_terms = 5; //optional, I did this for a more general program
+	
+	for(int i = 2; i < num_terms; ++i)
+	{
+		fn = fn1 + fn2;
+		
+		fn2 = fn1; //update terms
+		fn1 = fn; //update terms
+	}
+	cout << "Term " << num_terms << " of the fibonacci sequence is: " << fn << endl;
+	
+	return 0;
+}

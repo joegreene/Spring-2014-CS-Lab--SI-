@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() 
+{
+  int r, c;
+  int side = 3;
+
+  for(r = side; r >= -side; --r) //outer loop
+  {
+    for(c = side; c >= -side; --c) //inner loop
+    {
+      if((abs(r) + abs(c)) <= side)
+      {
+        cout << "*";
+      }
+      else
+      {
+        cout << " ";
+      }
+    }
+    cout << endl;
+  }
+	return 0;
+}

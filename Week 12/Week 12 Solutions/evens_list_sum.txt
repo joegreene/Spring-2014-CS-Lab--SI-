@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() 
+{
+  const int EVENS = 100;
+  int even_list[EVENS];
+  int even_count = 0;
+  
+  cout << "Here are the first hundred even numbers: " << endl;
+  
+  
+  for(int i = 0; i < EVENS; ++i) //i helps with indices
+  {
+  	even_list[i] = even_count; //start from 0, so we set sum first
+  	even_count+=2;
+  	cout << even_list[i] << " ";
+  }
+  
+  int even_sum = (even_list[0] + even_list[99]) / 2 * EVENS; //to do sum of all
+  
+  cout << endl << "Here is the sum of the first hundred even numbers: " 
+  	   << even_sum << endl;
+  
+  return 0;
+}

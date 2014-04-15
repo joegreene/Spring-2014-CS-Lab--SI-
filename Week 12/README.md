@@ -17,7 +17,7 @@ to know), dealing with file input/output (IO).
 As a side note: I don't know if you all have realized this yet, but I made the topics on the top work as links. This means you can click the blue text and it 
 will automatically jump you to its section, instead of needing to scroll all the way down to get to each section.
 
-### Loops Review & Shape-Printing
+### Loops Review
 Located [here](Loops.md).
 
 ### Shape Printing

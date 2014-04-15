@@ -7,8 +7,9 @@
 - [Extra Challenges](#extra-challenges)
 
 ### Intro
-This is an optional section and will not be covered in this course. It will, however, be heavily covered in CS121 and CS131. If you plan on going up to
-those courses, or if you want to simply learn a cool thing, hopefully this page helps you in your endeavors.
+This is an optional section and will not be covered in this course. It will, however, be heavily covered in CS121 and CS131. If you plan on going up to those courses, or if you want to simply learn a cool thing, hopefully this page helps you.
+
+NOTE: Incomplete, but if you want to check stuff out click [here](#http://www.cplusplus.com/doc/tutorial/files/).
 
 ### File Input/Output (IO)
 TBD

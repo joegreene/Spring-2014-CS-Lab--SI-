@@ -27,7 +27,7 @@ Located [here](Shape_printing.md).
 Located [here](Arrays.md).
 
 ### File Input/Output (IO)
-Located [here](File_IO.md). This is optional.
+I didn't have enough time to finish this page for this week (and I didn't think we would get to this in time). I have little-to-no information on it, and plan to create it for next week or in a future session hopefully, depending on how thing go this week and in lecture. Check it out [here](file_io.md).
 
 ### Practice Assignments
 These are all listed under their relevant note pages.

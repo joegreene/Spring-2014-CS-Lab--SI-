@@ -18,8 +18,7 @@ TBD
 1. TBD
 
 ### Extra Challenges
-You can check out how to work with binary files as well. I personally haven't had much experience with them, but [here](#) 
-if you are interested.
+You can check out how to work with binary files as well. I personally haven't had much experience with them, but [here](#http://www.cplusplus.com/doc/tutorial/files/) if you are interested.
 
 -------------------------------------------------------------------------------
 Copyright &copy; 2014 Joseph Greene <joeisgreene@csu.fullerton.edu>

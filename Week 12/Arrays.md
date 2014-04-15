@@ -18,10 +18,10 @@ We'll be talking about these in lecture. Pretty much, arrays are a neat way to s
 Let's say we wanted to have a list of scores for some skaters, and we knew for sure the scores would be 
 given to us in order. Currently, we would then have a program like the following to get the job done.
 ```C++
-  double score0, score1, score2, score3, score4, score5, score6;
+  double score0, score1, score2, score3, score4, score5;
   
   cout << "Enter first, second, third, fourth, fifth, and sixth score: ";
-  cin >> score1 >> score2 >> score3 >> score4 >> score5 >> score6;
+  cin >> score0 >> score1 >> score2 >> score3 >> score4 >> score5;
 ```
 
 ... and we would have to make as many variables and as many `cin` statements as we needed in order to 
@@ -32,12 +32,12 @@ We'll work at this in the following sections.
 #### Holding Multiple Values
 Since the scores are similar variables (i.e. they are all `double`), we can convert this nasty code:
 ```C++
-  double score0, score1, score2, score3, score4, score5, score6;
+  double score0, score1, score2, score3, score4, score5;
 ```
 
 Into this, much easier to type code:
 ```C++
-  double scorelist[7];
+  double scorelist[6];
 ```
 
 The syntax structure for an array is as follows:
@@ -45,7 +45,7 @@ The syntax structure for an array is as follows:
   datatype identifier[size];
 ```
 
-What we did above is created an (one-dimensional) __array__ of doubles of size 7. The "one-dimensional" part doesn't really matter to us for now (in about two weeks it will), it just means that it's working one way (left to right). As this type of array is type double, we are allowed to hold multiple double variables within it. When we say size of 7, we mean that we allowed ourselves to have a total of seven doubles inside our array. 
+What we did above is created an (one-dimensional) __array__ of doubles of size 6. The "one-dimensional" part doesn't really matter to us for now (in about two weeks it will), it just means that it's working one way (left to right). As this type of array is type double, we are allowed to hold multiple double variables within it. When we say size of 6, we mean that we allowed ourselves to have a total of six doubles inside our array. 
 
 The size is important, especially when we work with initializing arrays. We'll begin to understand why this is in the following section.
 
@@ -61,14 +61,14 @@ Let's say, for instance, we wanted to set the value of the first score to `8`. A
 
 It's really that simple. If we wanted to change the last score in the array to 10 (because we have bias, beats me) we can do the following:
 ```C++
-  scorelist[6] = 10;
+  scorelist[5] = 10;
 ```
 
 At this point, many students raise the question: Why is the first value in the array equal to 0, and the last value equal to one less than the total size? 
 
 Well, a couple of reasons for this include: So we have an extra value to work with, it's how our counting system works (e.g. we count by the decimal system, or 0 through 9 until we go to the next place value), and certain algorithms only work when starting from zero (making our lives easier when implementing them). It's also due to how arrays work in RAM. 
 
-Keep in mind that, to account for starting at zero, we have to shift back one value from the maximum (in our case, our last value is six and not seven).
+Keep in mind that, to account for starting at zero, we have to shift back one value from the maximum (in our case, our last value is five and not six).
 
 Here is a general rule when accessing an array:
 > The valid index range of an array is 0 <= n < length of array, where n is an integer
@@ -78,10 +78,10 @@ If we attempt to access a index outside of the above range, what we get is an `o
 
 If we were to initialize the remainder of our code, we would have something like the following:
 ```C++
-  double scoreslist[7]; //array of doubles, for scores
+  double scoreslist[6]; //array of doubles, for scores
   
   cout << "Enter first, second, third, fourth, fifth, and sixth score: ";
-  cin >> scorelist[0] >> scorelist[1] >> scorelist[2] >> scorelist[3] >> scorelist[4] >> scorelist[5] >> scorelist[6];
+  cin >> scorelist[0] >> scorelist[1] >> scorelist[2] >> scorelist[3] >> scorelist[4] >> scorelist[5];
 ```
 
 Keep in mind that, at first, the values in an array are either uninitialized or are set to zero. Whichever value it is (be it garbage or zero), we'll want to initialize the list as soon as possible if we plan on using it to our disposal.
@@ -91,9 +91,9 @@ The beginning seems nicer now, but the latter seems even worse. How do you suppo
 
 To further make our code much easier to type (and read), instead of our previous code we may do the following:
 ```C++
-  double scoreslist[7];
+  double scoreslist[6];
   
-  int score_amt = 7;
+  int score_amt = 6;
   
   cout << "Enter first, second, third, fourth, fifth, and sixth score";
   

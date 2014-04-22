@@ -1,4 +1,3 @@
-```C++
 // hangman_project_no_loop.cpp : Defines the entry point for the console application.
 // MAKE SURE TO HAVE A WORD LIST IN THE SAME DIRECTORY AS THE .CPP OR .EXE
 
@@ -188,5 +187,3 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	return 0;
 }
-
-```

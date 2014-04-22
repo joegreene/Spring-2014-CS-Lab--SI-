@@ -186,9 +186,9 @@ For instance, recall back to how we grab from and wrote to a file (assume the fi
   //General Variable
   string temp_str;
 
-  //Grab input
+  //Grab a line from the input file
   ifstream infile;
-  infile.open("text_doc.txt");
+  infile.open("input_text.txt");
   getline(infile, temp_str);
   infile.close();
   
@@ -196,6 +196,7 @@ For instance, recall back to how we grab from and wrote to a file (assume the fi
   ofstream outfile;
   outfile.open("out_text.txt");
   outfile << temp_str << endl;
+  outfile.close();
   
 ```
 
@@ -213,21 +214,7 @@ It's almost the exact same as using `cout` and `cin`, just with a few extra line
   
 ```
 
-__WARNING:__ At this point, some of you may go into complete shock. Please do not feel alarmed or freak out.
-
-If we wanted to make our own `cin` and `cout` objects that do exactly what `cin` and `cout` do, we do the following:
-```C++
-  ostream console_out; //equivalent to cout; ostream means output stream
-  istream console_in; //equivalent to cin; istream means input stream
-  
-  int some_var;
-  
-  console_out << "Enter in a number: ";
-  console_in >> some_var;
-  
-```
-
-These work exactly the same as `cout` and `cin` (in terms of using the insertion and extraction operators, or '<<' and '>>' respectively) and work pretty much like `ofstream` and `ifstream` respectively.
+Judging off of this, it's nice to know that `cin` is an `istream` (input stream) object and `cout` is an `ostream` (output stream) object. This helps with the connection between `iostream` and `fstream`.
 
 ### Practice Assignments
 1. Make a program that scans a file containing words and tells the user if each word is or is not a palindrome. If you do not know, a palindrome is a word that is 
@@ -242,7 +229,7 @@ spelt exactly the same backwards (e.g. "racecar" and "civic" are palindromes but
   - BONUS: Print out the hangman image each time. HINT: Best way to do this is to use a 2d-array.
   
   
-Example outputs and resources for each assignment are added at top of page. Your outputs should be roughly similar (except for the exceptions in Hangman). If enough people ask, we'll go over them (or just one) together.
+Example outputs and resources for each assignment are added at top of [this](README.md) page (in folders). Your outputs should be roughly similar (except for the exceptions in Hangman). If enough people ask, we'll go over them (or just one) together.
 
 -------------------------------------------------------------------------------
 Copyright &copy; 2014 Joseph Greene <joeisgreene@csu.fullerton.edu>

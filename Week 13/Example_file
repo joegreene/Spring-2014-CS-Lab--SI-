@@ -1,0 +1,46 @@
+// file_test.cpp : Defines the entry point for the console application.
+// MAKE SURE TO HAVE A DOCUMENT NAMED "document.txt" IN THE SAME PLACE AS THIS .CPP
+
+#include "stdafx.h"
+#include <iostream>
+#include <string>
+#include <fstream>
+
+using namespace std;
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	const int MAX_SIZE = 50; //arbitrary size for array
+	string word_list[MAX_SIZE]; //array to hold all words
+	int word_count = 0; //to manage actual word count
+	ifstream input_file; //input file to read from
+
+	input_file.open("document.txt"); //attempt to open the file
+
+	if(input_file.is_open()) //if the file successfully opened
+	{
+		//If the file still has words to grab AND we haven't reached the max count
+		while(input_file >> word_list[word_count] && word_count < MAX_SIZE)
+		{
+			//input_file in the above works just like cin, grabbing data until a space or endline
+			word_count++; //increment count
+		}
+
+		input_file.close(); //close the file when we are done
+	}
+	else //if the file did not successfully open
+	{
+		cout << "File could not be read. Make sure the file exists in the same directory";
+	}
+
+	if(word_count > 0) //if we actually grabbed any words
+	{
+		for(int i = 0; i < word_count; i++) //print each grabbed word
+		{
+			cout << word_list[i] << endl;
+		}
+	}
+
+	return 0;
+}
+

@@ -127,3 +127,10 @@ Here if you don't understand how the edit looks like:
 
 When comparing two two-dimensional arrays, it's important that they are of the same size. If you don't do this, chances are you'll get an out-of-bounds error when accessing an array position in either (or both) 
 two-dimensional array. Also, if they are not of equal size, that automatically means the two 2d-arrays are unequal. It helps to think of these as matrices.
+
+At this point, you should move onto the File IO page [here](file_io_new.md).
+
+-------------------------------------------------------------------------------
+Copyright &copy; 2014 Joseph Greene <joeisgreene@csu.fullerton.edu>
+Released under [The MIT License] (http://opensource.org/licenses/MIT)  
+Project located at <https://github.com/joegreene/Spring-2014-CS-Lab--SI-/>

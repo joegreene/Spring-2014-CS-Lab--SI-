@@ -227,3 +227,8 @@ spelt exactly the same backwards (e.g. "racecar" and "civic" are palindromes but
   
   
 Example outputs and resources for each assignment are added at top of page. Your outputs should be roughly similar (except for the exceptions in Hangman). If enough people ask, we'll go over them (or just one) together.
+
+-------------------------------------------------------------------------------
+Copyright &copy; 2014 Joseph Greene <joeisgreene@csu.fullerton.edu>
+Released under [The MIT License] (http://opensource.org/licenses/MIT)  
+Project located at <https://github.com/joegreene/Spring-2014-CS-Lab--SI-/>

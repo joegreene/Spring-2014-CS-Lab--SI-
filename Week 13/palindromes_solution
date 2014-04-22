@@ -29,8 +29,8 @@ int _tmain(int argc, _TCHAR* argv[])
 
   if(infile.is_open())
   {
-    while(getline(infile, phrase_list[phrase_count]) && phrase_count <= MAX_COUNT) //while there is data to grab
-		                                                                           //and we haven't reached max count 
+    while(getline(infile, phrase_list[phrase_count]) && phrase_count < MAX_COUNT) //while there is data to grab
+		                                                                  //and we haven't reached max count 
     {
       ++phrase_count; //increase phrase count
     }

@@ -6,7 +6,6 @@
     - [Special Note: Using eof()](#special-note-using-eof)
     - [Special Note: Delimiters in getline and Another Way to Scan](#special-note-delimiters-in-getline-and-another-way-to-scan)
   - [Writing to a File](#writing-to-a-file)
-  - [Input and Output at Once](#input-and-output-at-once)
   - [iostream Versus fstream](#iostream-versus-fstream)
 - [Practice Assignments](#practice-assignments)
 
@@ -179,25 +178,42 @@ Lastly, when finished writing to the file, make sure to close it (like with inpu
   outfile.close();
 ```
 
-#### Input and Output at Once
-If we use `fstream` to replace either `ifstream` or `ofstream`, we can have an object to do both reading and writing.
-
-```C++
-  fstream file;
-  file.open(filename.c_str());
-  
-  string some_string;
-  getline(file, some_string); //grab from file to put in some_string
-  
-  file << some_string; //write to 
-```
-
 #### iostream Versus fstream
 It's really nice how similar the `iostream` and `fstream` libraries are. With some minor differences in initialization and implementation, each can almost be interchanged exactly, line-by-line.
 
-For instance, recall back to how we grab from and wrote to a file:
+For instance, recall back to how we grab from and wrote to a file (assume the file exists for sake of less typing in this example):
+```C++
+  //General Variable
+  string temp_str;
 
-__WARNING:__ At this point, some of you may go into complete shock. Do not feel alarmed however.
+  //Grab input
+  ifstream infile;
+  infile.open("text_doc.txt");
+  getline(infile, temp_str);
+  infile.close();
+  
+  //Write grabbed info to another file
+  ofstream outfile;
+  outfile.open("out_text.txt");
+  outfile << temp_str << endl;
+  
+```
+
+It's almost the exact same as using `cout` and `cin`, just with a few extra lines:
+```C++
+  //General Variable
+  string temp_str;
+  
+  //Grab input
+  cout << "Enter a phrase: ";
+  getline(cin, temp_str); //changed infile to cin
+  
+  //Write input to console
+  cout << temp_str << endl; //changed outfile to cout
+  
+```
+
+__WARNING:__ At this point, some of you may go into complete shock. Please do not feel alarmed or freak out.
 
 If we wanted to make our own `cin` and `cout` objects that do exactly what `cin` and `cout` do, we do the following:
 ```C++
@@ -211,7 +227,7 @@ If we wanted to make our own `cin` and `cout` objects that do exactly what `cin`
   
 ```
 
-These work exactly the same as `cout` and `cin` (in terms of using the insertion and extraction operators, or '<<' and '>>' respectively).
+These work exactly the same as `cout` and `cin` (in terms of using the insertion and extraction operators, or '<<' and '>>' respectively) and work pretty much like `ofstream` and `ifstream` respectively.
 
 ### Practice Assignments
 1. Make a program that scans a file containing words and tells the user if each word is or is not a palindrome. If you do not know, a palindrome is a word that is 

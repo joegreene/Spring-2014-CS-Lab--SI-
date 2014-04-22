@@ -1,0 +1,55 @@
+// file_test.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include <string>
+#include <fstream> //required for file io
+
+using namespace std;
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	const int MAX_RECORDS = 12;
+	int ID_list[MAX_RECORDS];
+	int record_amt = 0; //record amount
+
+	string name1, name2;
+
+	ifstream infile;
+
+	infile.open("document.txt");
+
+	if(infile.is_open()) //if input file is opened successfully
+	{
+		infile >> name1; //grab first name
+		infile >> name2; //grab second name
+
+		while(infile >> ID_list[record_amt] && record_amt < MAX_RECORDS) //while there's info to grab AND 
+			                                                             //we haven't reached the limit
+		{
+			record_amt++; //increase count of records
+		}
+
+		infile.close();
+	}
+	else
+	{
+		cout << "File was not opened. Make sure the file is in the same directory as this program." << endl;
+	}
+
+	if(record_amt > 0) //if we got any records
+	{
+		cout << "Name 1: " << name1 << endl << "Name 2: " << name2 << endl;
+		cout << "IDs: ";
+		for(int i = 0; i < record_amt; i++)
+		{
+			cout << ID_list[i] << " "; //print each ID in the ID list
+		}
+	}
+
+	cout << endl;
+
+	return 0;
+}
+

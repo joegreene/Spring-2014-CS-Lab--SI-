@@ -38,7 +38,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
   if(phrase_file.is_open())
   {
-    while(getline(phrase_file, phrase_list[phrase_count]) == false && phrase_count <= MAX_PHRASE_COUNT) //while there are more lines to grab 
+    while(getline(phrase_file, phrase_list[phrase_count]) == false && phrase_count < MAX_PHRASE_COUNT) //while there are more lines to grab 
                                                                                                         //(and if so put them in the array), 
                                                                                                         //AND more spots to fill
     {

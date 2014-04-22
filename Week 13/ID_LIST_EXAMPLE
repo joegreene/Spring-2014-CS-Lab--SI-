@@ -12,6 +12,7 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	const int MAX_RECORDS = 12;
 	int ID_list[MAX_RECORDS];
+
 	int record_amt = 0; //record amount
 
 	string name1, name2;

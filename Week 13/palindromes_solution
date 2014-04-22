@@ -1,0 +1,102 @@
+// palindromes.cpp : Defines the entry point for the console application.
+// MAKE SURE TO HAVE SOME PHRASE LIST IN THE SAME DIRECTORY AS THIS .CPP OR THE .EXE
+
+#include "stdafx.h"
+#include <iostream>
+#include <fstream> //for file io
+#include <string>
+
+using namespace std;
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+  //General variables
+  const int MAX_COUNT = 50; //arbitrary value required for string array
+  int phrase_count = 0;
+  string phrase_list[MAX_COUNT]; //to hold all the input file's phrases to test
+  bool is_palindrome = true; //assume true for less code later
+
+  //File variables
+  string filename = "";
+  cout << "Enter a filename to grab the phrases/words from: ";
+  getline(cin, filename);
+
+  cout << endl;
+
+  //File initialization
+  ifstream infile; //input file
+  infile.open(filename.c_str());
+
+  if(infile.is_open())
+  {
+    while(getline(infile, phrase_list[phrase_count]) && phrase_count <= MAX_COUNT) //while there is data to grab
+		                                                                           //and we haven't reached max count 
+    {
+      ++phrase_count; //increase phrase count
+    }
+
+    infile.close(); //remember to close the file
+  }
+  else //if the file was unsuccessfully read
+  {
+    cout << "Incorrect filename. Make sure the filename is typed fully and correctly, and the file is in " 
+         << "the same directory as this executable." << endl;
+  }
+
+  if(phrase_count != 0) //if we have any phrases
+  {
+    //Variables for positions in inner while loop
+    int leftpos; //leftmost position for inner while loop
+    int rightpos; //rightmost position for inner while loop
+
+    cout << "Here are the results: " << endl;
+
+	//Scan through all the phrases
+    for(int i = 0; i < phrase_count; ++i)
+    {
+      string temp_str = phrase_list[i];
+      
+      //remove all spaces from the phrase
+      for(int w = 0; w < temp_str.length(); ++w)
+      {
+        temp_str[w] = tolower(temp_str[w]); //set all letters to lower case to ignore case sensitivity
+
+        if(temp_str[w] == ' ') //if the current position has a space in it
+          temp_str.erase(w, 1); //erase one character from string at position w; in our case it is the space
+      }
+
+      leftpos = 0; //set to first position of temp string
+      rightpos = temp_str.length() - 1; //set to end position of temp string
+
+      while(rightpos != temp_str.length()/2 && is_palindrome) //while we haven't reached the middle yet 
+                                                              //and determined it isn't a palindrome
+      {
+        if(temp_str[leftpos] != temp_str[rightpos]) //while current left and current right positions aren't equal
+        {
+          is_palindrome = false;
+        }
+        else
+        {
+          //Proper increment/decrement to move through current string
+          leftpos++;
+          rightpos--;
+        }
+      }
+
+      cout << "The phrase/word: \"" << phrase_list[i];
+
+      if(is_palindrome)
+      {
+        cout << "\" is a palindrome." << endl;
+      }
+      else
+      {
+        cout << "\" is not a palindrome." << endl;
+        is_palindrome = true; //reset this to previous assumption (unnecessary in previous if-statement)
+      }
+    }
+  }
+
+	return 0;
+}
+

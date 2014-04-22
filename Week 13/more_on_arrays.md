@@ -21,7 +21,7 @@ For instance, if we were to have an array of `some_type`, we calculate the size 
 
 Simply put: If we have an array of twelve doubles, the byte-size of the array is `12 * 8 = 96 bytes`.
 
-Click [here](#http://www.cplusplus.com/doc/tutorial/arrays/) and look through all until the topic "Arrays as Parameters" (this topic deals with something else that we might go over later). 
+Click [here](http://www.cplusplus.com/doc/tutorial/arrays/) and look through all until the topic "Arrays as Parameters" (this topic deals with something else that we might go over later). 
 This page also covers two-dimensional arrays (covered mid-way of this page), so if you want you can read that as well.
 
 #### Comparing Arrays

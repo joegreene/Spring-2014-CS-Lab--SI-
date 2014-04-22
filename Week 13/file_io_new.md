@@ -16,7 +16,7 @@ we always need to first `open` the file, then when we are done reading/writing t
 
 Because we won't have to deal with binary files right now (or so I believe), we'll only be working with text files. If things change later then I'll do my best to help explain how to work with them.
 
-Although it might be more difficult to read due to the jargon on the page (and talk about binary files), you can also learn about file IO [here](#http://www.cplusplus.com/doc/tutorial/files/). Just skip to the "text files" section.
+Although it might be more difficult to read due to the jargon on the page (and talk about binary files), you can also learn about file IO [here](http://www.cplusplus.com/doc/tutorial/files/). Just skip to the "text files" section.
 
 #### Grabbing Information From Files
 To grab information from a file, we first must make a `ifstream` (input file stream) object. This would look similar to the following: 
@@ -102,7 +102,7 @@ From what I've heard, it's generally bad to use the function `eof()`. Although `
 
 Alternatively, what we may do is set the conditional check in the `while` loop to be the `getline` expression. 
 
-For more information, check out [this](#http://stackoverflow.com/questions/5837639/eof-bad-practice) page. Also, check out [here](#http://mathbits.com/MathBits/CompSci/Files/End.htm).
+For more information, check out [this](http://stackoverflow.com/questions/5837639/eof-bad-practice) page. Also, check out [here](http://mathbits.com/MathBits/CompSci/Files/End.htm).
 
 ##### Special Note: Delimiters in getline and Another Way to Scan
 If our text file has a specific way of grouping data to grab, e.g. by using ' ' or '|', we can change the arguments to `getline`.
@@ -217,7 +217,7 @@ These work exactly the same as `cout` and `cin` (in terms of using the insertion
 1. Make a program that scans a file containing words and tells the user if each word is or is not a palindrome. If you do not know, a palindrome is a word that is 
 spelt exactly the same backwards (e.g. "racecar" and "civic" are palindromes but "palindrome" and "alpha" are not palindromes). Have the maximum amount of entries be 50.
 
-2. Make the game Hangman. [Here](#http://en.wikipedia.org/wiki/Hangman_%28game%29) it is if in case you've never heard of it. It needs to have the following:
+2. Make the game Hangman. [Here](http://en.wikipedia.org/wiki/Hangman_%28game%29) it is if in case you've never heard of it. It needs to have the following:
   - Must print the correct number of dashes and spaces for the guesses (e.g. --- --- for guess phrase "Old Dog")
   - Must print the list of wrong guesses each turn.
   - Have the maximum unique wrong guesses be six (for each body part).

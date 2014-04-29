@@ -3,8 +3,8 @@
 ## Contents
 - [Intro](#intro)
 - [Steps](#steps)
-  - [Psuedo-code](#psuedo--code)
-  - [Translation to C++](#translation-to-c++)
+  - [Psuedo-code](#psuedo-code)
+  - [Translation to C++](#translation-to-c)
   - [Debugging](#debugging)
 - [Practice Assignment](#practice-assignment)
 - [Extra Challenges](#extra-challenges)

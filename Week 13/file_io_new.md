@@ -220,13 +220,7 @@ Judging off of this, it's nice to know that `cin` is an `istream` (input stream)
 1. Make a program that scans a file containing words and tells the user if each word is or is not a palindrome. If you do not know, a palindrome is a word that is 
 spelt exactly the same backwards (e.g. "racecar" and "civic" are palindromes but "palindrome" and "alpha" are not palindromes). Have the maximum amount of entries be 50.
 
-2. Make the game Hangman. [Here](http://en.wikipedia.org/wiki/Hangman_%28game%29) it is if in case you've never heard of it. It needs to have the following:
-  - Must print the correct number of dashes and spaces for the guesses (e.g. --- --- for guess phrase "Old Dog")
-  - Must print the list of wrong guesses each turn.
-  - Have the maximum unique wrong guesses be six (for each body part).
-  - Must grab a word list from a text file. The phrase count is arbitrary (if anything set it to 50). If the file does not exist, __do not__ execute the game.
-  - Must tell the user the right word in the end (if they used up all their unique wrong guesses).
-  - BONUS: Print out the hangman image each time. HINT: Best way to do this is to use a 2d-array.
+2. MOVED HANGMAN TO NEXT WEEK WORK.
   
   
 Example outputs and resources for each assignment are added at top of [this](README.md) page (in folders). Your outputs should be roughly similar (except for the exceptions in Hangman). If enough people ask, we'll go over them (or just one) together.

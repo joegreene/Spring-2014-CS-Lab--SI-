@@ -1,0 +1,189 @@
+// hangman_project_no_loop.cpp : Defines the entry point for the console application.
+// MAKE SURE TO HAVE A WORD LIST IN THE SAME DIRECTORY AS THE .CPP OR .EXE
+
+#include "stdafx.h"
+#include <iostream>
+#include <string>
+#include <fstream> //file io
+#include <cstdlib> //for rand() function
+#include <ctime> //for srand's time
+
+using namespace std;
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+  //General variables for initialization
+  bool play_game = true;
+  const int MAX_PHRASE_COUNT = 50;
+  int phrase_count = 0;
+
+  //Grid for the hangman print
+  char hangman_grid[7][6] = {' ', ' ', '_', '_', '_', '_',
+				    			            ' ', ' ', ' ', ' ', ' ', '|',
+				    			            ' ', ' ', ' ', ' ', ' ', '|',
+						    	            ' ', ' ', ' ', ' ', ' ', '|',
+						    	            ' ', ' ', ' ', ' ', ' ', '|',
+						    	            ' ', ' ', ' ', ' ', ' ', '|',
+                              ' ', ' ', ' ', ' ', ' ', '|'};
+
+  //File and phrase list initialization
+  string filename = "";
+  string phrase_list[MAX_PHRASE_COUNT];
+
+  cout << "Enter filename to grab words from: ";
+  getline(cin, filename);
+
+  ifstream phrase_file;
+  phrase_file.open(filename.c_str());
+
+  if(phrase_file.is_open())
+  {
+    while(getline(phrase_file, phrase_list[phrase_count]) == false && phrase_count < MAX_PHRASE_COUNT) //while there are more lines to grab 
+                                                                                                        //(and if so put them in the array), 
+                                                                                                        //AND more spots to fill
+    {
+      //grab entire line and throw it into each position of phrase_list
+      ++phrase_count; //increase phrase_count variable
+    }
+
+    phrase_file.close(); //always make sure to close the file afterwards
+  }
+  else
+  {
+    cout << "ERROR: Could not open " << filename << ". Make sure the full filename is spelt correctly and in the "
+         << "same directory as this executable file. Ending program..." << endl;
+    play_game = false;
+  }
+  //end of file initialization
+
+  if(play_game == true) //if the user wants to play hangman or we can 
+  {
+    //Random phrase initialization
+    srand( time(NULL) );
+    int rand_index = rand() % phrase_count;
+    string cur_phrase = phrase_list[rand_index];
+
+    //General variables for game
+    bool is_guessing = true;
+    bool guessed_right = false; //variable to see if user guessed correctly
+    char input = ' '; //general input variable
+    const int MAX_WRONG = 6; //for each body part
+    int num_wrong = 0; //number of guesses the user has made
+    string wrong_guesses = ""; //for each wrong guess
+    string right_prompt = ""; //for each right guess
+
+    //Prompt initialization
+    for(int i = 0; i < cur_phrase.length(); ++i)
+    {
+      if(cur_phrase[i] == ' ') //if the current position we are at is a space
+      {
+        right_prompt.push_back(' '); //add spaces where necessary
+      }
+      else //for each letter in the actual phrase
+      {
+        right_prompt.push_back('-'); //add dashes where necessary
+      }
+    }
+
+
+    cout << "Welcome to Hangman!" << endl;
+    do 
+    {
+      //Exactly like printing a rectangle, print the hangman grid
+      for(int r = 0; r < 7; ++r)
+      {
+        for(int c = 0; c < 6; ++c)
+        {
+          cout << hangman_grid[r][c];
+        }
+        cout << endl;
+      }
+      cout << endl << endl; //for neatness
+
+      //Correctly-guessed prompt print
+      cout << "Word: " << right_prompt << endl;
+
+      //While the user is still guessing, hasn't exceeded the max amount of guesses, and hasn't gotten the phrase yet
+      if(is_guessing == true && num_wrong < MAX_WRONG && right_prompt != cur_phrase)
+      {
+        cout << "Incorrect guesses: " << wrong_guesses << endl;
+
+        //Grab input from user for a letter
+        do
+        {
+          cout << "Enter an (alphabetical) letter: ";
+          cin >> input;
+
+          if(isalpha(input) == false)
+          {
+            cout << "Incorrect input." << endl;
+          }
+
+        }while(isalpha(input) == false);
+
+        //Scan to see if the inputted letter is in the word list
+        for(int i = 0; i < cur_phrase.length(); ++i)
+        {
+          if(cur_phrase[i] == input) //if the letter is in the phrase
+          {
+            right_prompt[i] = input; //set it in the corresponding place in the prompt
+            guessed_right = true; //to not subtract from the total guesses the user can make
+          }
+        }
+
+        //If the guess was not in the phrase, increase wrong guesses, 
+        //add input to wrong guess list, and add body part
+        if(guessed_right == false)
+        {
+          ++num_wrong;
+
+          wrong_guesses.push_back(input);
+          wrong_guesses.push_back(' ');
+
+          switch(num_wrong)
+          {
+            case 1: //head
+              hangman_grid[1][1] = 'O';
+              break;
+            case 2: //body
+              hangman_grid[2][1] = '|';
+              hangman_grid[3][1] = '|';
+              break;
+            case 3: //left arm
+              hangman_grid[2][0] = '-';
+              break;
+            case 4: //right arm
+              hangman_grid[2][2] = '-';
+              break;
+            case 5: //left leg
+              hangman_grid[4][0] = '/';
+              break;
+            case 6: //right leg (lost game)
+              hangman_grid[4][2] = '\\';
+              break;
+            default: //unnecessary, but left just in case of any debugging
+              break;
+          }
+        }
+
+        guessed_right = false; //reset guessed_right for next loop
+
+      }
+      else if (num_wrong >= MAX_WRONG)
+      {
+        cout << "Guesser loses -- the answer was: " << cur_phrase << endl;
+        is_guessing = false;
+      }
+      else
+      {
+        cout << "You won! Thanks for playing!" << endl;
+        is_guessing = false;
+      }
+      
+      cout << endl << endl;
+
+    }while(is_guessing);
+  }
+
+	return 0;
+}

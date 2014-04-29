@@ -1,0 +1,48 @@
+// hangman_lame_version psuedo-code
+//
+
+Initialize variables
+
+Initialize masked phrase using correct phrase
+
+While game is running
+  Prompt masked phrase
+  Prompt amount of wrong letters
+  Prompt number of tries left
+  
+  If guessing
+    Ask for a letter
+    If the input is a letter
+      Scan the correct phrase for occurrences of letter input
+        If the letter input is in the correct phrase
+          Set the corresponding position in masked phrase to input and set toggle in_phrase to true
+          
+      If the letter input was in the phrase
+        Reset toggle in_phrase to false
+        If the masked phrase now equals the correct phrase
+          Set toggle for is_guessing to false
+          Toggle for guessed_right is true
+          
+      Else (if input was not in the phrase)
+        Scan the wrong input list to see if the letter input is in there
+          If the input is in the wrong list
+            Set toggle for in_wrong to true
+        
+        If the input was already in the wrong list
+          Set toggle for in_wrong to be false (do nothing with 
+        Else
+          Add input to wrong list
+          Add a space afterwards (for cleanliness)
+          Decrease number of guesses left
+          If the number of guesses is less than (or equal to) zero
+            Set toggle for is_guessing to false
+            
+  Else if the user guessed right
+    Congratulate the user
+    Set is_playing toggle to false
+  
+  Else (user guessed wrong)
+    Tell the user they lost and tell them the correct phrase
+    Set is_playing toggle to false
+
+End program

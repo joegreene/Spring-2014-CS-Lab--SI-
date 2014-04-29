@@ -219,8 +219,6 @@ Judging off of this, it's nice to know that `cin` is an `istream` (input stream)
 ### Practice Assignments
 1. Make a program that scans a file containing words and tells the user if each word is or is not a palindrome. If you do not know, a palindrome is a word that is 
 spelt exactly the same backwards (e.g. "racecar" and "civic" are palindromes but "palindrome" and "alpha" are not palindromes). Have the maximum amount of entries be 50.
-
-2. MOVED HANGMAN TO NEXT WEEK WORK.
   
   
 Example outputs and resources for each assignment are added at top of [this](README.md) page (in folders). Your outputs should be roughly similar (except for the exceptions in Hangman). If enough people ask, we'll go over them (or just one) together.

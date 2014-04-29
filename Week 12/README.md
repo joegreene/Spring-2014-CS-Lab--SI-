@@ -25,7 +25,7 @@ Located [here](Shape_printing.md).
 Located [here](Arrays.md).
 
 ### File Input/Output (IO)
-I didn't have enough time to finish this page for this week (and I didn't think we would get to this in time). I have little-to-no information on it, and plan to create it for next week or in a future session hopefully, depending on how thing go this week and in lecture. Check it out [here](file_io.md).
+I didn't have enough time to finish this page for this week (and I didn't think we would get to this in time). Week 13 has notes on this.
 
 ### Practice Assignments
 These are all listed under their relevant note pages.
@@ -33,7 +33,7 @@ These are all listed under their relevant note pages.
 ### Extra Challenges
 If you haven't yet, check out the File IO notes listed above (incomplete though).
 
-If the schedule allows it, we might be able to make a game of [tic-tac-toe](#http://xoax.net/cpp/crs/console/lessons/Lesson9/) together. If you end up 
+If the schedule allows it, we might be able to make a game of [tic-tac-toe](http://xoax.net/cpp/crs/console/lessons/Lesson9/) together. If you end up 
 somehow finishing all the other material on this page, you can try this tutorial out. It's a video tutorial, however, so you'll have to either find another elsewhere 
 without two-dimensional arrays (a topic we will cover either next week or the one after), or 
 

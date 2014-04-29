@@ -16,13 +16,11 @@ This page will go through all of the proper steps in order to make the game Hang
 Normally, making a program can be split up into several steps: Psuedo-code, C++ translation, and overall debugging.
 
 #### Psuedo-code
-The most important part to making this game is to lay out everything you will need. A good way of doing this is to lay out everything you will 
-need (algorithmically, not syntactically).
+The most important part to making this game (or really any program) is to lay out everything you will need, in a step-wise fashion.
 
 For instance, let's say we need to make a program that grabs a list of students from a file, allow the user to add, delete, print, and close, saving the records to the file 
 when the program quits. A psuedo-code example would be:
 
-Psuedo-code:
 ```
   Grab and store the data for the student list
   
@@ -46,6 +44,8 @@ Psuedo-code:
   End the program (when outside request)
 ```
 
+Do something similar to the above 
+
 The best way (in my opinion) to go about this is to make it as general as possible at first. Think about the problem, split it up into smaller pieces, and go from there. 
 This technique is called taking a top-down approach. More info [here](#http://en.wikipedia.org/wiki/Top-down_and_bottom-up_design).
 
@@ -53,8 +53,10 @@ You'll want to debug your psuedo-code, making sure there aren't any sort of logi
 third step.
 
 #### Translation to C++
-This step shouldn't be too rough to get through, given you have sufficient psuedo-code. The two biggest problems with translation is __1)__ Making sure you have all the correct 
-variables needed and __2)__ Dealing with the compiler's pickiness.
+This step shouldn't be too rough to get through, given you have sufficient psuedo-code and syntax knowledge. It's definitely the lengthiest though. The two biggest problems with translation is 
+
+__1)__ Making sure you have all the correct variables needed and 
+__2)__ Dealing with the compiler's pickiness.
 
 To be nice however, I'll give you the code to initialize the dashes prompt. It might be a bit tricky, but it's doable:
 ```C++
@@ -75,9 +77,12 @@ If the above is confusing, this is what's going on:
     if the current character is not a space, set it to a dash
 ```
 
+It's simple in psuedo-code, but not necessarily in the C++ syntax example. Remember that each position in a string can be treated as an array index. That's because a 
+string is an array of characters (don't call it a char array though, because that's another, older version of the string).
+
 Note also how the psuedo-code translated pretty well over to the C++ version. That's what you want to happen with your own psuedo-code translation.
 
-This is another time to debug both your psuedo-code and C++ code. If either conflict, or doesn't work in some way, 
+This is another time to debug both your psuedo-code and C++ code. If either conflict, or doesn't work in some way, something is wrong in one or both of them.
 
 #### Debugging
 At this point, if your code works completely as you need it to be then good job. Else, you'll want to write down a list of what's wrong, think about how to fix that, then 

@@ -2,18 +2,15 @@
 
 ## Contents
 - [Intro](#intro)
-- [User-Defined Functions](#functions)
-  - [Review Work](#)
+- [Review Work](#review-work)
 - [Practice Assignments](#practice-assignments)
 - [Extra Challenges](#extra-challenges)
 
 ### Intro
 
-### Functions
-You've been working with functions already, except they were pre-defined functions. Now we'll start creating 
-our own functions, which makes programming a heck of a lot nicer on our end for various reasons.
 
-#### Initialize a User-Defined Function
+#### Review Work
+Not sure if these will be passed out, but [here](questions.md) if you want to view them via this site.
 
-
-
+If you finish and feel comfortable about all the review work, take a look at the functions page (either [here](functions.md) or navigate through 
+to it from the main page).

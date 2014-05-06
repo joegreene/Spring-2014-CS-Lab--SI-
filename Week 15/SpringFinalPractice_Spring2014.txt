@@ -1,0 +1,111 @@
+CPSC 120-2014-SpringFinalPractice
+
+Section #: __________Name: ___________________________________
+
+DO NOT USE NOTES UNLESS INSTRUCTED!
+I.	Short Answer
+1.	List the three types of loops and their differences. In what situations are each preferable over the others?
+2.	Describe the differences between a switch statement and if-else chain. Give an example of when one would be preferable over the other (and vice-versa).
+3.	What are different types of program errors? Please give one example for each type. How should we debug for different types of errors? 
+4.	What is the difference between a one-dimensional and two-dimensional array? What is a partially-filled array? Draw a diagram of a partially filled two-dimensional 3x3 array (any values) and an empty one-dimensional array of size 5. 
+5.	What is a loop inside a loop called? Give an example of when this would be necessary.
+6.	What is an off-by-one error? What is a counter? What is an accumulator? What is a sentinel? How do we get the size of an one-dimensional array?
+7.	What does it mean to use the static_cast operator on a variable? Give an example of when using static_cast would be necessary.
+II.	Multiple Choice
+1.	What does the following line output to the screen?
+
+int stuff[] = {2, 3, 4, 1};
+cout << stuff[3];
+a. 4
+b. 1
+c. 2
+d. 3
+2.	Assuming ar is initialized and is 5 x 5, what is the output of the following code?
+for(int c = 0; c < 3; ++c) {
+	for(r = 0; r < 3; r++)
+		cout << ar[c][r] << " ";
+	cout << endl; 
+}
+a.	Prints out each row of ar per line
+b.	Prints out each column of ar per line
+c.	Does not compile
+d.	None of the above
+3.	A byte consists of how many bits?
+a.	6
+b.	7
+c.	8
+d.	9
+e.	10
+
+4.	What is the value of total after the following statements are executed?
+	int total, i;
+	total = i = 0;
+	for(int i = 0; i <= 5; ++i)
+		total+=i; 15
+a.	5
+b.	10
+c.	0
+d.	Compiler error
+
+5.	What is the output of the following code?
+for(int r = 0; r < 3; r++)
+	for(int c = 0; c < 4; c++)
+		cout<<"*";
+
+a.	****
+b.	************
+c.	None of the options
+d.	****
+****
+****
+
+6.	What is the value of sum after running the following code?
+int sum = 0;
+while(true)
+{
+	if(sum > 0)
+		break;
+	else
+		sum+=1;
+}
+
+a.	4
+b.	0
+c.	1
+d.	Infinite loop (sum infinitively increases)
+
+7.	What is the output of the following code?
+int hello = 3.14;
+double div = static_cast<double>(hello)/2;
+cout << div << endl;
+
+a.	1.57
+b.	1
+c.	1.5
+d.	3.14
+
+
+8.	Which of the following statements is NOT legal?
+a. int array[] = {1, 2, 3, 4};
+b. double list[5] = {5.5, 3.14};
+c. char grid[][2] = { {1}, {2} };
+d. string crossword[2][] = { {4}, {5} };
+
+9.	What is the value of x after the following statements?
+int x;
+x = 25/7;
+
+a.	15
+b.	3
+c.	4
+d.	3.75
+
+10.	What is the value of x after the following statements, assuming the array z has values 1, 2, 5, 4, 3 inside of it?
+int x = -999;
+for(int i = 0; c < 5; ++c)
+	if(x < x[c])
+		x=x[c];
+a.	5
+b.	1
+c.	-999
+d.	None of the above

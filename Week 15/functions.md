@@ -2,13 +2,13 @@
 
 ## Contents
 - [Intro](#intro)
-- [User-Defined Functions](#functions)
-  - [What is a User-Defined Function?](#what-is-a-user-defined-function?)
+- [User-Defined Functions](#user-defined-functions)
+  - [What is a User-Defined Function?](#what-is-a-user-defined-function)
   - [Initialize a User-Defined Function](#initialize-a-user-defined-function)
   - [Function Prototypes](#function-prototypes)
   - [Parameters and Arguments](#parameters-and-arguments)
   - [Using Your Functions](#using-your-functions)
-  - [Various Return Types](#using-various-return-types)
+  - [Various Return Types](#various-return-types)
 - [Practice Assignments](#practice-assignments)
 - [Extra Challenges](#extra-challenges)
 

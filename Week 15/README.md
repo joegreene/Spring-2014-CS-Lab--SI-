@@ -18,7 +18,6 @@ Check [here](review.md).
 These are essential to look over if you're planning on taking CS 121. If you're not, I still say it's worth a shot to learn about because it makes typing 
 similar code a lot easier. Reusability is key here. The page is located [here](functions.md) or above.
 
-
 ### Extra Challenges
 If you feel comfortable with all the material so far (and I urge you to be comfortable with it as next week is finals week), see if anyone else may need help. You might 
 learn a thing or two when helping your peers out, or even realize you need to review a topic or two.

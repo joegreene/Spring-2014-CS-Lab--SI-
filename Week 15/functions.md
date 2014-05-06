@@ -4,7 +4,7 @@
 - [Intro](#intro)
 - [User-Defined Functions](#functions)
   - [What is a User-Defined Function?](#what-is-a-user-defined-function?)
-  - [Initialize a User-Defined Function](#)
+  - [Initialize a User-Defined Function](#initialize-a-user-defined-function)
   - [Function Prototypes](#function-prototypes)
   - [Parameters and Arguments](#parameters-and-arguments)
   - [Using Your Functions](#using-your-functions)
@@ -179,10 +179,25 @@ what is being thrown into the function at a function call (function calls are ta
 Although already shown a bit before: Parameters are defined just like variables are, except we don't (necessarily) assign to them a value. If we had a function 
 to add two numbers and return their sum:
 ```C++
-  
+  int add(int a, int b)
+  {
+    return a+b;
+  }
 ```
 
-I'm not sure about the exact limit on the number of parameters (number of arguments is limited by the number of parameters of course), but if you require more 
+The parameters are int a and int b.
+
+We can also have no parameters in our function. For instance, a practically useless function:
+```C++
+  int mult_one_two()
+  {
+    return 1*2;
+  }
+```
+
+returns one and two multiplied.
+
+__NOTE:__ I'm not sure about the exact limit on the number of parameters (number of arguments is limited by the number of parameters of course), but if you require more 
 than six then your might need to revise how your function operates. Typically, functions require 0 to 4 parameters/arguments, although at times I've had to use 
 around six (which looked nasty). I believe the limit is defined by the compiler used.
 

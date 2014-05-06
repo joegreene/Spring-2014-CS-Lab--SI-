@@ -15,7 +15,8 @@ If I didn't get a chance to pass out the actual informal exam, check out [this](
 I tried to make it have a similar format to the midterm exam (assuming the final will be of the same format).
 
 I'm not sure if it will be on the final, but it would be a good idea to review the past midterm and the terminology from that section. Everyone 
-said that was the toughest section of the midterm exam, and it wouldn't surprise me if Professor Tian questions similar to those on the final exam.
+said that was the toughest section of the midterm exam, and it wouldn't surprise me if Professor Tian has questions similar to those (or reused them)
+ on the final exam.
 
 ### Extra Challenges
 If you finish and feel comfortable about all the review work, take a look at the functions page (either [here](functions.md) or navigate through 

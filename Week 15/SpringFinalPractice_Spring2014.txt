@@ -41,11 +41,12 @@ e.	10
 	int total, i;
 	total = i = 0;
 	for(int i = 0; i <= 5; ++i)
-		total+=i; 15
-a.	5
-b.	10
-c.	0
-d.	Compiler error
+		total+=i; 
+a.	15
+b.	5
+c.	10
+d.	0
+e.	Compiler error
 
 5.	What is the output of the following code?
 for(int r = 0; r < 3; r++)
@@ -103,8 +104,8 @@ d.	3.75
 10.	What is the value of x after the following statements, assuming the array z has values 1, 2, 5, 4, 3 inside of it?
 int x = -999;
 for(int i = 0; c < 5; ++c)
-	if(x < x[c])
-		x=x[c];
+	if(x < z[c])
+		x=z[c];
 a.	5
 b.	1
 c.	-999

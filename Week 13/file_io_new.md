@@ -221,7 +221,7 @@ Judging off of this, it's nice to know that `cin` is an `istream` (input stream)
 spelt exactly the same backwards (e.g. "racecar" and "civic" are palindromes but "palindrome" and "alpha" are not palindromes). Have the maximum amount of entries be 50.
   
   
-Example outputs and resources for each assignment are added at top of [this](README.md) page (in folders). Your outputs should be roughly similar (except for the exceptions in Hangman). If enough people ask, we'll go over them (or just one) together.
+Example outputs and resources for each assignment are added at top of [this](https://github.com/joegreene/Spring-2014-CS-Lab--SI-/tree/master/Week%2013) page (in folders). Your outputs should be roughly similar (except for the exceptions in Hangman). If enough people ask, we'll go over them (or just one) together.
 
 -------------------------------------------------------------------------------
 Copyright &copy; 2014 Joseph Greene <joeisgreene@csu.fullerton.edu>

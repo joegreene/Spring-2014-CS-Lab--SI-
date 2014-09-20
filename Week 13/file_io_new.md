@@ -97,7 +97,7 @@ SPOILER: The answer is `file.close();`, and it goes after the `while` loop as fo
 __SIDE NOTE:__ Here are alternative ways to grab text, and replace 
 
 ##### Special Note: Using eof()
-From what I've heard, it's generally bad to use the function `eof()`. Although `eof()` means "end of file", the reason it is bad is because what it actually means is "".
+From what I've heard, it's generally bad to use the function `eof()`. Although `eof()` means "end of file", the reason it is bad is because what it actually means is "read until after we hit EOF".
 
 Alternatively, what we may do is set the conditional check in the `while` loop to be the `getline` expression. 
 
